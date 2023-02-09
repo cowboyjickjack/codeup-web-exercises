@@ -1,8 +1,8 @@
 let a = 1;
 let b = a++;
-let c = ++a;
+let c = ++a; // preincrement is completed before the next line
 // what is the value of a, b, and c?
-// 1, 1, 2
+// 3, 1, 3
 //console.log(a, b, c);
 
 let d = "hello";
@@ -146,12 +146,12 @@ let password = 'notastrongpassword';
 let passwordLength = password.length >= 5;
 let usernameLength = username.length <= 20;
 
-let userSpaceBegin = username.indexOf(' ', 0);
-let passSpaceBegin = password.indexOf(' ', 0);
-let userSpaceEnd = username.lastIndexOf(' ');
-let passSpaceEnd = password.lastIndexOf(' ');
+let userSpaceBegin = username.startsWith(' ');
+let passSpaceBegin = password.startsWith(' ');
+let userSpaceEnd = username.endsWith(' ');
+let passSpaceEnd = password.endsWith(' ');
 
-if( usernameLength && passwordLength && !password.includes(username) && userSpaceBegin && passSpaceBegin && userSpaceEnd && passSpaceEnd){
+if( usernameLength && passwordLength && !password.includes(username) && !userSpaceBegin && !passSpaceBegin && !userSpaceEnd && !passSpaceEnd){
     console.log(`Successful login!`)
 } else {
     console.log(`Uh oh! The username/password you input does not meet our criteria.`)
