@@ -1,0 +1,164 @@
+let a = 1;
+let b = a++;
+let c = ++a;
+// what is the value of a, b, and c?
+// 1, 1, 2
+//console.log(a, b, c);
+
+let d = "hello";
+let e = false;
+
+d++;
+e++;
+// NaN, NaN
+//console.log(d, e);
+
+let perplexed; // perplexed is undefined (no value is assigned)
+perplexed + 2;
+// undefined
+//console.log(perplexed);
+
+let price = 2.7;
+price.toFixed(2);
+// "2.70"
+
+//let price = "2.7";
+price.toFixed(2);
+// error? already a string
+
+isNaN(0) // false
+
+isNaN(1) // false
+
+isNaN("") // true - ACTUALLY FALSE?? it's empty, undefined.
+
+isNaN("string") // true
+
+isNaN("0") // true - ACTUALLY FALSE?
+
+isNaN("1") // true - ACTUALLY FALSE?
+
+isNaN("3.145") // true - ACTUALLY FALSE?
+
+isNaN(Number.MAX_VALUE) // false
+
+isNaN(Infinity) // false
+
+isNaN("true") // true - reason = boolean value?
+
+isNaN(true) // true - ACTUALLY FALSE?
+
+isNaN("false") // true
+
+isNaN(false) // false - maybe since boolean values are 0 and 1 ?
+
+// to illustrate why the isNaN() function is needed:
+NaN == NaN
+
+!true // false
+
+!false // true
+
+!!true // true
+
+!!false // false
+
+!!0 // false
+
+!!-0 // true - ACTUALLY FALSE?
+
+!!1 // true
+
+!!-1 // false - ACTUALLY TRUE?
+
+!!0.1 // false - ACTUALLY TRUE?
+
+!!"hello" // true
+
+!!"" // false
+
+!!'' // false
+
+!!"false" //true
+
+!!"0" // true
+
+let sample = `Hello Codeup`;
+sample = `${sample} Students` // gotta love a backtick moment
+sample = sample.replace('Students', 'Class');
+
+// console.log(sample.length);
+//console.log(sample.toUpperCase());
+// console.log(sample.indexOf('c'));
+// console.log(sample.indexOf('C'));
+
+let sampleCharEnd = sample.indexOf('p') + 1;
+
+//console.log(sampleCharEnd);
+
+let company = sample.substring(6, sampleCharEnd);
+// took me forever to realize that it would start at 6, not 0
+console.log(company);
+
+let littleMermaid = 3;
+let brotherBear = 5;
+let hercules = 1;
+let totalPrice = 3 * ( littleMermaid + brotherBear + hercules );
+console.log(totalPrice);
+
+let googleRate = 400;
+googleRate = googleRate * 6;
+let amazonRate = 380;
+amazonRate = amazonRate * 4;
+let facebookRate = 350;
+facebookRate = facebookRate * 10;
+let totalPaycheck = googleRate + amazonRate + facebookRate;
+console.log("$" + totalPaycheck);
+
+//
+
+let student = "Gabriella";
+let fullClass = "true";
+let conflictedSchedule = "true";
+
+// if(fullClass && conflictedSchedule) {
+//     console.log(`Sorry ${student}, that class is full, and you're schedule is wack!`)
+// } else {
+//     console.log(`Congratulations, ${student}, you're enrolled!`)
+// };
+
+//
+
+let productOffer = "valid"
+let productAmount = 1
+let memberStatus = "premium"
+
+// if((productAmount <= 2) || (!productOffer)) {
+//     console.log(`Sorry Sir/Ma'am, this product offer cannot be redeemed today.`)
+// } else if(memberStatus) {
+//     console.log(`Thank you. Your product offer has been redeemed.`)
+// };
+
+//
+
+let username = 'codeup';
+let password = 'notastrongpassword';
+let passwordLength = password.length >= 5;
+let usernameLength = username.length <= 20;
+
+let userSpaceBegin = username.indexOf(' ', 0);
+let passSpaceBegin = password.indexOf(' ', 0);
+let userSpaceEnd = username.lastIndexOf(' ');
+let passSpaceEnd = password.lastIndexOf(' ');
+
+if( usernameLength && passwordLength && !password.includes(username) && userSpaceBegin && passSpaceBegin && userSpaceEnd && passSpaceEnd){
+    console.log(`Successful login!`)
+} else {
+    console.log(`Uh oh! The username/password you input does not meet our criteria.`)
+};
+
+
+
+
+
+
