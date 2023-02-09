@@ -15,11 +15,11 @@ e++;
 
 let perplexed; // perplexed is undefined (no value is assigned)
 perplexed + 2;
-// undefined
+// NaN - can't run a math operation on nothing, no NaN
 //console.log(perplexed);
 
 let price = 2.7;
-price.toFixed(2);
+price.toFixed(2); // toFixed is a method you can ONLY use on a NUMBER
 // "2.70"
 
 //let price = "2.7";
@@ -65,15 +65,15 @@ NaN == NaN
 
 !!0 // false
 
-!!-0 // true - ACTUALLY FALSE?
+!!-0 // true - ACTUALLY FALSE? no difference between 0 and -0!
 
 !!1 // true
 
-!!-1 // false - ACTUALLY TRUE?
+!!-1 // false - ACTUALLY TRUE? it's not just 1 that's truthy, it's any number other than 0!
 
-!!0.1 // false - ACTUALLY TRUE?
+!!0.1 // false - ACTUALLY TRUE? still bigger than 0!
 
-!!"hello" // true
+!!"hello" // true - string is a truthy value
 
 !!"" // false
 
