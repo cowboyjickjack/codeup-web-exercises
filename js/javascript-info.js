@@ -99,9 +99,9 @@ let message = "i don't like you, go away!";
 let discordName = "[YoLo] Jason";
 discordName = discordName.split(']');
 discordName = discordName[1].trim(); // gets rid of the space in between [ and J
-//console.log(`This is the censored Discord name: ` + discordName);
-//console.log(discordName.length); // with .length, it counts characters, so it begins at 1
-// discordName = discordName.replace('[yolo]', '');
+console.log(`This is the censored Discord name: ` + discordName);
+console.log(discordName.length); // with .length, it counts characters, so it begins at 1
+discordName = discordName.replace('[yolo]', '');
 
 /* indexOf = returns index of specified character in string */
 let sPosition = discordName.indexOf('s');
