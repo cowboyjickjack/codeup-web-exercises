@@ -96,24 +96,24 @@ let sampleCharEnd = sample.indexOf('p') + 1;
 
 //console.log(sampleCharEnd);
 
-let company = sample.substring(6, sampleCharEnd);
-// took me forever to realize that it would start at 6, not 0
-// console.log(company);
-
-let littleMermaid = 3;
-let brotherBear = 5;
-let hercules = 1;
-let totalPrice = 3 * ( littleMermaid + brotherBear + hercules );
+// let company = sample.substring(6, sampleCharEnd);
+// // took me forever to realize that it would start at 6, not 0
+// // console.log(company);
+//
+// let littleMermaid = 3;
+// let brotherBear = 5;
+// let hercules = 1;
+// let totalPrice = 3 * ( littleMermaid + brotherBear + hercules );
 // console.log(`The price per day for each movie is $3.
 // The total number of days the movies are rented is ${littleMermaid + brotherBear + hercules} days.
 // The total price you will pay is $${totalPrice}`);
 
-let google = 400 * 6;
-let amazon = 380 * 4;
-let facebook = 350 * 10;
-let totalPaycheck = google + amazon + facebook;
-let formattedPaycheck =totalPaycheck.toLocaleString("en-US", {style: "currency", currency: "USD"});
-// console.log(`You will receive $${formattedPaycheck} in payment for this week.`); // how to put commas in money!
+// let google = 400 * 6;
+// let amazon = 380 * 4;
+// let facebook = 350 * 10;
+// let totalPaycheck = google + amazon + facebook;
+// let formattedPaycheck =totalPaycheck.toLocaleString("en-US", {style: "currency", currency: "USD"});
+//  console.log(`You will receive $${formattedPaycheck} in payment for this week.`); // how to put commas in money!
 
 //
 
