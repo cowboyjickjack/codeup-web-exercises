@@ -98,30 +98,30 @@ let sampleCharEnd = sample.indexOf('p') + 1;
 
 let company = sample.substring(6, sampleCharEnd);
 // took me forever to realize that it would start at 6, not 0
-console.log(company);
+// console.log(company);
 
 let littleMermaid = 3;
 let brotherBear = 5;
 let hercules = 1;
 let totalPrice = 3 * ( littleMermaid + brotherBear + hercules );
-console.log(totalPrice);
+// console.log(`The price per day for each movie is $3.
+// The total number of days the movies are rented is ${littleMermaid + brotherBear + hercules} days.
+// The total price you will pay is $${totalPrice}`);
 
-let googleRate = 400;
-googleRate = googleRate * 6;
-let amazonRate = 380;
-amazonRate = amazonRate * 4;
-let facebookRate = 350;
-facebookRate = facebookRate * 10;
-let totalPaycheck = googleRate + amazonRate + facebookRate;
-console.log("$" + totalPaycheck);
+let google = 400 * 6;
+let amazon = 380 * 4;
+let facebook = 350 * 10;
+let totalPaycheck = google + amazon + facebook;
+let formattedPaycheck =totalPaycheck.toLocaleString("en-US", {style: "currency", currency: "USD"});
+// console.log(`You will receive $${formattedPaycheck} in payment for this week.`); // how to put commas in money!
 
 //
 
 let student = "Gabriella";
-let fullClass = "true";
-let conflictedSchedule = "true";
+let fullClass = true;
+let scheduleConflict = true;
 
-// if(fullClass && conflictedSchedule) {
+// if(fullClass && scheduleConflict) {
 //     console.log(`Sorry ${student}, that class is full, and you're schedule is wack!`)
 // } else {
 //     console.log(`Congratulations, ${student}, you're enrolled!`)
@@ -129,34 +129,57 @@ let conflictedSchedule = "true";
 
 //
 
-let productOffer = "valid"
+let offerExpired = false
 let productAmount = 1
-let memberStatus = "premium"
+let memberStatus = true
 
-// if((productAmount <= 2) || (!productOffer)) {
+// if((productAmount <= 2 || memberStatus) && !offerExpired) {
 //     console.log(`Sorry Sir/Ma'am, this product offer cannot be redeemed today.`)
-// } else if(memberStatus) {
+// } else {
 //     console.log(`Thank you. Your product offer has been redeemed.`)
 // };
 
 //
 
+// let username = 'codeup';
+// let password = 'notastrongpassword';
+// let passwordLength = password.length >= 5;
+// let usernameLength = username.length <= 20;
+//
+// let userSpaceBegin = username.startsWith(' ');
+// let passSpaceBegin = password.startsWith(' ');
+// let userSpaceEnd = username.endsWith(' ');
+// let passSpaceEnd = password.endsWith(' ');
+
+// if( usernameLength && passwordLength && !password.includes(username) && !userSpaceBegin && !passSpaceBegin && !userSpaceEnd && !passSpaceEnd){
+//     console.log(`Successful login!`)
+// } else {
+//     console.log(`Uh oh! The username/password you input does not meet our criteria.`)
+// };
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 let username = 'codeup';
 let password = 'notastrongpassword';
+
 let passwordLength = password.length >= 5;
 let usernameLength = username.length <= 20;
+let userPassCombo = !password.includes(username);
+let noWhiteSpaces = username.startsWith(' ') + username.endsWith(' ') + password.startsWith(' ') + password.endsWith(' ');
 
-let userSpaceBegin = username.startsWith(' ');
-let passSpaceBegin = password.startsWith(' ');
-let userSpaceEnd = username.endsWith(' ');
-let passSpaceEnd = password.endsWith(' ');
-
-if( usernameLength && passwordLength && !password.includes(username) && !userSpaceBegin && !passSpaceBegin && !userSpaceEnd && !passSpaceEnd){
-    console.log(`Successful login!`)
+if ( usernameLength && passwordLength && userPassCombo && !noWhiteSpaces) {
+    console.log(`Yay! You're logged in!`)
 } else {
-    console.log(`Uh oh! The username/password you input does not meet our criteria.`)
+    console.log(`Oh no! You're login information isn't following the rules...`)
 };
-
 
 
 
