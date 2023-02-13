@@ -13,7 +13,7 @@ const sayHello = name => {
     let message =  `Hello, ${name}!`;
     return message;
 }
-// console.log(sayHello(`Codeup`));
+console.log(sayHello(`Codeup`));
 
 /**
  * TODO:
@@ -24,7 +24,7 @@ const sayHello = name => {
  */
 
 let helloMessage = sayHello(`Gabriella`);
-// console.log(helloMessage);
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -34,7 +34,7 @@ let helloMessage = sayHello(`Gabriella`);
  */
 
 let myName = `Gabriella`;
-// console.log(sayHello(myName));
+console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -63,7 +63,7 @@ const isTwo = num => {
     return num % 2 == 0;
 }
 
-// console.log(isTwo(random));
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -83,7 +83,7 @@ const  calculateTip = ( tip, bill )=> {
     return (totalTip.toLocaleString("en-US", {style: "currency", currency: "USD"}));
 }
 
-// console.log(calculateTip(20, 20));
+console.log(calculateTip(20, 20));
 
 /**
  * TODO:
@@ -119,4 +119,4 @@ const applyDiscount = (originalPrice, discount) => {
     return totalAmount.toLocaleString("en-US", {style: "currency", currency: "USD"});
 }
 
-// console.log(applyDiscount(45.99, 12));
+console.log(applyDiscount(45.99, 12));
