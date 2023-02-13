@@ -59,9 +59,7 @@ let random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-const isTwo = num => {
-    return num % 2 == 0;
-}
+const isTwo = num => num % 2 == 0;
 
 console.log(isTwo(random));
 
