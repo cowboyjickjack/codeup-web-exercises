@@ -9,11 +9,11 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-const sayHello = name => {
+const sayHello = (name) => {
     let message =  `Hello, ${name}!`;
     return message;
 }
-console.log(sayHello(`Codeup`));
+// console.log(sayHello(`Codeup`));
 
 /**
  * TODO:
@@ -24,7 +24,7 @@ console.log(sayHello(`Codeup`));
  */
 
 let helloMessage = sayHello(`Gabriella`);
-console.log(helloMessage);
+// console.log(helloMessage);
 
 /**
  * TODO:
@@ -33,8 +33,8 @@ console.log(helloMessage);
  * console.
  */
 
-let myName = `Gabriella`;
-console.log(sayHello(myName));
+const myName = `Gabriella`;
+// console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -59,9 +59,11 @@ let random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-const isTwo = num => num % 2 == 0;
+const isTwo = number => number === 2;
+let randomMessage = isTwo(random);
 
-console.log(isTwo(random));
+// console.log(`The random number is ${random}`)
+// console.log(randomMessage);
 
 /**
  * TODO:
@@ -75,13 +77,13 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-const  calculateTip = ( tip, bill )=> {
-    let tipInDollars = parseFloat( (tip / 100) * bill );
+const  calculateTip = ( tipPercent, billTotal )=> {
+    let tipInDollars = parseFloat( (tipPercent / 100) * billTotal );
     let totalTip = parseFloat(tipInDollars);
     return (totalTip.toLocaleString("en-US", {style: "currency", currency: "USD"}));
 }
 
-console.log(calculateTip(20, 20));
+// console.log(calculateTip(15, 33.42));
 
 /**
  * TODO:
@@ -90,7 +92,7 @@ console.log(calculateTip(20, 20));
  * then display the dollar amount they should tip
  */
 
-// let userBill = prompt(`We hope you enjoyed dining with us! Please input your total bill:`)
+// let userBill = prompt(`We hope you enjoyed dining with us! Please input your total bill:`) // consider parseFloat since prompts return strings
 // let userTip = prompt(`What percent would you like to tip?`);
 // alert(`Thank you! Please ensure you're tipping: ${calculateTip(userTip, userBill)}`);
 
@@ -112,9 +114,103 @@ console.log(calculateTip(20, 20));
 
 const applyDiscount = (originalPrice, discount) => {
     let discountPercent = discount / 100;
-    let discountDollar = discountPercent * originalPrice
+    let discountDollar = discountPercent * originalPrice;
     let totalAmount = originalPrice - discountDollar;
     return totalAmount.toLocaleString("en-US", {style: "currency", currency: "USD"});
 }
 
-console.log(applyDiscount(45.99, 12));
+// console.log(applyDiscount(45.99, 12));
+
+
+/** FUNCTIONS PRACTICE
+ * TODO:
+ * Make a function called returnTwo() that returns the number 2 when called
+ *    Test this function with `console.log(returnTwo())`
+ */
+const returnTwo = (num) => 2;
+
+// console.log(returnTwo());
+
+/**
+ * TODO:
+ * Make a function called sayHowdy() which console.logs the string “Howdy!”
+ *    Test this function by directly calling `sayHowdy()`
+ *    Remember this function does not need a defined return value
+ */
+
+const sayHowdy = () => console.log(`Howdy!`);
+// sayHowdy();
+
+/**
+ * TODO:
+ * Make a function called returnName() that returns the string of your name
+ *    Test this function with `console.log(returnName())`
+ */
+
+const returnName = () => `Gabriella`;
+// console.log(returnName());
+
+/**
+ * TODO:
+ * Make a function called addThree() which takes in a number input and returns the number plus 3.
+ *    Test this function with `console.log(addThree(5))`
+ */
+
+const addThree = num => parseFloat(num + 3);
+// console.log(addThree(5));
+
+/**
+ * TODO:
+ * Make a function called sayString() which returns the string input passed in.
+ *    Test this function with `console.log(sayString('codeup'))`
+ */
+
+const sayString = (str) => str;
+// console.log(sayString(`codeup`));
+
+const doubleNum = x => x * 2;
+// console.log(doubleNum(5));
+
+const lowercaseString = (string) => string.toLowerCase();
+// console.log(lowercaseString(`HELLO WORLD`));
+
+const halfNum = x => x / 2;
+// console.log(halfNum(7))
+
+const remainder = (x, y) => x % y;
+// console.log(remainder(7, 2));
+
+const squareRoot = x => Math.sqrt(x);
+// console.log(squareRoot());
+
+/**
+ * TODO:
+ * Write a function that accepts a last name and a first name and returns the full name.
+ */
+
+// let firstName = prompt(`What's your first name?`);
+// let lastName = prompt(`What's your last name?`);
+
+const fullName = (firstName, lastName) => {
+    alert(`Nice to meet you, ${firstName} ${lastName}!`);
+}
+
+// fullName(firstName, lastName);
+
+const negative = input => {
+    if (typeof input == `number` || isNaN(parseFloat(input))) { // true/false will slip through if not parseFloat
+        return `That's not a number!`;
+    } else if (input > 0) {
+        return -input;
+    } else {
+        return input;
+    }
+}
+
+const negativeNoConditionals = num => -Math.abs(num);
+// console.log(negativeNoConditionals(2));
+
+const reverseString = word => {
+    return word.split(``).reverse(``).join(``);
+}
+// console.log(reverseString(`I put my thang down, flip it and reverse it.`));
