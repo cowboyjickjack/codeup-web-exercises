@@ -10,10 +10,10 @@
  */
 
 const sayHello = name => {
-    let message =  `Hello ${name}`;
+    let message =  `Hello, ${name}!`;
     return message;
 }
-console.log(sayHello(`codeup`));
+// console.log(sayHello(`Codeup`));
 
 /**
  * TODO:
@@ -24,6 +24,7 @@ console.log(sayHello(`codeup`));
  */
 
 let helloMessage = sayHello(`Gabriella`);
+// console.log(helloMessage);
 
 /**
  * TODO:
@@ -32,9 +33,13 @@ let helloMessage = sayHello(`Gabriella`);
  * console.
  */
 
+let myName = `Gabriella`;
+// console.log(sayHello(myName));
+
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -54,6 +59,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+const isTwo = num => {
+    return num % 2 == 0;
+}
+
+// console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -66,12 +77,25 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+const  calculateTip = ( tip, bill )=> {
+    let tipInDollars = parseFloat( (tip / 100) * bill );
+    let totalTip = parseFloat(tipInDollars);
+    return (totalTip.toLocaleString("en-US", {style: "currency", currency: "USD"}));
+}
+
+// console.log(calculateTip(20, 20));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+// let userBill = prompt(`We hope you enjoyed dining with us! Please input your total bill:`)
+// let userTip = prompt(`What percent would you like to tip?`);
+// alert(`Thank you! Please ensure you're tipping: ${calculateTip(userTip, userBill)}`);
+
 
 /**
  * TODO:
@@ -87,3 +111,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+const applyDiscount = (originalPrice, discount) => {
+    let discountPercent = discount / 100;
+    let discountDollar = discountPercent * originalPrice
+    let totalAmount = originalPrice - discountDollar;
+    return totalAmount.toLocaleString("en-US", {style: "currency", currency: "USD"});
+}
+
+// console.log(applyDiscount(45.99, 12));
