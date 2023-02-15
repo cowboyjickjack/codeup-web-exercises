@@ -159,6 +159,7 @@ const luckyNumber = Math.floor(Math.random() * 6);
 const isNumericAndNotNaN = (input) => {
     return !isNaN(parseFloat(input)) && input !== null && typeof input !== `boolean` && typeof input !== `string`;
 }
+// isNumericAndNotNaN will be helpful for assessments!!!!!
 
 let wantsToEnterNumber = confirm(`Would you like to enter a number?`);
 if (wantsToEnterNumber) {
