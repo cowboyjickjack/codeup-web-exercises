@@ -35,6 +35,8 @@ const isFactor = (num1, num2) => {
 }
 
 /** List out arrays, each on a new row */
+let fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
+
 for (let i = 0; i < fruits.length; i++) { // i + i = 1
     let fruit = fruits[i]; // OR resolve it inside [i -1] if i = 1
     console.log(fruit);

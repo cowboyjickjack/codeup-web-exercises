@@ -25,16 +25,18 @@
      * accessing each element's index.
      */
 
-    for (let i = 0; i < names.length; i++) {
-        let nameIndividually = names[i];
-        console.log(nameIndividually);
-    }
+
 
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
+
+    for (let i = 0; i < names.length; i++) {
+        let nameIndividually = names[i];
+        console.log(nameIndividually);
+    }
 
     /**
      * TODO:

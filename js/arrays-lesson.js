@@ -8,8 +8,8 @@ let fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
 // let numberOfFruits = fruits.length; // outputs 5, counting like a human
 // // console.log(`The number of fruits => `, numberOfFruits);
 //
-// let fruitsString = fruits.toString();
-// // console.log(`Using toString() on fruits => `, fruitsString);
+let fruitsString = fruits.toString();
+console.log(`Using toString() on fruits => `, fruitsString);
 //
 // /** Arrays can hold ALL data types! */
 //
@@ -31,10 +31,10 @@ const returnString = input => {
 /** REMEMBER: `i` will start at 1, so you need to correct that in a loop
  * SO either start with 0 and remove <= and input (<= will output undefined) < */
 
-for (let i = 0; i < fruits.length; i++) { // i + i = 1
-    let fruit = fruits[i]; // OR resolve it inside [i -1] if i = 1
-    console.log(fruit);
-}
+// for (let i = 0; i < fruits.length; i++) { // i + i = 1
+//     let fruit = fruits[i]; // OR resolve it inside [i -1] if i = 1
+//     console.log(fruit);
+// }
 
 /** For-each Loop: Method that calls a function with specific parameters */
 /** inside function:
