@@ -17,9 +17,7 @@
      * array.
      */
 
-    console.log(`Here are how many names are in the array => `, names.length);
-
-    /** WALKTHROUGH */
+    // console.log(`Number of elements in names => `, names.length);
 
     /**
      * TODO:
@@ -27,14 +25,11 @@
      * accessing each element's index.
      */
 
-    // names.forEach((name, i, array) => {
-    // console.log(`The element follows: `, name);
-    // console.log(`The index follows: `, i);
-    // console.log(`The array follows: `, array);
-    // });
-
-    /** WALKTHROUGH */
-
+    // console.log(names[0]);
+    // console.log(names[1]);
+    // console.log(names[2]);
+    // console.log(names[3]);
+    // console.log(names[4]);
 
     /**
      * TODO:
@@ -42,27 +37,20 @@
      * array.
      */
 
-    // for (let i = 0; i < names.length; i++) {
-    //     let nameIndividually = names[i];
-    //     console.log(nameIndividually);
+    // for (let i = 0; i < names.length; i++) { // i++ iterates one at a time
+    //     console.log(names[i]); // i = 0
     // }
-
-    /** WALKTHROUGH */
-
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
 
-    // names.forEach((name, i, array) => {
+    // names.forEach(function (name, i, array) {
     // console.log(`The element follows: `, name);
-    // console.log(`The index follows: `, i);
-    // console.log(`The array follows: `, array);
+    // console.log(`The index follows: `, i); // don't need
+    // console.log(`The array follows: `, array); // don't need
     // });
-
-    /** WALKTHROUGH */
-
 
     /**
      * TODO:
@@ -78,27 +66,22 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    let array
+    const returnFirst = array => {
+        return (array[0]);
+    }
 
-    // const firstItemReturn = input => {
-    //     let array = [1, 2, 3, 4, 5];
-    //     return (array[0]);
-    // }
-    //
-    // const secondItemReturn = input => {
-    //     let array = [1, 2, 3, 4, 5];
-    //     return (array[1]);
-    // }
-    //
-    // const lastItemReturn = input => {
-    //     let array = [1, 2, 3, 4, 5];
-    //     return (array[4]);
-    // }
+    const returnSecond = array => {
+        return (array[1]);
+    }
 
-    /** WALKTHROUGH */
+    const returnLast = array => {
+        const arrayLength = array.length; // length counts as a human
+        return (array[arrayLength - 1]); // this accounts for the computer counting at 0
+    }
 
-
-
+    console.log(returnFirst(names));
+    console.log(returnSecond(names));
+    console.log(returnLast(names));
 
 })();
 
