@@ -1,5 +1,7 @@
 "use strict";
 
+/** CMD + CONTROL + G = when clicking a console.log, will highlight all console logs */
+
 /** Generates random number between 2 numbers */
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -67,4 +69,10 @@ function shuffleArray(array) {
     }
     // Return the shuffled array
     return array;
+}
+
+/** Fahrenheit to celsius conversion */
+const convertToCelcius = temp => {
+    let celciusConversion = (temp - 32) * (5/9);
+    return (celciusConversion);
 }
