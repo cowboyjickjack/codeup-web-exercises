@@ -80,3 +80,5 @@ fruits.forEach((fruit, i, array) => {
 //         console.log(student);
 //     })
 // });
+
+console.log(arrayOfRandomNumbers(6));

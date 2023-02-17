@@ -41,3 +41,30 @@ for (let i = 0; i < fruits.length; i++) { // i + i = 1
     let fruit = fruits[i]; // OR resolve it inside [i -1] if i = 1
     console.log(fruit);
 }
+
+/** Creates an array of random numbers of a predetermined size */
+const arrayOfRandomNumbers = lengthOfArray => {
+    // const array = new Array(LengthOfArray); //could use this
+    const array = [];
+    for (let i = 0; i < lengthOfArray; i++) {
+        let newRandomNumber = randomNumber(1, lengthOfArray + 100); // we generate it
+        while(array.includes(newRandomNumber)) {  // a loop will only run if this generates a duplicate
+            newRandomNumber = randomNumber(1, lengthOfArray + 100);
+        }
+        array.push(randomNumber(1, 100));
+    }
+    return array;
+}
+
+/** Shuffle Array */
+function shuffleArray(array) {
+    // Loop through the array from the last index to the first
+    for (let i = array.length - 1; i > 0; i--) {
+        // Generate a random index between 0 and i
+        const j = Math.floor(Math.random() * (i + 1));
+        // Swap the elements at index i and j
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    // Return the shuffled array
+    return array;
+}
