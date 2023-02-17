@@ -17,7 +17,9 @@
      * array.
      */
 
-    console.log(names);
+    console.log(`Here are how many names are in the array => `, names.length);
+
+    /** WALKTHROUGH */
 
     /**
      * TODO:
@@ -25,6 +27,13 @@
      * accessing each element's index.
      */
 
+    // names.forEach((name, i, array) => {
+    // console.log(`The element follows: `, name);
+    // console.log(`The index follows: `, i);
+    // console.log(`The array follows: `, array);
+    // });
+
+    /** WALKTHROUGH */
 
 
     /**
@@ -33,15 +42,27 @@
      * array.
      */
 
-    for (let i = 0; i < names.length; i++) {
-        let nameIndividually = names[i];
-        console.log(nameIndividually);
-    }
+    // for (let i = 0; i < names.length; i++) {
+    //     let nameIndividually = names[i];
+    //     console.log(nameIndividually);
+    // }
+
+    /** WALKTHROUGH */
+
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    // names.forEach((name, i, array) => {
+    // console.log(`The element follows: `, name);
+    // console.log(`The index follows: `, i);
+    // console.log(`The array follows: `, array);
+    // });
+
+    /** WALKTHROUGH */
+
 
     /**
      * TODO:
@@ -57,4 +78,27 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    let array
+
+    // const firstItemReturn = input => {
+    //     let array = [1, 2, 3, 4, 5];
+    //     return (array[0]);
+    // }
+    //
+    // const secondItemReturn = input => {
+    //     let array = [1, 2, 3, 4, 5];
+    //     return (array[1]);
+    // }
+    //
+    // const lastItemReturn = input => {
+    //     let array = [1, 2, 3, 4, 5];
+    //     return (array[4]);
+    // }
+
+    /** WALKTHROUGH */
+
+
+
+
 })();
+

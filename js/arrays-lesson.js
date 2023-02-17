@@ -1,6 +1,6 @@
 "use strict";
 
-let fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
+// let fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
 
 // let var1 = fruits[2] // selects oranges, starts at 0
 // console.log(var1);
@@ -8,8 +8,8 @@ let fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
 // let numberOfFruits = fruits.length; // outputs 5, counting like a human
 // // console.log(`The number of fruits => `, numberOfFruits);
 //
-let fruitsString = fruits.toString();
-console.log(`Using toString() on fruits => `, fruitsString);
+// let fruitsString = fruits.toString();
+// console.log(`Using toString() on fruits => `, fruitsString);
 //
 // /** Arrays can hold ALL data types! */
 //
@@ -22,8 +22,8 @@ const returnString = input => {
 
 /** Functions can only return data types, so you can only call the function in an array */
 
-// let stringsList = [returnString(`Jason`), returnString(`Javier`), returnString(`Yamba`)];
-// console.log(`stringList follows => `, stringsList);
+let stringsList = [returnString(`Jason`), returnString(`Javier`), returnString(`Yamba`)];
+console.log(`stringList follows => `, stringsList);
 
 /** Looping through arrays */
 /** Console.log each item in an array */
@@ -52,11 +52,11 @@ const returnString = input => {
 
 /** Arrow function (NO variable name!) */
 
-// fruits.forEach((fruit, i, array) => {
-//     console.log(`The element follows: `, fruit);
-//     console.log(`The index follows: `, i);
-//     console.log(`The array follows: `, array);
-// });
+fruits.forEach((fruit, i, array) => {
+    console.log(`The element follows: `, fruit);
+    console.log(`The index follows: `, i);
+    console.log(`The array follows: `, array);
+});
 
 /** forEach: executes a provided function once for each array element */
 
@@ -70,10 +70,10 @@ const returnString = input => {
 
 /** Listing seating arrangement */
 
-let studentSeating = [
-  [`Bob`, `Joe`, `Jill`],
-  [`Carl`, `Bill`, `John`]
-];
+// let studentSeating = [
+//   [`Bob`, `Joe`, `Jill`],
+//   [`Carl`, `Bill`, `John`]
+// ];
 
 // studentSeating.forEach((row) => { // forEach calls row.forEach as a function
 //     row.forEach((student) => {
