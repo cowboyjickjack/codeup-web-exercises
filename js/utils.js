@@ -76,3 +76,10 @@ const convertToCelcius = temp => {
     let celciusConversion = (temp - 32) * (5/9);
     return (celciusConversion);
 }
+
+/** MONEY */
+
+const formatMoney = input => {
+    let daMoney;
+    return daMoney = input.toLocaleString("en-US", {style: "currency", currency: "USD"});
+    }
