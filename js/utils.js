@@ -82,4 +82,34 @@ const convertToCelcius = temp => {
 const formatMoney = input => {
     let daMoney;
     return daMoney = input.toLocaleString("en-US", {style: "currency", currency: "USD"});
+}
+
+/** Palindrome Checker */
+const isPalindrome = input => {
+    let inputValues = input.split('');
+    let reverseInputValues = inputValues.reverse();
+    let convertInput = reverseInputValues.join('');
+
+    if ((input == convertInput || isNaN(input))) {
+        return true;
+    } else {
+        return false;
     }
+}
+
+/** Return Highest Number */
+const getHighestNumber = (a, b, c) => {
+    let num1 = parseFloat(a);
+    let num2 = parseFloat(b);
+    let num3 = parseFloat(c);
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        return false;
+    } else {
+        return Math.max(num1, num2, num3);
+    }
+}
+
+/** Is numeric and not NaN */
+const isNumericAndNotNaN = (input) => {
+    return !isNaN(parseFloat(input)) && input !== null && typeof input !== `boolean` && typeof input !== `string`;
