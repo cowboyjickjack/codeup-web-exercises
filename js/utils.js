@@ -114,3 +114,9 @@ const getHighestNumber = (a, b, c) => {
 const isNumericAndNotNaN = (input) => {
     return !isNaN(parseFloat(input)) && input !== null && typeof input !== `boolean` && typeof input !== `string`;
 }
+
+/** Abbreviate first/last name (ex: Sam Harris --> S.H) */
+function abbrevName(name){
+    let nameArray = name.split(" ");
+    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+}
