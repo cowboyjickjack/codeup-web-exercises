@@ -3,6 +3,10 @@
 /*    text-transform: capitalize;*/
 /*}*/
 
+.fancy-header {
+    text-align: center;
+}
+
 .red-paragraph {
     color: #8d0000;
     text-transform: uppercase;

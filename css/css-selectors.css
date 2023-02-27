@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 20px; /* doesn't affect width, but it's children */
+    font-family: "Times New Roman", sans-serif;
+}
+
+h1, h2, h3{
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.header1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+    transition: all ease .3s;
+    font-weight: 300;
+}
+
+span.heavy {
+    font-weight: 800;
+}
+
+.header1:hover {
+    color: red;
+}
+
+.text-center {
+    text-align: center;
+}
+
+header p { /* only apply to p within header, aka targeting it's children*/
+    color: #6c6c6c;
+}
+
+header {
+    background-color: #d5d5d5;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+}
+
+main {
+    padding: 20px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.photos-wrapper {
+    display: flex;
+    max-width: 100;
+    overflow: hidden;
+}
+
+.photo-wrapper {
+    flex: 1 0;
+    min-width: 1px;
+    aspect-ratio: 3/2; /* can use aspect ratio > height bc it will automatically adjust when sizing browser */
+}
+
+.photos-wrapper .photo-wrapper img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    transform-origin: 0 0;
+    transition: transform .25s, visibility .25s ease-in;
+}
+
+.photo-wrapper:hover {
+    transform: scale(1.1);
+}
+
+/*.photos-wrapper .photo-wrapper:first-child {*/
+/*    filter: grayscale(1.1);*/
+/*}*/
+
+section[data-features] {
+    opacity: .8;
+}
+
+.features-container ul li:nth-child(2) {
+    color: red;
+}
+
+

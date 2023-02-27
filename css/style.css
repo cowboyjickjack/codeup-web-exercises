@@ -1,4 +1,100 @@
+* {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 25px;
+    opacity: 1;
+    position: relative;
+}
+
 .fancy-header {
-    color: #620862;
+    color: #550b0b;
     text-decoration: underline;
+    text-align: center;
+    font-size: 80px;
+}
+
+.slogan {
+    text-align: center;
+    border-bottom: black 2px dotted;
+}
+
+h2 {
+    color: #550b0b;
+    text-align: center;
+    font-size: 50px;
+}
+
+body {
+
+}
+
+.images {
+    position: relative;
+}
+
+.images img {
+    opacity: 1;
+}
+
+.bg-img {
+    position: fixed;
+    background-size: auto;
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    opacity: .35;
+    top: 0;
+}
+
+ul {
+    list-style-type: square;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ol {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*.table-center {*/
+/*    text-align: center;*/
+/*    margin-left: 0;*/
+/*    margin-right: 0;*/
+/*    */
+/*}*/
+
+table, th, td {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 500px;
+    text-align: center;
+}
+
+.quality {
+    text-align: center;
+}
+
+.link {
+    text-align: center;
+    display: block;
+}
+
+a:link {
+    color: hotpink;
+}
+
+a:visited {
+    color: dodgerblue;
+}
+
+a:hover {
+    color: aqua;
+}
+
+a:active {
+    color: orange;
 }
