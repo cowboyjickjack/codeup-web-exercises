@@ -57,6 +57,13 @@ table {
     cursor: pointer;
 }
 
+/* removes underline(decoration) and color(unset = blank state) */
+/* DON'T want hyperlinks underlined by default */
+/* unset = i will address this, later */
+a, a:visited {
+    text-decoration: none;
+    color: unset;
+}
 
 
 
