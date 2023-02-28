@@ -1,16 +1,24 @@
 * {
     font-family: "Times New Roman", sans-serif;
+    color: whitesmoke;
     font-size: 25px;
     opacity: 1;
     position: relative;
 }
 
 .fancy-header {
-    color: #550b0b;
+    color: whitesmoke;
     text-decoration: underline;
     text-align: center;
     font-size: 80px;
 }
+
+/*.features-container {*/
+/*    display: flex;*/
+/*    !*flex-direction: column;*!*/
+/*    justify-content: space-between;*/
+/*    !*border-bottom: 1px solid #000;*!*/
+/*}*/
 
 .slogan {
     text-align: center;
@@ -18,26 +26,27 @@
 }
 
 h2 {
-    color: #550b0b;
+    color: #ffb9b9;
     text-align: center;
-    font-size: 50px;
-}
-
-body {
-
+    font-size: 30px;
 }
 
 .photos-wrapper {
     display: flex;
     max-width: 100%;
     overflow: hidden;
+    padding: 10px;
+    row-gap: 10px;
+    margin: 0;
 }
 
 .photo-wrapper {
     flex: 1 0;
     min-width: 1px;
-    aspect-ratio: 4/3; /* can use aspect ratio > height bc it will automatically adjust when sizing browser */
+    aspect-ratio: 3/2; /* can use aspect ratio > height bc it will automatically adjust when sizing browser */
     text-align: center;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .photos-wrapper .photo-wrapper img {
@@ -45,12 +54,14 @@ body {
     object-fit: cover;
     width: 700px;
     margin: 0;
+    transition: all ease .3s;
+    overflow: hidden;
 
 }
 
-/*.photo-wrapper:hover {*/
-/*    transform: scale(2);*/
-/*}*/
+.photo-wrapper:hover img {
+    transform: scale(1.1);
+}
 
 .bg-img {
     margin: auto 5px;
@@ -59,7 +70,6 @@ body {
     background-size: contain;
     width: 100%;
     height: auto;
-    opacity: .35;
     top: 0;
 }
 
@@ -84,14 +94,16 @@ ol {
 /*}*/
 
 table, th, td {
-    border: 4px solid black;
+    border: 4px solid whitesmoke;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
     width: 500px;
     text-align: center;
-    font-size: 30px;
     font-weight: bold;
+    font-size: 30px;
+    color: black;
+    background-color: rgb(255, 185, 185);
 }
 
 .quality {

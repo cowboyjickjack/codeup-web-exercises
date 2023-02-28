@@ -1,0 +1,62 @@
+/* Use a more-intuitive box-sizing model*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Removes margin/padding from ALL elements */
+* {
+    margin: 0;
+}
+
+/* Typographic tweaks!
+ Add accessible line-height (spaces text apart, top/bottom) and Improve text rendering
+ BUT can sometimes make font look too thin
+ AND webkit property only works on Chrome/Firefox */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Improved / Sensible media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* prevents a child element from growing wider than the parent element */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Instructs these elements to inherit their parent's font */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* removes spacing between cells and inherit colors in tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: inherit;
+}
+
+/* Hand cursor on clickable elements */
+.clickable, label, input[type=button], input[type=submit], input[type=file], button {
+    cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box; /* this prevents the border in the box from extending out, but rather staying consolidated! */
+}
+
+.page-wrapper { /* POSITIONING: should be placed on the parent whenever possible */
+    min-height: 100vh;
+    display: flex; /* naturally lines them up horizontally, next to each other */
+    flex-direction: column; /* this put them vertically */
+    row-gap: 40px; /* only affecting the children, not when children aren't touching! LOGIC */
+}
+
+.page-wrapper.all-centered { /* no space = only page-wrapper AND all-centered combined */
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 175px;
+    height: 125px;
+    background-color: grey;
+    /*margin: 40px; !* pushes stuff away *!*/
+    padding: 40px; /* pushes stuff inward */
+    border: 5px solid #8d0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #FFF;
+}
