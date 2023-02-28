@@ -61,21 +61,19 @@ main {
 
 .photos-wrapper {
     display: flex;
-    max-width: 100;
+    max-width: 100%;
     overflow: hidden;
 }
 
 .photo-wrapper {
     flex: 1 0;
     min-width: 1px;
-    aspect-ratio: 3/2; /* can use aspect ratio > height bc it will automatically adjust when sizing browser */
+    aspect-ratio: 4/3; /* can use aspect ratio > height bc it will automatically adjust when sizing browser */
 }
 
 .photos-wrapper .photo-wrapper img {
     aspect-ratio: 3/2;
     object-fit: cover;
-    transform-origin: 0 0;
-    transition: transform .25s, visibility .25s ease-in;
 }
 
 .photo-wrapper:hover {
