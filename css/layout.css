@@ -58,8 +58,14 @@
 .row.align-bottom {
     align-items: end;
 }
+.row.text-center {
+    text-align: center;
+}
 .row.justify-center { /*  */
     justify-content: center;
+}
+.row.justify-right {
+    justify-content: end;
 }
 .row.justify-space-between { /*  */
     justify-content: space-between;
