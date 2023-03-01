@@ -1,0 +1,57 @@
+.page-wrapper {
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.page-wrapper.all-centered {
+    align-items: center;
+    justify-content: center;
+}
+.flex-parent {
+    width: 80vw;
+    height: 80vh;
+    background-color: #cbcbcb;
+    border: 10px solid #a4a4a4;
+    /* flex properties */
+    display: flex; /* by default flex direction is rows  */
+    flex-direction: row; /* row.reverse reverses the order */
+    gap: 20px; /* does nothing without flex - gap does both row and column */
+    align-items: start; /* 'I want them to align at the start(top) BUT not always vertical' */
+    justify-content: center; /* won't work if children are growing */
+}
+
+.box {
+    width: 200px;
+    flex: 0 1 0; /* (ratio that it grows, and ratio that it shrinks, and the basis) */
+    /*align-self: stretch;*/
+    /*aspect-ratio: 3/2; !* uses width/height to determine height or width via aspect ratio *!*/
+    background-color: #76af4c;
+    padding: 20px;
+    border: 5px solid #2f521c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+}
+
+.box:first-child {
+    flex: 1 0 0;
+}
+
+/*.box:nth-child(even) {*/
+/*    flex: 2 0 0; !* squeeze as much as the content inside the box will allow (padding etc) *!*/
+
+/*}*/
+/*.box:first-child {*/
+/*    flex: 0 1 300px; !* reflecting align-self: stretch. telling box 1 to shrink but not be smaller than 300px*/
+/*     and let box 2 take up the rest of the page *!*/
+
+/*}*/
+/*.box:first-child {*/
+/*    align-self: end;*/
+
+/*}*/

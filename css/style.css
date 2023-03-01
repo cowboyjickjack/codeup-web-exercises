@@ -4,6 +4,7 @@
     font-size: 25px;
     opacity: 1;
     position: relative;
+    margin: 0;
 }
 
 .fancy-header {
@@ -66,11 +67,10 @@ h2 {
 .bg-img {
     margin: auto 5px;
     position: fixed;
-    background-size: auto;
+    background-size: cover;
     background-size: contain;
     width: 100%;
     height: auto;
-    top: 0;
 }
 
 ul {

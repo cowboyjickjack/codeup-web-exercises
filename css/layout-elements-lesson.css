@@ -1,0 +1,19 @@
+/* targets header - container meant to have a direct child of a row.
+ if using a container, it NEEDS a ROW and to be CENTERED */
+header.container {
+    height: 80px;
+    border-bottom: 1px solid black;
+}
+
+.container.hero-scene {
+    height: 80vh;
+    background-color: #76af4c;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.container.features {
+    padding: 40px 0;
+}
