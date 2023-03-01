@@ -86,3 +86,12 @@ span {
     width: 30px;
 }
 
+.contents {
+    display: flex;
+    color: #484848;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
