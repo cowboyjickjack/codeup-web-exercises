@@ -1,0 +1,39 @@
+:root { /* variables */
+    --primary-font: Helvetica Serif;
+}
+
+body {
+    background-image: url("../images/city-at-night.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo {
+    max-width: 50px;
+}
+
+.hero-h1 {
+    display: flex;
+    color: white;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    font-family: var(--primary-font);
+}
+
+.column.info {
+    max-width: 100px;
+}
+
+.information.justify-right {
+    display: flex;
+    justify-content: end;
+}
+
+button {
+    color: black;
+    background-color: white;
+}

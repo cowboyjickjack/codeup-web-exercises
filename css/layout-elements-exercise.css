@@ -1,5 +1,11 @@
+:root { /* creates a local variable to work smarter, not harder */
+    --primary-color: #979797;
+    --font-color: #6D6D6D;
+    --light-gray: #ECECEC;
+}
+
 body {
-    color: #484848;
+    color: var(--font-color);
     font-family: Roboto, Arial, sans-serif;
 }
 h2 {
@@ -13,11 +19,11 @@ h4 {
 }
 
 button {
-    background-color: #646464;
+    background-color: var(--primary-color);
     color: #fff;
-    border-color: #646464;
+    border-color: var(--primary-color);
     border-radius: 5px;
-    box-shadow: 0 0 2px black;
+    box-shadow: 0 0 2px var(--primary-color);
     margin-right: 40px;
 }
 
@@ -27,7 +33,7 @@ header.container {
 
 .container.hero-scene {
     height: 80vh;
-    background-color: #d7d7d7;
+    background-color: var(--light-gray);
 }
 
 .container.features {
@@ -40,7 +46,7 @@ header.container {
 }
 
 .box {
-    background-color: #646464;
+    background-color: var(--primary-color);
     padding: 200px 225px;
     border-color: #646464;
     border-radius: 5px;
@@ -84,6 +90,7 @@ header.container {
 
 span {
     font-size: 16px;
+    color: var(--font-color);
 }
 
 .logo {
