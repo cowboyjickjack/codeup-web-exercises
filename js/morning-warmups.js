@@ -84,3 +84,46 @@ const totalPets = personsArray => {
     });
     return total;
 }
+
+/**
+ * Find the Smallest and Biggest Numbers
+ * Create a function named minMax that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+ *
+ * Examples
+ * >> minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+ * >> minMax([2334454, 5]) ➞ [5, 2334454]
+ * >> minMax([1]) ➞ [1, 1]
+ *
+ * Notes
+ * All test arrays will have at least one element and are valid.
+ */
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [12345, 5];
+let arr3 = [1];
+const minMax = numbersArray => {
+    let min = Math.min.apply(Math, numbersArray);
+    let max = Math.max.apply(Math, numbersArray);
+    return {
+        min,
+        max
+    }
+}
+
+/**
+ * Drink Sorting
+ * You will be given an array of drinks, with each drink being an object with two properties: name and price.
+ * Create a function named sortDrinkByPrice that has the drinks array as an argument and return the drinks objects sorted by price in ascending order.
+ *
+ * Assume that the following array of drink objects needs to be sorted:
+ * drinks = [
+ *     {name: "lemonade", price: 50},
+ *     {name: "lime", price: 10}
+ * ]
+ *
+ * Examples
+ * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
+ */
+let drinks = [
+    {name: "lemonade", price: 50},
+    {name: "lime", price: 10}
+]
