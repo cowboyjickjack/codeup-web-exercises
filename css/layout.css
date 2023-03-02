@@ -91,7 +91,7 @@
 
 /* Combo classes to extend the column's versatility */
 .column.shrink { /* don't share space with your siblings */
-    flex: 0 1 80px;
+    flex: 0 1 auto;
 }
 .column.text-center { /* centers all text within column, whether children or not */
     text-align: center;

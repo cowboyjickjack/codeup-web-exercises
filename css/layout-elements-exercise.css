@@ -18,6 +18,7 @@ button {
     border-color: #646464;
     border-radius: 5px;
     box-shadow: 0 0 2px black;
+    margin-right: 40px;
 }
 
 header.container {
@@ -97,4 +98,5 @@ span {
     justify-content: space-evenly;
     width: 300px;
 }
+
 
