@@ -10,6 +10,23 @@ body {
     flex: 0 1 250px;
 }
 
+.column1 {
+    min-width: 255px;
+    height: 100%;
+}
+
+.column2 {
+    border-left: 2px solid #F1F4F5;
+    border-right: 2px solid #F1F4F5;
+    min-width: 600px;
+    height: 100%;
+}
+
+.column3 {
+    min-width: 350px;
+    height: 100%;
+}
+
 .row.grow {
     height: 100px;
     justify-content: center;
@@ -52,8 +69,8 @@ h3 {
 .messages-link img, .bookmark-link img, .twitter-blue-link img,
 .profile-link img, .more-link img {
     display: flex;
-    height: 40px;
-    width: 40px;
+    max-height: 40px;
+    max-width: 40px;
 }
 
 .tweet-button {
@@ -65,24 +82,16 @@ h3 {
     height: 50px;
 }
 
-.twee
-
 svg {
     display: flex;
-    height: 40px;
-    width: 40px;
-}
-
-
-.column2 {
-    border-left: 2px solid #F1F4F5;
-    border-right: 2px solid #F1F4F5;
+    height: 28px;
+    width: 28px;
 }
 
 .back-arrow {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 54px;
 }
 
 .back-arrow img {
@@ -93,8 +102,120 @@ svg {
     left: 10px;
 }
 
-.column2 {
-    width: 600px;
+.user-name {
+    display: flex;
+    position: relative;
+    display: block;
+    margin-right: 10px;
+    margin-left: 40px;
+    font-size: 14px;
+}
+
+.tweet-count {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    overflow-wrap: break-word;
+    color: #536371;
+}
+
+.cover-photo img {
+    z-index: 1;
+}
+
+.profile-info {
+    height: 330px;
+}
+
+.profile-picture {
+    max-height: 68px;
+    position: absolute;
+    max-width: 600px;
+    justify-content: space-evenly;
+}
+.profile-picture img {
+    display: flex;
+    position: relative;
+    width: 135px;
+    height: 135px;
+    border: white 4px solid;
+    border-radius: 50%;
+    left: 15px;
+    z-index: 2;
+    bottom: 120px;
+}
+
+.more-icon {
+    display: flex;
+    position: relative;
+    border: 0px;
+    margin: 0px;
+    width: 50px;
+    height: 45px;
+    left: 425px;
+    top: 15px;
+}
+
+.bio {
+    padding-top: 12px;
+}
+
+.bio-intro {
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    display: block;
+/*margin-right: 10px;*/
+/*margin-left: 40px;*/
+font-size: 16px;
+}
+
+
+.bio-intro h2 {
+    height: 32px;
+}
+
+.bio-intro p {
+    font-size: 16px;
+}
+
+.bio p {
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+
+.location {
+    padding-top: 10px;
+    height: 32px;
+}
+
+.location svg,.join-date svg {
+    display: flex;
+    position: relative;
+    height: 18px;
+    width: 18px;
+    align-items: center;
+}
+
+.location p, .join-date p {
+    display: flex;
+    position: relative;
+    width: 564px;
+    left: 24px;
+    bottom: 20px;
+    color: #536371;
+}
+
+.follow-button {
+    display: flex;
+    position: relative;
+    height: 45px;
+    width: 105px;
+    left: 480px;
+    bottom: 35px;
 }
 
 .site-search {
@@ -115,6 +236,7 @@ button {
     position: relative;
     top: 7px;
     height: 30px;
+    align-items: center;
 }
 
 .search-img {
