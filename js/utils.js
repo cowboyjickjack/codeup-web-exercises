@@ -120,3 +120,8 @@ function abbrevName(name){
     let nameArray = name.split(" ");
     return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
 }
+
+/** Sort an array and return the objects sorted by price in ascending order  */
+const sortDrinkByPrice = drinks => {
+    return drinks.sort((a, b) => a.price - b.price);
+}

@@ -108,11 +108,18 @@ const minMax = numbersArray => {
         max
     }
 }
+/** WALKTHROUGH */
+// try to figure out the algorithm in your head - as if you're simply talking to the computer
+// it's called 'pseudo-code'!
+// const minMax = numbersArray => {
+//
+// }
 
 /**
  * Drink Sorting
  * You will be given an array of drinks, with each drink being an object with two properties: name and price.
- * Create a function named sortDrinkByPrice that has the drinks array as an argument and return the drinks objects sorted by price in ascending order.
+ * Create a function named sortDrinkByPrice that has the drinks array as an argument and return the
+ * drinks objects sorted by price in ascending order.
  *
  * Assume that the following array of drink objects needs to be sorted:
  * drinks = [
@@ -123,11 +130,129 @@ const minMax = numbersArray => {
  * Examples
  * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
  */
+// let drinks = [
+//     {name: "lemonade", price: 50},
+//     {name: "lime", price: 10}
+// ]
+// try to figure out the algorithm in your head - as if you're simply talking to the computer
+// sort is a function that accepts a function as an argument
+// forEach accepts a function as it's argument - great use for this :)
+//   it'll look in the array and compare the two parameters
+// if you want a to come after b, you need to return -1 (for ascending order)
+// if you want b to come after a, you need to return 1
 let drinks = [
     {name: "lemonade", price: 50},
-    {name: "lime", price: 10}
+    {name: "lime", price: 10},
+    {name: "horchata", price: 12},
+    {name: "water", price: 2},
+    {name: "soda", price: 4}
 ]
-
 const sortDrinkByPrice = drinks => {
-    return
+    return drinks.sort((a, b) => a.price - b.price);
 }
+
+/** Start by looping over the array, console-logging the name of each city.
+ * Then try console-logging the name and state.
+ * Then try console-logging all the cities in Texas with populations over 1 million. */
+const cities = [
+    {
+        name: "New York City",
+        state: "New York",
+        population: 8336817
+    },
+    {
+        name: "Los Angeles",
+        state: "California",
+        population: 3979576
+    },
+    {
+        name: "Chicago",
+        state: "Illinois",
+        population: 2693976
+    },
+    {
+        name: "Houston",
+        state: "Texas",
+        population: 2320268
+    },
+    {
+        name: "Phoenix",
+        state: "Arizona",
+        population: 1680992
+    },
+    {
+        name: "Philadelphia",
+        state: "Pennsylvania",
+        population: 1584064
+    },
+    {
+        name: "San Antonio",
+        state: "Texas",
+        population: 1547253
+    },
+    {
+        name: "San Diego",
+        state: "California",
+        population: 1423851
+    },
+    {
+        name: "Dallas",
+        state: "Texas",
+        population: 1343573
+    },
+    {
+        name: "San Jose",
+        state: "California",
+        population: 1030119
+    },
+    {
+        name: "Austin",
+        state: "Texas",
+        population: 964254
+    },
+    {
+        name: "Jacksonville",
+        state: "Florida",
+        population: 903889
+    },
+    {
+        name: "Fort Worth",
+        state: "Texas",
+        population: 895008
+    },
+    {
+        name: "Columbus",
+        state: "Ohio",
+        population: 892533
+    },
+    {
+        name: "San Francisco",
+        state: "California",
+        population: 883305
+    },
+    {
+        name: "Charlotte",
+        state: "North Carolina",
+        population: 885708
+    },
+    {
+        name: "Indianapolis",
+        state: "Indiana",
+        population: 876384
+    },
+    {
+        name: "Seattle",
+        state: "Washington",
+        population: 753675
+    },
+    {
+        name: "Denver",
+        state: "Colorado",
+        population: 727211
+    },
+    {
+        name: "Washington",
+        state: "District of Columbia",
+        population: 702455
+    }
+]

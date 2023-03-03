@@ -42,7 +42,7 @@ h3 {
 
 .home-link, .explore-link, .notifications-link,
 .messages-link, .bookmark-link, .twitter-blue-link,
-.profile-link, .more-link {
+.profile-link, .more-link, .tweet-link {
     display: flex;
     position: relative;
     top: 30px;
@@ -50,11 +50,22 @@ h3 {
 
 .home-link img, .explore-link img, .notifications-link img,
 .messages-link img, .bookmark-link img, .twitter-blue-link img,
-.profile-link img, .more-link img{
+.profile-link img, .more-link img {
     display: flex;
     height: 40px;
     width: 40px;
 }
+
+.tweet-button {
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    color: #FFF;
+    background-color: #1C9BEF;
+    height: 50px;
+}
+
+.twee
 
 svg {
     display: flex;
