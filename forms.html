@@ -12,16 +12,21 @@
     <input type="text" id="username" name="username"> <!-- ALL INPUTS SHOULD HAVE LABELS -->
     <br>
     <br>
+
     <label for="password">Password</label>
     <input type="password" id="password" name="password">
     <br>
     <br>
+
+    <!-- radio selection -->
     <h4>Marvel or DC?</h4> <!-- for only selecting one options -->
         <label for="marvel">Marvel:</label>
         <input type="radio" name="marveldc" value="Marvel" id="marvel"><br>
         <label for="dc">DC:</label>
         <input type="radio" name="marveldc" value="DC" id="dc"><br>
-    <h4>Choose your extras:</h4> > <!-- for selecting multiple options -->
+
+    <!-- checkbox radio selection -->
+    <h4>Choose your extras:</h4> <!-- for selecting multiple options -->
     <input type="checkbox" name="extras" value="cheddar" id="cheddar">
     <label for="cheddar">Cheddar</label><br>
     <input type="checkbox" name="extras" value="provologne" id="provologne">
@@ -35,6 +40,22 @@
     <input type="checkbox" name="extras" value="olives" id="olives">
     <label for="olives">Olives</label><br>
     <input type="submit">
+
+    <!-- dropdown menu -->
+    <h4><label for="destination">Choose your destination</label><br></h4>
+    <select name="destination" id="destination">
+        <option value="Hawaii">Hawaii</option>
+        <option value="Taiwan">Taiwan</option>
+        <option value="Greece">Greece</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Egypt">Egypt</option>
+    </select>
+    <br>
+    <br>
+
+    <!-- textbox -->
+    <h4><label for="comments">Please leave your comments:</label></h4><br>
+    <textarea name="comments" id="comments" cols="48" rows="10"></textarea><br>
 </form>
 </body>
 </html>
