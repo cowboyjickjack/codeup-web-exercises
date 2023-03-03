@@ -4,91 +4,101 @@
     <meta charset="UTF-8">
     <title>Forms Lecture</title>
     <link rel="stylesheet" href="css/resets.css">
-    <link rel="stylesheet" href="css/layout.css.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
-<form method="post" action="https://request-inspector.glitch.me/">
-    <fieldset>
-        <label for="username">Username</label> <!-- for connects to the input via id. label wont work w/o id attribute -->
-        <input type="text" id="username" name="username"> <!-- ALL INPUTS SHOULD HAVE LABELS -->
-    </fieldset>
-    <br>
-    <br>
+<div class="page-wrapper justify-center">
+    <div class="container">
+        <div class="row justify-center">
+            <div class="column justify-center shrink">
+                <form method="post" action="https://request-inspector.glitch.me/">
+                    <fieldset>
+                        <label for="username">Username</label> <!-- for connects to the input via id. label wont work w/o id attribute -->
+                        <input type="text" id="username" name="username"> <!-- ALL INPUTS SHOULD HAVE LABELS -->
+                    </fieldset>
+                    <br>
+                    <br>
 
-    <fieldset>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password">
-    </fieldset>
-    <br>
-    <br>
+                    <fieldset>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </fieldset>
+                    <br>
+                    <br>
 
-    <fieldset>
-        <!-- radio selection -->
-        <h4>Marvel or DC?</h4> <!-- for only selecting one options -->
-        <label for="marvel">Marvel:</label>
-        <input type="radio" name="marveldc" value="Marvel" id="marvel"><br>
-        <label for="dc">DC:</label>
-        <input type="radio" name="marveldc" value="DC" id="dc"><br>
-    </fieldset>
-    <br>
-    <br>
+                    <fieldset>
+                        <!-- radio selection -->
+                        <legend><h4>Marvel or DC?</h4></legend> <!-- for only selecting one options -->
+                        <label for="marvel">Marvel:</label>
+                        <input type="radio" name="marveldc" value="Marvel" id="marvel"><br>
+                        <label for="dc">DC:</label>
+                        <input type="radio" name="marveldc" value="DC" id="dc"><br>
+                    </fieldset>
+                    <br>
+                    <br>
 
-    <fieldset>
-        <!-- checkbox radio selection -->
-        <h4>Choose your extras:</h4> <!-- for selecting multiple options -->
-        <input type="checkbox" name="extras" value="cheddar" id="cheddar">
-        <label for="cheddar">Cheddar</label><br>
-        <input type="checkbox" name="extras" value="provologne" id="provologne">
-        <label for="provologne">Provologne</label><br>
-        <input type="checkbox" name="extras" value="pepperoni" id="pepperoni">
-        <label for="pepperoni">Pepperoni</label><br>
-        <input type="checkbox" name="extras" value="onions" id="onions">
-        <label for="onions">Onions</label><br>
-        <input type="checkbox" name="extras" value="mushrooms" id="mushrooms">
-        <label for="mushrooms">Mushrooms</label><br>
-        <input type="checkbox" name="extras" value="olives" id="olives">
-        <label for="olives">Olives</label><br>
-        <input type="submit">
-    </fieldset>
-    <br>
-    <br>
+                    <fieldset>
+                        <!-- checkbox radio selection -->
+                        <!-- CANNOT BE STYLED IN CSS -->
+                        <legend><h4>Choose your extras:</h4></legend> <!-- for selecting multiple options -->
+                        <input type="checkbox" name="extras" value="cheddar" id="cheddar">
+                        <label for="cheddar">Cheddar</label><br>
+                        <input type="checkbox" name="extras" value="provologne" id="provologne">
+                        <label for="provologne">Provologne</label><br>
+                        <input type="checkbox" name="extras" value="pepperoni" id="pepperoni">
+                        <label for="pepperoni">Pepperoni</label><br>
+                        <input type="checkbox" name="extras" value="onions" id="onions">
+                        <label for="onions">Onions</label><br>
+                        <input type="checkbox" name="extras" value="mushrooms" id="mushrooms">
+                        <label for="mushrooms">Mushrooms</label><br>
+                        <input type="checkbox" name="extras" value="olives" id="olives">
+                        <label for="olives">Olives</label><br>
+                        <input type="submit">
+                    </fieldset>
+                    <br>
+                    <br>
 
-    <fieldset>
-        <!-- dropdown menu -->
-        <h4><label for="destination">Choose your destination</label><br></h4>
-        <select name="destination" id="destination">
-            <option value="Hawaii">Hawaii</option>
-            <option value="Taiwan">Taiwan</option>
-            <option value="Greece">Greece</option>
-            <option value="Alaska">Alaska</option>
-            <option value="Egypt">Egypt</option>
-        </select>
-    </fieldset>
-    <br>
-    <br>
+                    <fieldset>
+                        <!-- dropdown menu -->
+                        <legend><h4><label for="destination">Choose your destination</label></h4></legend>
+                        <select name="destination" id="destination">
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Egypt">Egypt</option>
+                        </select>
+                    </fieldset>
+                    <br>
+                    <br>
 
-    <fieldset>
-        <!-- textbox -->
-        <h4><label for="comments">Please leave your comments:</label></h4><br>
-        <textarea name="comments" id="comments" cols="48" rows="10"></textarea><br>
-    </fieldset>
-    <br>
-    <br>
+                    <fieldset>
+                        <!-- textbox -->
+                        <legend><h4><label for="comments">Please leave your comments:</label></h4></legend>
+                        <textarea name="comments" id="comments" cols="48" rows="10"></textarea><br>
+                    </fieldset>
+                    <br>
+                    <br>
 
-    <fieldset>
-        <h4>Assorted inputs</h4>
-        <!-- date can take min and max attributes -->
-        <input type="date" name="date"><br>
-        <input type="color" name="pickColor"><br>
-        <!-- range can take min, max, and step attributes -->
-        <input type="range" name="evaluation" max="1000"><br>
-        <!-- number can take min, max, and step attributes -->
-        <!-- email, tel, and url inputs are predominantly mobile-oriented -->
-        <input type="number" name="number"><br>
-    </fieldset>
-    <br>
-    <br>
-    <input type="submit">
-</form>
+                    <fieldset>
+                        <legend><h4>Assorted inputs</h4></legend>
+                        <!-- date can take min and max attributes -->
+                        <input type="date" name="date"><br>
+                        <input type="color" name="pickColor"><br>
+                        <!-- range can take min, max, and step attributes -->
+                        <input type="range" name="evaluation" max="1000"><br>
+                        <!-- number can take min, max, and step attributes -->
+                        <!-- email, tel, and url inputs are predominantly mobile-oriented -->
+                        <input type="number" name="number"><br>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
