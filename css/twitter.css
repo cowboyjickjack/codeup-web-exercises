@@ -170,7 +170,7 @@ svg {
     display: flex;
     padding-left: 16px;
     padding-right: 16px;
-    height: 300px;
+    height: 250px;
     display: flex;
     position: relative;
     display: block;
@@ -259,6 +259,35 @@ font-size: 16px;
     left: 24px;
     bottom: 20px;
     color: #536371;
+}
+
+.quad-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #536371;
+    font-size: 16px;
+    font-weight: bold;
+    height: 53px;
+}
+
+.quad-menu:hover {
+    color: #6c6c6c;
+}
+
+.quad-menu nav {
+    display: flex;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.tweets-replies {
+    display: flex;
+    min-width: 200px;
+    justify-content: center;
 }
 
 .follow-button {
