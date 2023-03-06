@@ -1,0 +1,32 @@
+.box {
+    width: 100%;
+    height: 200px;
+    background-color: darkred;
+    border: 1px solid #000;
+}
+
+@media screen and (max-width: 992px) {
+    .box {
+        background-color: black;
+    }
+    .features .row {
+        flex-wrap: wrap;
+    }
+    .features .row .column {
+        flex-basis: calc(50% - 10px); /* how small you'll let it go */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        background-color: darkblue;
+    }
+    .features .row {
+        flex-direction: column;
+        flex: unset;
+    }
+    .features .row .column {
+        flex-basis: unset;
+    }
+}
+
