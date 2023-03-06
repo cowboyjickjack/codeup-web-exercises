@@ -5,6 +5,7 @@
     <title>Register With Us</title>
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
 <div class="page-wrapper justify-center">
@@ -13,18 +14,18 @@
             <div class="column justify-center shrink">
                 <form method="POST" action="https://request-inspector.glitch.me/">
                     <fieldset>
-                      <label for="username">Username</label>
+                      <label class="username" for="username">Username:</label>
                       <input type="text" id="username" name="username">
                     </fieldset>
                     <fieldset>
-                      <label for="password">Password</label>
+                      <label class="password" for="password">Password:</label>
                       <input type="password" id="password" name="password">
                     </fieldset>
                     <fieldset>
                       <textarea name="bio" id="bio" placeholder="Please write about yourself!" rows="5" cols="26"></textarea>
                     </fieldset>
                     <fieldset>
-                      <label>How did you hear about us?</label>
+                      <label class="advertisement">How did you hear about us?</label>
                       <br>
                       <label for="billboard">Billboard</label>
                       <input type="checkbox" name="advertisement" value="billboard" id="billboard"><br>

@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+}
+
+textarea {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 40px;
+}
+
+.advertisement, .username, .password {
+    font-weight: bold;
+    font-size: large;
+    border-bottom: 2px solid black;
+}
+
+.advertisement {
+    border-bottom: 2px solid black;
+}
