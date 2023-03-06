@@ -1,0 +1,18 @@
+@media screen and (max-width: 768px) {
+
+    .alert-info hidden-on-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: 1px solid lightblue;
+        width: 339px;
+        height: 224px;
+    }
+
+    .container .justify-center .features {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
