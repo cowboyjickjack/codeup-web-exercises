@@ -256,3 +256,55 @@ const cities = [
         population: 702455
     }
 ]
+// for loop is a FUNDAMENTAL skill
+// . notations = OBJECTS
+// [] notations = ARRAY
+const citiesLoop = cities => {
+    for (let i = 0; i < cities.length; i++) {
+        console.log(`${cities[i].name}, ${cities[i].state}`);
+    }
+}
+
+/** Make sure you are comfortable with these techniques:
+ * looping over the array, console-logging the name of each city.
+ * Then try console-logging the name and state.
+ * Then try console-logging all the cities in Texas with populations over 1 million.
+ * Write a function that accepts one city object and returns true if the city is in Texas.
+ * Write a function that accepts an array of city objects and the name of a state and
+ * returns an array with only the cities in that state. **/
+
+/**
+ * Get Sum of People's Budget
+ * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+ *
+ * Examples
+ *
+ * >> getBudgets([
+ *        { name: "John", age: 21, budget: 23000 },
+ *        { name: "Steve",  age: 32, budget: 40000 },
+ *        { name: "Martin",  age: 16, budget: 2700 }
+ *    ]) ➞ 65700
+ * >> getBudgets([
+ *        { name: "John",  age: 21, budget: 29000 },
+ *        { name: "Steve",  age: 32, budget: 32000 },
+ *        { name: "Martin",  age: 16, budget: 1600 }
+ *    ]) ➞ 62600
+ */
+
+const peopleAndBudgets = [
+    { name: "John", age: 21, budget: 23000 },
+    { name: "Steve",  age: 32, budget: 40000 },
+    { name: "Martin",  age: 16, budget: 2700 }
+]
+
+// function getBudget(arrayOfObjects) {
+//     let totalBudget = 0;
+//     arrayOfObjects.forEach(object => totalBudget += object.budget);
+//     return totalBudget;
+// }
+
+/** with reduce..? **/
+
+const getBudget = arrayofObjects => {
+    return arrayofObjects.reduce((total, object) => total += object.budget, 0);
+}
