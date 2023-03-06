@@ -255,13 +255,31 @@ const cities = [
         state: "District of Columbia",
         population: 702455
     }
-]
+];
 // for loop is a FUNDAMENTAL skill
 // . notations = OBJECTS
 // [] notations = ARRAY
 const citiesLoop = cities => {
     for (let i = 0; i < cities.length; i++) {
-        console.log(`${cities[i].name}, ${cities[i].state}`);
+        // adding conditional for cities > 1000000
+        if (cities[i].state === "Texas" && cities[i].population > 1000000) {
+            console.log(`${cities[i].name}, ${cities[i].state}`);
+        }
+    }
+}
+
+//example
+const fortWorth = {
+    name: "Fort Worth",
+    state: "Texas",
+    population: 895008
+}
+
+const isInTexas = (cityObject) => {
+    if (cityObject.state === "Texas") {
+        return true;
+    } else {
+        return false;
     }
 }
 
