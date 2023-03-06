@@ -315,14 +315,37 @@ const peopleAndBudgets = [
     { name: "Martin",  age: 16, budget: 2700 }
 ]
 
-// function getBudget(arrayOfObjects) {
-//     let totalBudget = 0;
-//     arrayOfObjects.forEach(object => totalBudget += object.budget);
-//     return totalBudget;
-// }
+function getBudget(arrayOfObjects) {
+    let totalBudget = 0;
+    arrayOfObjects.forEach(object => totalBudget += object.budget);
+    return totalBudget;
+}
 
 /** with reduce..? **/
 
-const getBudget = arrayofObjects => {
-    return arrayofObjects.reduce((total, object) => total += object.budget, 0);
+// const getBudget = arrayofObjects => {
+//     return arrayofObjects.reduce((total, object) => total += object.budget, 0);
+// }
+
+/**
+ * Hashes and Pluses
+ * Create a function named hashPlusCount that returns the number of hashes and pluses in a string.
+ *
+ * Examples
+ *
+ * hashPlusCount("###+") ➞ [3, 1]
+ * hashPlusCount("##+++#") ➞ [3, 3]
+ * hashPlusCount("#+++#+#++#") ➞ [4, 6]
+ * hashPlusCount("") ➞ [0, 0]
+ *
+ * Notes
+ * Return [0, 0] for an empty string.
+ * Return in the order of [hashes, pluses].
+ */
+
+const hashPlusCount = string => {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+
+    }
 }
