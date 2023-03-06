@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/resets.css">
+</head>
+<body>
+<div class="page-wrapper justify-center">
+    <div class="container">
+        <div class="row justify-center">
+            <div class="column justify-center shrink">
+                <form method="POST" action="https://request-inspector.glitch.me/">
+                    <fieldset>
+                      <label for="username">Username</label>
+                      <input type="text" id="username" name="username">
+                    </fieldset>
+                    <fieldset>
+                      <label for="password">Password</label>
+                      <input type="password" id="password" name="password">
+                    </fieldset>
+                    <fieldset>
+                      <textarea name="bio" id="bio" placeholder="Please write about yourself!" rows="5" cols="26"></textarea>
+                    </fieldset>
+                    <fieldset>
+                      <label>How did you hear about us?</label>
+                      <br>
+                      <label for="billboard">Billboard</label>
+                      <input type="checkbox" name="advertisement" value="billboard" id="billboard"><br>
+                      <label for="radio">Radio Advertisement</label>
+                      <input type="checkbox" name="advertisement" value="radio" id="radio"><br>
+                      <label for="internet">Internet Advertisement</label>
+                      <input type="checkbox" name="advertisement" value="internet" id="internet"><br>
+                      <label for="other">Other</label>
+                      <input type="checkbox" name="advertisement" value="other" id="other"><br>
+                    </fieldset>
+                    <fieldset>
+                        <label>What browser are you using?</label>
+                        <select name="browser" id="browser">
+                          <option value="chrome">Chrome</option>
+                          <option value="firefox">Firefox</option>
+                          <option value="safari">Safari</option>
+                          <option value="expolorer">Internet Explorer</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                      <button>Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
