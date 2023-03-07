@@ -42,6 +42,9 @@
 
 /*}*/
 
+.sub-section h2 {
+    font-style: italic;
+}
 
 @media screen and (max-width: 665px) {
 
