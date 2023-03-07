@@ -45,6 +45,13 @@
 
 @media screen and (max-width: 576px) {
 
+    .column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .container.justify-center.features {
         display: flex;
         justify-content: center;
@@ -88,6 +95,10 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
+    }
+
+    li a:visited {
+        color: blue;
     }
 
     li {
