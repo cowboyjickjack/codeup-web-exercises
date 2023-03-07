@@ -87,8 +87,6 @@
     li a {
         display: flex;
         border: 1px solid #CCCCCC;
-        background-color: #CCCCCC;
-        color: blue;
         text-decoration: underline blue;
         height: 35px;
         text-align: center;
@@ -119,6 +117,11 @@
         width: 339px;
         list-style: none;
         padding: unset;
+    }
+
+    .nav-links a {
+        background-color: #CCCCCC;
+        color: blue;
     }
 
     img {
