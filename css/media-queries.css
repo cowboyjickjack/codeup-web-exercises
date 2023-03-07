@@ -136,6 +136,7 @@
         flex-direction: column;
         width: 339px;
         flex-wrap: wrap;
+        text-align: start;
         margin-top: 10px;
         margin-bottom: 10px;
     }
