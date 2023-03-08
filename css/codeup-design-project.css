@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-header {
+header, h4 {
     font-family: 'Abel', sans-serif;
+    background-color: #F0F0F0;
 }
 
 body {
     font-family: 'Anton', sans-serif;
+    background-color: #F0F0F0;
 }
