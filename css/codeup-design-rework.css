@@ -66,3 +66,18 @@ h5 {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 720px){
+
+    .four-icon.row {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .right-article.col.d-none.d-md-block {
+        display: flex;
+        display: none;
+    }
+}
+
