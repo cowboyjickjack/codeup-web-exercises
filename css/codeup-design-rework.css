@@ -74,10 +74,41 @@ h5 {
         justify-content: center;
     }
 
+    div .images.col {
+        /*display: flex;*/
+        margin-left: 40px;
+    }
+
+    .navbar-logo {
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
 
     .right-article.col.d-none.d-md-block {
         display: flex;
         display: none;
     }
+
+    div .row.ps-2 {
+        display: flex;
+        max-width: 400px;
+    }
+
+    .navbar-logo {
+        display: flex;
+        width: 75px;
+        height: 75px;
+    }
 }
 
+@media screen and (max-width: 1140px) {
+
+    .right-article.col.d-none.d-md-block {
+        display: flex;
+    }
+}
