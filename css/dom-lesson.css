@@ -1,0 +1,13 @@
+.btn {
+    background-color: darkred;
+    color: #fff;
+    border: 2px solid goldenrod;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all ease .3s;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: goldenrod;
+}
