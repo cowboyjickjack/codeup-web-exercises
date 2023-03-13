@@ -20,6 +20,6 @@ let interval = 1000; //only runs in milliseconds
 // }, 5000);
 
 // .href will forward user to a desired page
-setTimeout(function (){
-    window.location.href = "https://google.com";
-}, 10000);
+// setTimeout(function (){
+//     window.location.href = "https://google.com";
+// }, 10000);
