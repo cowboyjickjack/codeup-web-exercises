@@ -53,32 +53,50 @@
             subHeader.style.color = 'blue'
         });
         // TODO: Uncomment the next line and get all list items
-        let listItems = document.getElementsByTagName('li');
+        let listItems = document.querySelectorAll('li');
         console.log(listItems)
 
         // TODO: Set text color on every other list item to grey
         let button3 = document.querySelector('#btn3');
         button3.innerHTML = "What about SOME grey?"
+        // button3.addEventListener('click', function () {
+        //     for (let i = 0; i < listItems.length; i++) {
+        //         if (i % 2 == 0){
+        //             listItems[i].style.color = "grey";
+        //         }
+        //     }  button3.innerHTML = `That's enough grey!`;
+        // })
+
+        /** WALKTHROUGH **/
         button3.addEventListener('click', function () {
-            for (let i = 0; i < listItems.length; i++) {
-                if (i % 2 == 0){
-                    listItems[i].style.color = "grey";
+            listItems.forEach(function (element, index) {
+                if (index % 2 === 0) {
+                    element.style.color = 'grey';
+                    button3.innerHTML = `That's enough grey!`;
                 }
-            }  button3.innerHTML = `That's enough grey!`;
+            });
         })
 
         // TODO: Set text color of li with dbid = 1 to blue
         let button4 = document.querySelector('#btn4');
         button4.innerHTML = 'Lastly, a splash of blue?';
+        // button4.addEventListener('click', function (){
+        //     listItems[0].style.color = 'blue';
+        //     button4.innerHTML = `Perfecto.`;
+        // });
+
+        /** WALKTHROUGH **/
         button4.addEventListener('click', function (){
-            listItems[0].style.color = 'blue';
+        let dbidLi = document.querySelector('[data-dbid = "1"]');
+            dbidLi.style.color = 'blue';
             button4.innerHTML = `Perfecto.`;
-        });
+        })
 
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        let subParagraphs = document.getElementsByClassName('sub-paragraph');
+            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        // let subParagraphs = document.getElementsByClassName('sub-paragraph');
         console.log(subParagraphs);
+
+        let subParagraphs = document.querySelectorAll('.sub-paragraph')
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = 'Mission Accomplished!';
     })();
