@@ -36,13 +36,44 @@ buttonNode.addEventListener('click', function () {
 // })
 
 /** click to make bg red **/
-// clickMe.addEventListener('click', function () {
-//     pageWrapper.style.backgroundColor = 'black';
-// });
+clickMe.addEventListener('click', function () {
+    pageWrapper.style.backgroundColor = 'black';
+});
 
 // clickMe.addEventListener('click', function () {
 //     pageWrapper.classList.toggle('red');
 // });
 
 
+btnColumn.appendChild(buttonNode);
+
+/** DOM EVENTS **/
+
+const handleClick = input => {
+    alert('Yay! You clicked me...');
+}
+
+
+// what if you add another button? it won't be included. So... change the logic...
+// allButtons.forEach(function (element) {
+//    element.addEventListener('click', handleClick);
+// });
+
+// this is like giving instructions to the managers of the buttons > the children, so they can inherit
+btnColumn.addEventListener('click', function (e){
+    if (e.target.classList[0] === 'btn') {
+        alert('Yay! You clicked me!');
+    }
+});
+
+// clickMe.addEventListener('click', handleClick);
+// cannot remove event listener if function used is anonymous!!!
+// clickMe.removeEventListener('click')
+
+// this will run right after the previous event... BUT you cannot remove it!!
+// clickMe.addEventListener('click', function () {
+//     alert('Yay, Event Listener....');
+// });
+//
+// clickMe.removeEventListener('click', handleClick);
 btnColumn.appendChild(buttonNode);
