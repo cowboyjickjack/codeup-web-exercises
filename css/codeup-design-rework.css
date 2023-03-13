@@ -45,12 +45,20 @@ img {
 .row{
     gap: 10px 20px;
 }
-.column-cir{
+
+.column-cir-top {
     display: flex;
     flex-direction: row;
     width: 100px;
     height: 100px;
-    border: 1px solid #000000;
+    border: 4px solid #FFF;
+    border-radiu
+.column-cir {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
