@@ -75,3 +75,55 @@ header.container {
 .page-wrapper.mobile-menu-open .mobile-menu-wrapper {
     right: 0px;
 }
+
+nav.navigation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+/* DROPDOWN MENU */
+.dropdown-parent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-toggle {
+    display: flex;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.5);
+    top: 100%;
+    right: 0px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dropdown-menu p {
+    text-align: center;
+}
+
+/* THESE TWO COMBINED = THIS THING IS GONE */
+[data-dropdown="parent"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+[data-dropdown="menu"] {
+    pointer-events: none;
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+[data-dropdown="parent"].open [data-dropdown="menu"] {
+    pointer-events: all;
+    opacity: 1;
+}
