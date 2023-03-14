@@ -25,6 +25,16 @@ header.container {
     background-color: rgba(0, 0, 0, 1);
 }
 
+.page-wrapper.mobile-menu-open .menu-line.top {
+    transform: rotate(45deg);
+}
+.page-wrapper.mobile-menu-open .menu-line.middle {
+    transform: rotate(45deg);
+}
+.page-wrapper.mobile-menu-open .menu-line.bottom {
+    transform: rotate(-45deg);
+}
+
 .mobile-menu-container {
     position: fixed;
     top: 0;
@@ -32,6 +42,7 @@ header.container {
     height: 100%;
     width: 100%;
     display: flex;
+    pointer-events: none;
 }
 
 .mobile-menu-overlay {
@@ -40,7 +51,8 @@ header.container {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0);
+    transition: all ease .3s;
 }
 .mobile-menu-wrapper {
     position: absolute;
@@ -51,4 +63,15 @@ header.container {
     border-left: 1px solid rgba(0,0,0,0.5);
     box-shadow: 0 0 20px -10px #000;
     background-color: #eee;
+    transition: all ease .3s;
+}
+
+.page-wrapper.mobile-menu-open .mobile-menu-container {
+    pointer-events: all;
+}
+.page-wrapper.mobile-menu-open .mobile-menu-overlay {
+    background-color: rgba(255,255,255,0.7);
+}
+.page-wrapper.mobile-menu-open .mobile-menu-wrapper {
+    right: 0px;
 }
