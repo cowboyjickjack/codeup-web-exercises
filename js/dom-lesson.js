@@ -1,5 +1,6 @@
 "use strict"
 // saves this node and everything we can do to in a variable
+// recommended to console.log after defining a query selector, to ensure you're selecting the correct node
 
 let clickMe = document.querySelector('#clickMe');
 let allButtons = document.querySelectorAll('.btn'); // select class
