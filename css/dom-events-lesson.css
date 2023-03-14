@@ -1,0 +1,54 @@
+header.container {
+    background-color: #eee;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    min-height: 60px;
+}
+
+.das-burger-wrapper {
+    height: 20px;
+    width: 27px;
+    position: relative;
+    /*background-color: grey;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-line {
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all ease .3s;
+}
+
+.das-burger-wrapper:hover .menu-line {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.mobile-menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+}
+.mobile-menu-wrapper {
+    position: absolute;
+    top: 0;
+    right: -500px;
+    width: 400px;
+    height: 100%;
+    border-left: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px -10px #000;
+    background-color: #eee;
+}
