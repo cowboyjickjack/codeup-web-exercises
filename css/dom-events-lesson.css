@@ -80,6 +80,7 @@ nav.navigation-wrapper {
     display: flex;
     align-items: center;
     justify-content: end;
+    gap: 15px;
 }
 
 /* DROPDOWN MENU */
@@ -92,6 +93,8 @@ nav.navigation-wrapper {
 .dropdown-toggle {
     display: flex;
     cursor: pointer;
+    align-items: center;
+    gap: 5px;
 }
 
 .dropdown-menu {
@@ -126,4 +129,13 @@ nav.navigation-wrapper {
 [data-dropdown="parent"].open [data-dropdown="menu"] {
     pointer-events: all;
     opacity: 1;
+}
+
+.arrow-icon {
+    width: 15px;
+    transition: all ease .3s;
+}
+
+[data-dropdown="parent"].open .arrow-icon {
+    transform: rotate(180deg);
 }
