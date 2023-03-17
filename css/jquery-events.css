@@ -1,0 +1,40 @@
+.page-wrapper {
+    background-color: black;
+    font-family: Impact, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+button {
+    background-color: darkred;
+    color: #FFF;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    font-size: 40px;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: #b41212;
+    border: 2px solid #ff6666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.column.text.text-center {
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
