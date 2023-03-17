@@ -20,7 +20,7 @@ button {
     height: 200px;
     width: 200px;
     background-color: #b41212;
-    border: 2px solid #ff6666;
+    border: 2px solid #07e9ff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,11 @@ button {
 
 h1 {
     font-size: 40px;
+    cursor: pointer;
+}
+
+p {
+    cursor: pointer;
 }
 
 .column.text.text-center {

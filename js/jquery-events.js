@@ -10,10 +10,16 @@ $('#clickme').click(()=> alert(`It would be nice, but no go...`));
 
 $('.box').hover(
     function (){
-        $(this).css('background-color', '#17a206');
+        $(this).css({
+            'background-color': '#17a206',
+            'border': '2px solid #FFF'
+        });
     },
     function (){
-        $(this).css('background-color', '#b41212');
+        $(this).css({
+            'background-color': '#b41212',
+            'border': '2px solid #07e9ff'
+        });
     }
 );
 
