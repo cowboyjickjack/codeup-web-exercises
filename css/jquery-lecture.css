@@ -2,6 +2,10 @@ body {
     font-family: Rockwell;
 }
 
+.page-wrapper {
+    margin-bottom: 25px;
+}
+
 h3 {
     width: fit-content;
     border: 1px solid black;
@@ -9,3 +13,15 @@ h3 {
     cursor: pointer;
 }
 
+img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.img-frame, .column.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

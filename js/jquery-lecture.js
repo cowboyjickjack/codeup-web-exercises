@@ -38,4 +38,35 @@ $(document).ready(function (){
     $("h3").click(function () {
         $(this).next().slideToggle(500);
     });
+
+    // jQuery selectors use CSS selectors syntax
+    // this is similar to .innerText in JS
+    // $("#library").text("jQuery is a JavaScript library");
+
+    // this is a 'getter' - gets the text inside of #library (can remove .text())
+    // console.log($("#library").text());
+
+    // can also use selector to grab and store text in a variable
+    const $libraryReference = $("#library") // convention to reuse jQuery id reference element
+    let libraryText = $($libraryReference).text();
+    console.log(libraryText);
+    $($libraryReference).text(`${libraryText} is library`);
 });
+
+/** EXERCISES FROM INTRO TO JQUERY **/
+// alerts when DOM finishes loading
+// $(document).ready(function (){
+//     alert("page has loaded - enjoy!");
+// })
+
+// animate the cat photo
+$("#cat").click(function (){
+    $('#cat').animate({
+        // opacity: 0.25,
+        left: "+=50",
+        height: "toggle"
+    }, 1000, function() {
+        // Animation complete.
+    });
+});
+
