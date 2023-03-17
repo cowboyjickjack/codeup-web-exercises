@@ -43,14 +43,41 @@ $(document).ready(function (){
     // this is similar to .innerText in JS
     // $("#library").text("jQuery is a JavaScript library");
 
-    // this is a 'getter' - gets the text inside of #library (can remove .text())
-    // console.log($("#library").text());
 
-    // can also use selector to grab and store text in a variable
-    const $libraryReference = $("#library") // convention to reuse jQuery id reference element
+    // get a reference to the element with the id of library
+    // using a jQuery selector and storing it in a variable
+    // I use the $ to mark this as a reference to a jQuery object
+    //as opposed to a reference to a JS DOM node
+    const $libraryReference = $("#library")
+    // this is jQuery equivalent to
+    const libraryReferenceJS = document.querySelector('#library');
+    // use the reference to get the innerText of the element
     let libraryText = $($libraryReference).text();
-    console.log(libraryText);
-    $($libraryReference).text(`${libraryText} is library`);
+    // output the innerText of the element to the console
+    //     console.log(libraryText);
+    // change the innerText of the element on the page
+    $libraryReference.text(`${libraryText} is library`);
+    // if I console.log libraryText, it still shows the unchanged text
+    // bc it was stored in a variable prior to being change
+    //     console.log(libraryText);
+    // but if I use the .text() method to read the innerText again,
+    // it shows the new (changed) innerText
+    //     console.log($libraryReference.text());
+
+
+    // jQuery class selector with .css method
+    // to change the css of the selected element(s)
+    // $(".framework").css('border', '1px solid black');
+    // to change more than one css property at a time
+    // $(".framework").css({
+    //     'border': '1px solid black',
+    //     'width': 'fit-content',
+    //     'padding': '4px',
+    //     'border-radius': '5px',
+    //     'margin-bottom': '5px'
+    // })
+    //
+    // $('p, li').text('jQuery takes over').css('color', 'darkred');
 });
 
 /** EXERCISES FROM INTRO TO JQUERY **/
@@ -70,3 +97,32 @@ $("#cat").click(function (){
     });
 });
 
+// id selectors
+// $('#selectors-title').text('What? How did I get here..?').css({
+//     'font-size': '40px',
+//     'display': 'flex',
+//     'align-text': 'center',
+//     'color': 'darkred'
+// });
+
+//class selectors
+// $('.codeup').css({
+//     'border': '1px solid red',
+//     'border-radius': '10px',
+// });
+
+// element selectors
+$('ul').css({
+    'padding': '0px'
+});
+
+$('li').css({
+    'font-size': '20px',
+    'list-style': 'none',
+    'text-align': 'center',
+});
+
+// multiple selectors
+$('h1, p, li').css({
+    'background-color': 'yellow'
+});
