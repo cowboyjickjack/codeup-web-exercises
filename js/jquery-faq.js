@@ -11,3 +11,6 @@ $question.click('toggle', function (){
     $(this).toggleClass('highlight');
 });
 
+$question.on('click', function (){
+    $(this).next().fadeToggle();
+})
