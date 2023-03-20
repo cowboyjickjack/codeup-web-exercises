@@ -6,13 +6,8 @@ h1 {
     justify-content: center;
     font-size: 60px;
     font-family: 'Press Start 2P', serif;
-}
-
-.page-wrapper {
-    /*background-size: 100px;*/
-    /*background-repeat: no-repeat;*/
+    cursor: pointer;
 }
 
 img {
-
 }
