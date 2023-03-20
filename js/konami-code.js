@@ -56,8 +56,6 @@ $('h1').click(function (){
 
 /** fun time activations **/
 function activateCheats() {
-    let kirby = "url('/images/kirby-1up.gif')";
-    document.body.style.backgroundImage = kirby;
 
     $('h1').click((function (){
         $(this).css({
@@ -65,11 +63,6 @@ function activateCheats() {
         })
     }));
 
-    $('img').ready(function (){
-        $(this).css({
-            background: '0'
-        })
-    });
 
     alert("30 LIVES ADDED!!!");
 };
