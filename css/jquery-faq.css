@@ -1,3 +1,9 @@
+body {
+    /*background-image: url("/images/national-park.jpeg");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 h1 {
     display: flex;
     text-align: center;
@@ -10,6 +16,11 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+dt, dd {
+    backdrop-filter: opacity(40);
+    width: fit-content;
 }
 
 button {
