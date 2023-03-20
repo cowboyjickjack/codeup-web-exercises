@@ -33,7 +33,7 @@ h2 {
     position: relative;
     height: 150px;
     width: 350px;
-    z-index: 2;
+    z-index: 3;
     top: 50px;
     left: 700px;
 }
@@ -43,7 +43,11 @@ h2 {
     position: relative;
     height: 700px;
     width: auto;
-    z-index: 1;
+    z-index: 2;
     bottom: 250px;
+}
+
+.kirby {
+    display: none;
 }
 

@@ -63,7 +63,11 @@ function activateCheats() {
         })
     }));
 
-    $('')
+    $(".nyan-cat").remove();
+    $('.speech-bubble').remove();
+    $('h2').remove();
+
+
 
     alert("30 LIVES ADDED!!!");
 };
