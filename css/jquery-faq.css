@@ -1,0 +1,20 @@
+h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+button {
+    margin: 20px 0px;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.invisible {
+    visibility: hidden;
+}

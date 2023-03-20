@@ -23,6 +23,7 @@ let vanillaParent = document.querySelector('#paragraphParent');
 
 
 // getting more than one element, you can run the same methods
+// the multiple selection is also nice to avoid making a loop
 let $paragraphs = $('p');
 $paragraphs.css('color', 'blue');
 
@@ -53,4 +54,9 @@ $paragraphs.removeClass('highlight');
 // jQuery toggling a class on/off
 $paragraphs.on('click', function (){
     $(this).toggleClass('highlight');
+    // $(this).animate({
+    //     opacity: 0.25
+    // }, 3000, function (){
+    //     //animation complete
+    // });
 });
