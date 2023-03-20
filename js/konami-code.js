@@ -19,6 +19,8 @@ $(document).keydown(function (e){
     console.log(e.keyCode);
 });
 
+
+
 /** Event Listener **/
 document.addEventListener('keydown', function(e) {
     // value of keycode for keymap
@@ -39,9 +41,17 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-function activateCheats() {
-    document.body.style.backgroundImage = "url('')";
+/** browser pre-activation **/
 
+$(document).ready(function (){
+    document.body.style.backgroundImage = "none";
+});
+
+/** fun time activations **/
+function activateCheats() {
+    document.body.style.backgroundImage = "url('/images/kirby-1up.gif')";
     alert("30 LIVES ADDED!!!");
-}
+};
+
+
 
