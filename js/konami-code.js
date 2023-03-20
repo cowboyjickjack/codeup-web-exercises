@@ -63,6 +63,7 @@ function activateCheats() {
         })
     }));
 
+    $('')
 
     alert("30 LIVES ADDED!!!");
 };

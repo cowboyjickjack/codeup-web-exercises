@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .page-wrapper {
+    display: flex;
     background-image: url("/images/8bit-sunset.png");
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 0;
 }
 
 h1 {
@@ -15,6 +17,33 @@ h1 {
     cursor: pointer;
 }
 
-img {
-    height: 600px;
+h2 {
+    display: flex;
+    position: relative;
+    top: 50px;
+    font-family: 'Press Start 2P', serif;
+    font-size: 40px;
+    color: white;
+    z-index: 3;
+    text-align: center;
 }
+
+.speech-bubble {
+    display: flex;
+    position: relative;
+    height: 150px;
+    width: 350px;
+    z-index: 2;
+    top: 50px;
+    left: 700px;
+}
+
+.nyan-cat {
+    display: flex;
+    position: relative;
+    height: 700px;
+    width: auto;
+    z-index: 1;
+    bottom: 250px;
+}
+
