@@ -21,15 +21,36 @@ let vanillaParent = document.querySelector('#paragraphParent');
 //     'fontStyle': 'italic'
 // });
 
-// adding classes with jQuery
-// $(jQueryParent).addClass('highlight');
 
 // getting more than one element, you can run the same methods
-// let $paragraphs = $('p');
-// $paragraphs.css('color', 'blue');
+let $paragraphs = $('p');
+$paragraphs.css('color', 'blue');
 
 // vanilla JS
 let paragraphs = document.querySelectorAll('p');
 paragraphs.forEach(function (element){
     element.style.color = 'blue';
-})
+    // setting/getting new attribute in vanilla JS
+    element.setAttribute('data-name', 'value');
+    let paragraphValue = element.getAttribute('data-name');
+});
+
+// jQuery setting value
+$paragraphs.attr('data-name2', 'really anything');
+// jQuery getting value
+let newParaValue = $paragraphs.attr('data-name2');
+
+// .text SETS new text
+$paragraphs.text('This is the new text inside the element!');
+// no argument, .text GETS the text
+let paraText = $paragraphs.text();
+
+// adding a class to elements
+$paragraphs.addClass('highlight');
+// removing a class from elements
+$paragraphs.removeClass('highlight');
+
+// jQuery toggling a class on/off
+$paragraphs.on('click', function (){
+    $(this).toggleClass('highlight');
+});
