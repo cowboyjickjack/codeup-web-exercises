@@ -31,5 +31,17 @@
     let drillQuantity = drill.quantity;
     let drillCategory = drill.categories;
     let drillPrice = drill.price;
-    console.log(drillPrice)
+
+    // MOWER INFO INDIVIDUALIZED
+    let mowerTitle = mower.title;
+    let mowerQuantity = mower.quantity;
+    let mowerCategory = mower.categories;
+    let mowerPrice = mower.price;
+
+    // SCREWDRIVER INFO INDIVIDUALIZED
+    let screwdriverTitle = screwdriver.title;
+    let screwdriverQuantity = screwdriver.quantity;
+    let screwdriverCategory = screwdriver.categories;
+    let screwdriverPrice = screwdriver.price;
+    console.log(screwdriverPrice)
 })();
