@@ -38,5 +38,5 @@ $('#fictional-parks li').click('click', function (){
 /** BONUS IMAGE TRAVERSAL **/
 
 $('#button1').click(function(){
-    $('#cat-img1').attr('#cat-img2');
+    $(this).attr('cat-img2', $('#cat-img1').css('background-color', 'red'));
 });
