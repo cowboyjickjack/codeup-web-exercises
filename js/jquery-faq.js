@@ -27,6 +27,11 @@ $('h3').click('toggle', function (){
 $('#national-parks li').click('click', function (){
     $('#national-parks li').first().css('color', 'blue');
 });
+// // walkthrough version
+// $('li').on('click', function (){
+//     let $parentUl = $(this).parent();
+//     $parentUl.find('li').first().css('color', 'blue');
+// });
 
 $('#state-parks-texas li').click('click', function (){
     $('#state-parks-texas li').first().css('color', 'blue');
@@ -38,6 +43,43 @@ $('#fictional-parks li').click('click', function (){
 
 /** BONUS IMAGE TRAVERSAL **/
 
-$('#button1').click(function(){
-    $(this).attr('cat-img2', $('#cat-img1').css('background-color', 'red'));
+$('.swap-btn').on('click', function(){
+    let btn = $(this).attr('id');
+    let $commonParent = $(this).parents('.row');
+    let $images = $commonParent.find('img');
+    let imgSources = [];
+    $images.each(function (){
+        let srcValue = $(this).attr('src')
+        imgSources.push(srcValue);
+    });
+    let firstImage = $images[0];
+    console.log('image src array => ', imgSources);
+    switch (btn) {
+        case 'button1':
+            // do the logic for left btn
+            $($images[0]).attr('src', imgSources[1]);
+            $($images[1]).attr('src', imgSources[0]);
+            console.log('clicked left btn')
+            break;
+        case 'button2':
+            // do the logic for middle btn
+            let randomNum = randomNumber(1, 2);
+            if (randomNum === 1) {
+                // go left
+                $($images[1]).attr('src', imgSources[0]);
+                $($images[0]).attr('src', imgSources[1]);
+            } else {
+                // go right
+                $($images[1]).attr('src', imgSources[2]);
+                $($images[2]).attr('src', imgSources[1]);
+            }
+            console.log('clicked middle btn')
+            break;
+        case 'button3':
+            // do the logic for right btn
+            $($images[2]).attr('src', imgSources[1]);
+            $($images[1]).attr('src', imgSources[2]);
+            console.log('clicked right btn')
+            break;
+    }
 });
