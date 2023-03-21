@@ -20,7 +20,8 @@ $('#list-button').click('toggle', function (){
 });
 
 $('h3').click('toggle', function (){
-    $('li').toggleClass('bold');
+    let $nextUl = $(this).next();
+    $nextUl.find('li').toggleClass('bold');
 });
 
 $('#national-parks li').click('click', function (){
