@@ -16,7 +16,7 @@ $question.on('click', function (){
 })
 
 $('#list-button').click('toggle', function (){
-    $('li').toggleClass('highlight');
+    $('#definition-list').find('ul li:last-child').toggleClass('highlight');
 });
 
 $('h3').click('toggle', function (){
