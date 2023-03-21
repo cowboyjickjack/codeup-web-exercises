@@ -20,6 +20,16 @@
     let mower = inventory[2];
     let screwdriver = inventory[3];
 
-    //individualizing each section of each array
+    // HAMMER INFO INDIVIDUALIZED
+    let hammerTitle = hammer.title;
+    let hammerQuantity = hammer.quantity;
+    let hammerCategory = hammer.categories;
     let hammerPrice = hammer.price;
+
+    // DRILL INFO INDIVIDUALIZED
+    let drillTitle = drill.title;
+    let drillQuantity = drill.quantity;
+    let drillCategory = drill.categories;
+    let drillPrice = drill.price;
+    console.log(drillPrice)
 })();
