@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Traversal</title>
+    <link rel="icon" href="images/kirby-1up.gif">
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/dom-traversal.css">
+</head>
+<body>
+<div class="page-wrapper gap-10">
+  <div class="container">
+    <div class="row">
+      <div class="column">
+
+      </div>
+      <div class="column shrink">
+        <div class="dropdown-parent">
+          <div class="dropdown-toggle">TOGGLE</div>
+            <div class="dropdown-menu">
+              <ul>
+                <li>MENU ITEM 1</li>
+                <li>MENU ITEM 2</li>
+                <li>MENU ITEM 3</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="row gap-10">
+      <div class="column">
+        <div class="box" id="box1">1</div>
+      </div>
+      <div class="column">
+        <div class="box">2</div>
+      </div>
+      <div class="column">
+        <div class="box">3</div>
+      </div>
+      <div class="column">
+        <div class="box">4</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row gap-10">
+      <div class="column">
+        <div class="box">5</div>
+      </div>
+      <div class="column">
+        <div class="box">6</div>
+      </div>
+      <div class="column">
+        <div class="box">7</div>
+      </div>
+      <div class="column">
+        <div class="box">8</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------- SCRIPTS ---------->
+<script src="js/jquery-minified.js"></script>
+<script src="js/dom-traversal.js"></script>
+</body>
+</html>
