@@ -43,13 +43,13 @@
         zoom: 9, // starting zoom
     });
     // sets a permanent marker on the map based of long/lat coords
-    // const codeupMarker = new mapboxgl.Marker().
-    // setLngLat([-98.48962, 29.42692])
-    // .addTo(map);
+    const codeupMarker = new mapboxgl.Marker().
+    setLngLat([-98.48962, 29.42692])
+    .addTo(map);
     // this enables a popup bubble
-    // const codeupPopup = new mapboxgl.Popup()
-    // .setHTML('<p class="popup">Codeup!</p>')
-    // codeupMarker.setPopup(codeupPopup);
+    const codeupPopup = new mapboxgl.Popup()
+    .setHTML('<p class="popup">Codeup!</p>')
+    codeupMarker.setPopup(codeupPopup);
 </script>
 <script src="js/mapbox-lecture.js"></script>
 </body>

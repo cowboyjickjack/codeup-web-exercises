@@ -12,6 +12,10 @@
  *      // do something with results
  *  })
  *
+ *  EX:
+ *
+ *  geocode('849 E Commerce St #393, San Antonio, TX 78205', MAPBOX_EXERCISE_TOKEN).then(coords => console.log(coords))
+ *
  */
 function geocode(search, token) {
     let baseUrl = 'https://api.mapbox.com';
