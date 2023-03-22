@@ -41,7 +41,7 @@ let fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
 
 for (let i = 0; i < fruits.length; i++) { // i + i = 1
     let fruit = fruits[i]; // OR resolve it inside [i -1] if i = 1
-    console.log(fruit);
+    // console.log(fruit);
 }
 
 /** Creates an array of random numbers of a predetermined size */
@@ -142,11 +142,11 @@ dropdowns.forEach(function (dropdown) {
     });
 });
 
-pageWrapper.addEventListener('click', function (event) {
-    // if the event target is not a dropdown, close all dropdowns
-    if (!event.target.closest('[data-dropdown="parent"]')) {
-        dropdowns.forEach(function (dropdown) {
-            dropdown.classList.remove('open');
-        });
-    }
-});
+// pageWrapper.addEventListener('click', function (event) {
+//     // if the event target is not a dropdown, close all dropdowns
+//     if (!event.target.closest('[data-dropdown="parent"]')) {
+//         dropdowns.forEach(function (dropdown) {
+//             dropdown.classList.remove('open');
+//         });
+//     }
+// });
