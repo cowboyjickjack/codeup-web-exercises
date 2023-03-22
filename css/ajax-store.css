@@ -1,0 +1,27 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+button {
+    margin: 20px 0px;
+}
+
+table{
+    border: black 4px solid;
+}
+
+th, td {
+    border: gray 2px dashed;
+}
+
+th {
+    margin: 20px 0px;
+    font-size: 28px;
+}
+
+td {
+    text-align: center;
+    font-size: 18px;
+}

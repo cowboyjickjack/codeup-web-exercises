@@ -20,28 +20,47 @@
     let mower = inventory[2];
     let screwdriver = inventory[3];
 
-    // HAMMER INFO INDIVIDUALIZED
-    let hammerTitle = hammer.title;
-    let hammerQuantity = hammer.quantity;
-    let hammerCategory = hammer.categories;
-    let hammerPrice = hammer.price;
+    $('#insertProducts').append([
+        '<tr>',
+        `<td>${hammer.title}</td>`,
+        `<td>${hammer.quantity}</td>`,
+        `<td>${hammer.price}</td>`,
+        `<td>${hammer.categories}</td>`,
+        '</tr>'
+    ].join(''));
 
-    // DRILL INFO INDIVIDUALIZED
-    let drillTitle = drill.title;
-    let drillQuantity = drill.quantity;
-    let drillCategory = drill.categories;
-    let drillPrice = drill.price;
+    $('#insertProducts').append([
+        '<tr>',
+        `<td>${drill.title}</td>`,
+        `<td>${drill.quantity}</td>`,
+        `<td>${drill.price}</td>`,
+        `<td>${drill.categories}</td>`,
+        '</tr>'
+    ].join(''));
 
-    // MOWER INFO INDIVIDUALIZED
-    let mowerTitle = mower.title;
-    let mowerQuantity = mower.quantity;
-    let mowerCategory = mower.categories;
-    let mowerPrice = mower.price;
+    $('#insertProducts').append([
+        '<tr>',
+        `<td>${mower.title}</td>`,
+        `<td>${mower.quantity}</td>`,
+        `<td>${mower.price}</td>`,
+        `<td>${mower.categories}</td>`,
+        '</tr>'
+    ].join(''));
 
-    // SCREWDRIVER INFO INDIVIDUALIZED
-    let screwdriverTitle = screwdriver.title;
-    let screwdriverQuantity = screwdriver.quantity;
-    let screwdriverCategory = screwdriver.categories;
-    let screwdriverPrice = screwdriver.price;
-    console.log(screwdriverPrice)
+    $('#insertProducts').append([
+        '<tr>',
+        `<td>${screwdriver.title}</td>`,
+        `<td>${screwdriver.quantity}</td>`,
+        `<td>${screwdriver.price}</td>`,
+        `<td>${screwdriver.categories}</td>`,
+        '</tr>'
+    ].join(''));
+
 })();
+
+$(document).ready(function(){
+    $("button").click(function(){
+        location.reload();
+    });
+});
+

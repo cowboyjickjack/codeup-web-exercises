@@ -105,6 +105,7 @@ const getPerson = async (person = 1) => {
 }
 
 (async()=>{
-    // main line of code
-    let luke = getPerson(1);
+    let please = await luke();
+    console.log(please)
 })();
+

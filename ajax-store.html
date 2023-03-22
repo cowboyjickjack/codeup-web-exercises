@@ -2,24 +2,39 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/ajax-store.css">
 </head>
 <body>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column">
 
-<h1>My Tool Store</h1>
+                <h1>My Tool Store</h1>
 
-<table id="products">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
+                <button type="button">Refresh</button>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+                <table id="products">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Categories</th>
+                    </tr>
+                    </thead>
+                    <tbody id="insertProducts"></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------- SCRIPTS ---------->
+<script src="js/jquery-minified.js"></script>
 <script src="js/ajax-store.js"></script>
 </body>
 </html>
