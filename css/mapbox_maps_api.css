@@ -5,3 +5,12 @@ form label {
 .popup {
     padding: 15px 0px;
 }
+
+.marker {
+    background-image: url("https://www.freeiconspng.com/uploads/restaurant-menu-icon-png-28.png");
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}

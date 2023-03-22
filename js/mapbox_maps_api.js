@@ -24,7 +24,10 @@ const restaurants = [
 
 /** POPULATES RESTAURANTS AND INPUTS THEM INTO THE HTML **/
 restaurants.forEach(restaurant=> {
-    const marker = new mapboxgl.Marker()
+    // this changes the marker image
+    const element = document.createElement('div');
+    element.className = 'marker';
+    const marker = new mapboxgl.Marker(element) // added (element) to .Marker -- was previously blank
         .setLngLat([restaurant.longitude, restaurant.latitude])
         .addTo(map);
 
