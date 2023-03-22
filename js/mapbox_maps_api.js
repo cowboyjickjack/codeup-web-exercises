@@ -35,6 +35,13 @@ restaurants.forEach(restaurant=> {
     marker.setPopup(popup);
 });
 
+/** HIDE MARKERS **/
+document.querySelector('#hideMarkers').addEventListener('click', event => {
+    document.querySelectorAll('svg').forEach(svg => { // forEach bc it's an array
+        svg.style.display = "none";
+    })
+});
+
 /** ZOOM LEVELS **/
 document.getElementById('5').addEventListener('click', event => {
     map.flyTo({zoom:5});
