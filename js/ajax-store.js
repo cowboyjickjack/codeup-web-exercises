@@ -26,28 +26,19 @@
         `<td>${hammer.quantity}</td>`,
         `<td>${hammer.price}</td>`,
         `<td>${hammer.categories}</td>`,
-        '</tr>'
-    ].join(''));
-
-    $('#insertProducts').append([
+        '</tr>',
         '<tr>',
         `<td>${drill.title}</td>`,
         `<td>${drill.quantity}</td>`,
         `<td>${drill.price}</td>`,
         `<td>${drill.categories}</td>`,
-        '</tr>'
-    ].join(''));
-
-    $('#insertProducts').append([
+        '</tr>',
         '<tr>',
         `<td>${mower.title}</td>`,
         `<td>${mower.quantity}</td>`,
         `<td>${mower.price}</td>`,
         `<td>${mower.categories}</td>`,
-        '</tr>'
-    ].join(''));
-
-    $('#insertProducts').append([
+        '</tr>',
         '<tr>',
         `<td>${screwdriver.title}</td>`,
         `<td>${screwdriver.quantity}</td>`,
@@ -55,6 +46,7 @@
         `<td>${screwdriver.categories}</td>`,
         '</tr>'
     ].join(''));
+
 
 })();
 
