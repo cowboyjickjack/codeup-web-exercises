@@ -22,6 +22,7 @@ const restaurants = [
     {name: "Rosario's", longitude: -98.48975, latitude: 29.417287, info: 'A more modern take on the classic San Antonio cuisine.'},
 ];
 
+/** POPULATES RESTAURANTS AND INPUTS THEM INTO THE HTML **/
 restaurants.forEach(restaurant=> {
     const marker = new mapboxgl.Marker()
         .setLngLat([restaurant.longitude, restaurant.latitude])
