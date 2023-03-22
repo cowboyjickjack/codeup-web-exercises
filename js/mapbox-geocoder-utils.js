@@ -40,8 +40,8 @@ function geocode(search, token) {
  *
  */
 function reverseGeocode(coordinates, token) {
-    let baseUrl = 'https://api.mapbox.com';
-    let endPoint = '/geocoding/v5/mapbox.places/';
+    const baseUrl = 'https://api.mapbox.com';
+    const endPoint = '/geocoding/v5/mapbox.places/';
     return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
         .then(function(res) {
             return res.json();
