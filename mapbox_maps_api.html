@@ -12,33 +12,45 @@
 </head>
 <body>
 <div class="page-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="column justify-center align-center text-center">
-        <h1>Mapbox!!!</h1>
-        <div id='map' style='width: 600px; height: 500px;'></div>
+    <div class="container">
         <div class="row">
-          <form class="column justify-center align-center text-center gap-10">
-            <label for="setMarker">Enter an Address:</label>
-            <input type="text" name="setMarker" id="setMarker">
-            <button id="setMarkerButton">Set Marker</button>
-          </form>
+            <div class="column justify-center align-center text-center">
+            <h1>The Best Restaurant Ever</h1>
+                <div id='map' style='width: 600px; height: 500px;'></div>
+
+                    <div class="column">
+                        <label for="zoom">Zoom Level:</label>
+
+                        <select name="zoom" id="zoom">
+                            <option value="5">5</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+
+                        <form class="column justify-center align-center text-center gap-10">
+                        <label for="setMarker">Enter an Address:</label>
+                        <input type="text" name="setMarker" id="setMarker">
+                        <button id="setMarkerButton">Enter</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <!---------- SCRIPTS ---------->
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script>
-  mapboxgl.accessToken = MAPBOX_API_TOKEN;
+  mapboxgl.accessToken = MAPBOX_EXERCISE_TOKEN;
   const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
     center: [-98.48962, 29.42692], // starting position [lng, lat]
-    zoom: 9, // starting zoom
+    zoom: 10, // starting zoom
   });
+
   // sets a permanent marker on the map based of long/lat coords
   // const codeupMarker = new mapboxgl.Marker().
   // setLngLat([-98.48962, 29.42692])
