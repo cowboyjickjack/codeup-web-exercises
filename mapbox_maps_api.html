@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Maps API</title>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/mapbox_maps_api.css">
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="column justify-center align-center text-center">
+        <h1>Mapbox!!!</h1>
+        <div id='map' style='width: 600px; height: 500px;'></div>
+        <div class="row">
+          <form class="column justify-center align-center text-center gap-10">
+            <label for="setMarker">Enter an Address:</label>
+            <input type="text" name="setMarker" id="setMarker">
+            <button id="setMarkerButton">Set Marker</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------- SCRIPTS ---------->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+  mapboxgl.accessToken = MAPBOX_API_TOKEN;
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+    center: [-98.48962, 29.42692], // starting position [lng, lat]
+    zoom: 9, // starting zoom
+  });
+  // sets a permanent marker on the map based of long/lat coords
+  // const codeupMarker = new mapboxgl.Marker().
+  // setLngLat([-98.48962, 29.42692])
+  // .addTo(map);
+  // this enables a popup bubble
+  // const codeupPopup = new mapboxgl.Popup()
+  // .setHTML('<p class="popup">Codeup!</p>')
+  // codeupMarker.setPopup(codeupPopup);
+</script>
+<script src="js/mapbox_maps_api.js"></script>
+</body>
+</html>

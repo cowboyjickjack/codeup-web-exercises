@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mapbox Lecture</title>
+    <script src="js/keys.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/resets.css">
@@ -22,26 +23,33 @@
                         <input type="text" name="zoom" id="zoom">
                         <button id="zoomSubmit">Zoom</button>
                     </form>
+                    <form class="column justify-center align-center text-center gap-10">
+                        <label for="setMarker">Enter an Address:</label>
+                        <input type="text" name="setMarker" id="setMarker">
+                        <button id="setMarkerButton">Set Marker</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FicmllbGxhbWFydGluZXowODE5IiwiYSI6ImNsZmp2dWJ1bzA0dDgzcHE0Y2o1ZGo0OGIifQ.VrfrLftgGP8k-ZgdP04qfQ';
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
         center: [-98.48962, 29.42692], // starting position [lng, lat]
         zoom: 9, // starting zoom
     });
-    const codeupMarker = new mapboxgl.Marker().
-    setLngLat([-98.48962, 29.42692])
-    .addTo(map);
-
-    const codeupPopup = new mapboxgl.Popup()
-    .setHTML('<p class="popup">Codeup!</p>')
-    codeupMarker.setPopup(codeupPopup);
+    // sets a permanent marker on the map based of long/lat coords
+    // const codeupMarker = new mapboxgl.Marker().
+    // setLngLat([-98.48962, 29.42692])
+    // .addTo(map);
+    // this enables a popup bubble
+    // const codeupPopup = new mapboxgl.Popup()
+    // .setHTML('<p class="popup">Codeup!</p>')
+    // codeupMarker.setPopup(codeupPopup);
 </script>
 <script src="js/mapbox-lecture.js"></script>
 </body>
