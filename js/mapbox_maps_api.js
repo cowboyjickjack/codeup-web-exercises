@@ -1,4 +1,6 @@
 "use strict"
+
+/** ADDRESS INPUT/EVENT LISTENER **/
 document.getElementById('setMarkerButton').addEventListener('click', event => {
     // prevents form from submitting by clicking button, and resets its function
     event.preventDefault();
@@ -11,7 +13,20 @@ document.getElementById('setMarkerButton').addEventListener('click', event => {
         const newMarker = new mapboxgl.Marker().setLngLat(coords).addTo(map);
         // this centers the map on the input coords
         map.setCenter(coords);
-
     });
-
 });
+
+/** ZOOM LEVELS **/
+document.getElementById('5').addEventListener('click', event => {
+    map.flyTo({zoom:5});
+});
+document.getElementById('15').addEventListener('click', event => {
+    map.flyTo({zoom:15});
+});
+document.getElementById('20').addEventListener('click', event => {
+    map.flyTo({zoom:20});
+});
+
+
+
+
