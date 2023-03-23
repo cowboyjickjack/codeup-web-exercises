@@ -64,7 +64,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
             /** create element!!!! that way I can customize **/
             // displays all the dates
             for (let i = 0; i < 1 && i < dates.length; i++) {
-                const dateElem = document.createElement('p');
+                let dateElem = document.createElement('p');
                 dateElem.innerText = dates;
                 document.querySelector('#weather').appendChild(dateElem);
             }
