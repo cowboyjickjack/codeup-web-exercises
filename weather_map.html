@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Weather Map Project</title>
     <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="css/resets.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/weather_map.css">
@@ -22,13 +24,42 @@
     <div class="container">
         <div class="row">
             <div class="column">
-                <div id="weather"></div>
+                <div id="dates"></div>
+                <div id="description"></div>
+                <div id="humidity"></div>
+                <div id="wind"></div>
+                <div id="pressure"></div>
+                <div id="tempMin"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div id='map' style='width: 600px; height: 500px;'></div>
             </div>
         </div>
     </div>
 </div>
 
 <!---------- SCRIPTS ---------->
+<script>
+    mapboxgl.accessToken = MAPBOX_EXERCISE_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+        center: [-98.48535, 29.42362], // starting position [lng, lat]
+        zoom: 10, // starting zoom
+    });
+
+    // sets a permanent marker on the map based of long/lat coords
+    // const fogoMarker = new mapboxgl.Marker().
+    // setLngLat([-98.48535, 29.42362])
+    //     .addTo(map);
+    // // this enables a popup bubble
+    // const fogoPopup = new mapboxgl.Popup()
+    //     .setHTML('<p class="popup">Fogo De Chao</p>')
+    // fogoMarker.setPopup(fogoPopup);
+</script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/jquery-minified.js"></script>
 <script src="js/weather_map.js"></script>

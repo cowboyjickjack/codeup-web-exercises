@@ -66,42 +66,43 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
             for (let i = 0; i < 1 && i < dates.length; i++) {
                 let dateElem = document.createElement('p');
                 dateElem.innerText = dates;
-                document.querySelector('#weather').appendChild(dateElem);
+                dateElem.classList.add('date');
+                document.querySelector('#dates').appendChild(dateElem);
             }
 
             // descriptions
             for (let i = 0; i < 1 && i < description.length; i++) {
                 const dateElem = document.createElement('p');
                 dateElem.innerText = description;
-                document.querySelector('#weather').appendChild(dateElem);
+                document.querySelector('#description').appendChild(dateElem);
             }
 
             // humidity
             for (let i = 0; i < 1 && i < humidity.length; i++) {
                 const dateElem = document.createElement('p');
                 dateElem.innerText = humidity;
-                document.querySelector('#weather').appendChild(dateElem);
+                document.querySelector('#humidity').appendChild(dateElem);
             }
 
             // wind speeds
             for (let i = 0; i < 1 && i < wind.length; i++) {
                 const dateElem = document.createElement('p');
                 dateElem.innerText = wind;
-                document.querySelector('#weather').appendChild(dateElem);
+                document.querySelector('#wind').appendChild(dateElem);
             }
 
             // wind pressure
             for (let i = 0; i < 1 && i < pressure.length; i++) {
                 const dateElem = document.createElement('p');
                 dateElem.innerText = pressure;
-                document.querySelector('#weather').appendChild(dateElem);
+                document.querySelector('#pressure').appendChild(dateElem);
             }
 
             // temp min
             for (let i = 0; i < 1 && i < tempMin.length; i++) {
                 const dateElem = document.createElement('p');
                 dateElem.innerText = tempMin;
-                document.querySelector('#weather').appendChild(dateElem);
+                document.querySelector('#tempMin').appendChild(dateElem);
             }
 
             // $("#weather").html(`The Next Four Days: ${fourDayHumidity}</p>`);
