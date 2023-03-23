@@ -4,19 +4,25 @@
     font-family: 'Roboto Mono', sans-serif;
 }
 
-/*#dates, #description {*/
+/*.column .cards {*/
 /*    display: flex;*/
 /*    flex-direction: row;*/
 /*}*/
 
-h1 {
-    display: flex;
-    align-items: flex-start;
-    font-size: 40px;
-}
+/*#dates, #description, #humidity, #wind, #pressure, #tempMin {*/
+/*    border: 2px black solid;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*}*/
 
-.date {
-    display: flex;
-    font-weight: bold;
-    font-size: 20px;
-}
+/*h1 {*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    font-size: 40px;*/
+/*}*/
+
+/*.date {*/
+/*    display: flex;*/
+/*    font-weight: bold;*/
+/*    font-size: 20px;*/
+/*}*/

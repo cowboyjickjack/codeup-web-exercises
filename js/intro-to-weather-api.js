@@ -10,13 +10,13 @@ const SALong = -98.48527;
 const SALat = 29.423017;
 
 /** SELECTING WEATHER DATA SPECIFICALLY **/
-// $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=>{
-//     console.log(data);
-//     console.log(`In ${data.name}, the weather is as follows:`)
-//     console.log("The temperature is: " + data.main.temp);
-//     console.log("The humidity is: " + data.main.humidity);
-//     $("#weather").html(`<p>The temperature is: ${data.main.temp}</p>`);
-// });
+$.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=>{
+    console.log(data);
+    console.log(`In ${data.name}, the weather is as follows:`)
+    console.log("The temperature is: " + data.main.temp);
+    console.log("The humidity is: " + data.main.humidity);
+    $("#weather").html(`<p>The temperature is: ${data.main.temp}</p>`);
+});
 
 /** MESSING WITH TIME/DATA MORE, AND USING A FOR EACH FUNCTION TO LIST THEM ALL **/
 $.get("http://api.openweathermap.org/data/2.5/forecast", {

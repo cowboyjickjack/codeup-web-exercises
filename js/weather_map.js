@@ -12,7 +12,7 @@
 
 /** THIS IS WHAT WE USE TO GET WEATHER INFO FROM A CITY **/
 $.get("http://api.openweathermap.org/data/2.5/weather", {
-    APPID: WEATHERMAP_API_KEY,
+    APPID: FORECAST_API_KEY,
     q:     "San Antonio, US"
 }).done(function(data) {
     // console.log(data);
