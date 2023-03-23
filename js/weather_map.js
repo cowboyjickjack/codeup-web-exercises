@@ -7,7 +7,7 @@
 *   DESCRIPTION - complete
 *   HUMIDITY - complete
 *   WIND - complete
-*   PRESSURE -
+*   PRESSURE - complete
 * */
 
 /** THIS IS WHAT WE USE TO GET WEATHER INFO FROM A CITY **/
@@ -44,12 +44,16 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         if (index % 8 === 0 && index !== 0){
             let data = [];
             const time = new Date(forecast.dt * 1000);
-            let fourDates = (dateFromTimeStamp(forecast.dt));
-            let fourDayDescription = (forecast.weather[0].description);
-            let fourDayHumidity = (String(forecast.main.humidity));
-            let fourDayWind = (String(forecast.wind.speed));
-            let fourDayPressure = (String(forecast.main.pressure));
-            console.log(fourDayPressure)
+            let dates = (dateFromTimeStamp(forecast.dt));
+            let description = (forecast.weather[0].description);
+            let humidity = (String(forecast.main.humidity));
+            let wind = (String(forecast.wind.speed));
+            let pressure = (String(forecast.main.pressure));
+            let tempMin = (String(forecast.main.temp_min));
+            // let tempMax = ((forecast.main.temp_max));
+
+            console.log(tempMin);
+            // console.log(tempMax);
 
 
             // console.log(time.getHours());
@@ -59,33 +63,46 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 
             /** create element!!!! that way I can customize **/
             // displays all the dates
-            for (let i = 0; i < 1 && i < fourDates.length; i++) {
+            for (let i = 0; i < 1 && i < dates.length; i++) {
                 const dateElem = document.createElement('p');
-                dateElem.innerText = fourDates;
+                dateElem.innerText = dates;
                 document.querySelector('#weather').appendChild(dateElem);
             }
 
-            // displays all the descriptions
-            for (let i = 0; i < 1 && i < fourDayDescription.length; i++) {
+            // descriptions
+            for (let i = 0; i < 1 && i < description.length; i++) {
                 const dateElem = document.createElement('p');
-                dateElem.innerText = fourDayDescription;
+                dateElem.innerText = description;
                 document.querySelector('#weather').appendChild(dateElem);
             }
 
-            // displays all the humidity
-            for (let i = 0; i < 1 && i < fourDayHumidity.length; i++) {
+            // humidity
+            for (let i = 0; i < 1 && i < humidity.length; i++) {
                 const dateElem = document.createElement('p');
-                dateElem.innerText = fourDayHumidity;
+                dateElem.innerText = humidity;
                 document.querySelector('#weather').appendChild(dateElem);
             }
 
-            // displays all the wind speeds
-            for (let i = 0; i < 1 && i < fourDayWind.length; i++) {
+            // wind speeds
+            for (let i = 0; i < 1 && i < wind.length; i++) {
                 const dateElem = document.createElement('p');
-                dateElem.innerText = fourDayWind;
+                dateElem.innerText = wind;
                 document.querySelector('#weather').appendChild(dateElem);
             }
 
+            // wind pressure
+            for (let i = 0; i < 1 && i < pressure.length; i++) {
+                const dateElem = document.createElement('p');
+                dateElem.innerText = pressure;
+                document.querySelector('#weather').appendChild(dateElem);
+            }
+
+            // temp min
+            for (let i = 0; i < 1 && i < tempMin.length; i++) {
+                const dateElem = document.createElement('p');
+                dateElem.innerText = tempMin;
+                document.querySelector('#weather').appendChild(dateElem);
+            }
 
             // $("#weather").html(`The Next Four Days: ${fourDayHumidity}</p>`);
 
