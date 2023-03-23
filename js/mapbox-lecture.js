@@ -20,4 +20,4 @@ document.getElementById('setMarkerButton').addEventListener('click', event => {
         map.setCenter(coords);
         console.log(newMarker);
     });
-})
+});

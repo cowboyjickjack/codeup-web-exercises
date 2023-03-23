@@ -4,6 +4,11 @@
     font-family: 'Roboto Mono', sans-serif;
 }
 
+/*#dates, #description {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+
 h1 {
     display: flex;
     align-items: flex-start;
