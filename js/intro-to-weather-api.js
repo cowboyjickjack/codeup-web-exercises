@@ -19,26 +19,26 @@ const SALat = 29.423017;
 // });
 
 /** MESSING WITH TIME/DATA MORE, AND USING A FOR EACH FUNCTION TO LIST THEM ALL **/
-// $.get("http://api.openweathermap.org/data/2.5/forecast", {
-//     APPID: WEATHERMAP_API_KEY,
-//     lat:    SALat, //using coords > typing city/state
-//     lon:   SALong,
-//     units: "imperial" // avoids celcius
-// }).done(function(data) {
-//     console.log(data);
-//     data.list.forEach((forecast, index) => {
-//         if (index % 8 === 0 && index !== 0){
-//             const time = new Date(forecast.dt * 1000);
-//             // console.log(time.getHours());
-//             // console.log(time.getTime());
-//             // console.log(time.getDay());
-//             // time & date x 4 days
-//             // console.log(forecast.dt_txt);
-//             // forecast
-//             // console.log(forecast.weather[0].description);
-//         }
-//     });
-// });
+$.get("http://api.openweathermap.org/data/2.5/forecast", {
+    APPID: WEATHERMAP_API_KEY,
+    lat:    SALat, //using coords > typing city/state
+    lon:   SALong,
+    units: "imperial" // avoids celcius
+}).done(function(data) {
+    console.log(data);
+    data.list.forEach((forecast, index) => {
+        if (index % 8 === 0 && index !== 0){
+            const time = new Date(forecast.dt * 1000);
+            // console.log(time.getHours());
+            // console.log(time.getTime());
+            // console.log(time.getDay());
+            // time & date x 4 days
+            // console.log(forecast.dt_txt);
+            // forecast
+            // console.log(forecast.weather[0].description);
+        }
+    });
+});
 
 
 

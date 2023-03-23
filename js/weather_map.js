@@ -40,17 +40,27 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
     lon:   SALong,
     units: "imperial" // avoids celcius
 }).done(function(data) {
-    console.log(data);
+    // console.log(data);
     data.list.forEach((forecast, index) => {
         if (index % 8 === 0 && index !== 0){
+            let data = [];
             const time = new Date(forecast.dt * 1000);
+            let fourDates = (dateFromTimeStamp(forecast.dt));
+            let fourDayDescription = (forecast.weather[0].description);
+            console.log(fourDates);
+
             // console.log(time.getHours());
             // console.log(time.getTime());
             // console.log(time.getDay());
-            // time & date x 4 days
-            // console.log(forecast.dt_txt);
-            // forecast
-            // console.log(forecast.weather[0].description);
+
+
+
+            // $("#weather").html(`The Next Four Days: ${fourDates}</p>`);
+
+
         }
     });
 });
+
+// date for today
+// console.log(dateFromTimeStamp(1679589292));
