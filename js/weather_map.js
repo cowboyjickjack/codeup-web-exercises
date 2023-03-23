@@ -1,10 +1,10 @@
 "use strict"
 
 /* TODO:
-*   DATE
+*   DATE - Complete
 *   HIGH/LOW TEMP
 *   ICON THAT CORRESPONDS W/THE DESCRIPTION
-*   DESCRIPTION
+*   DESCRIPTION - Complete
 *   HUMIDITY
 *   WIND
 *   PRESSURE
@@ -54,6 +54,11 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
             // console.log(time.getDay());
 
 
+            for (let i = 0; i < 1 && i < fourDates.length; i++) {
+                const dateElem = document.createElement('p');
+                dateElem.innerText = fourDates;
+                document.querySelector('#weather').appendChild(dateElem);
+            }
 
             // $("#weather").html(`The Next Four Days: ${fourDates}</p>`);
 
@@ -64,3 +69,4 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 
 // date for today
 // console.log(dateFromTimeStamp(1679589292));
+
