@@ -79,10 +79,10 @@
         data.list.forEach((forecast, index) => {
             if (index % 8 === 0 && index !== 0) {
                 const time = new Date(forecast.dt);
-                const formattedTime = JSON.stringify(formatTime(time).split(' ').slice(-1)).substr(1).slice(1, -2)
-                const date = dateFromTimeStamp(time);
-                const forecast = forecast.weather[0].description;
-                console.log(forecast.weather[0].description);
+                // const formattedTime = JSON.stringify(formatTime(time).split(' ').slice(-1)).substr(1).slice(1, -2)
+                // const date = dateFromTimeStamp(time);
+                const forecastDescription = (forecast.weather[0].description);
+                console.log(forecastDescription);
             }
         });
     });
