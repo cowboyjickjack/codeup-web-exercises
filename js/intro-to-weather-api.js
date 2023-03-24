@@ -10,18 +10,18 @@ const SALong = -98.48527;
 const SALat = 29.423017;
 
 /** SELECTING WEATHER DATA SPECIFICALLY **/
-$.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${FORECAST_API_KEY}&units=imperial`).done(data=>{
-    console.log(data);
-    const time = new Date();
-    $("#weather").html(`
-    <div class="row no-gap justify-center"><h3>${daysOfWeek[time.getDay()]}</h3></div>
-    <div class="row grow no-gap justify-center">${dateFromTimeStamp(data.dt)}</div>
-    <div class="row">Current Temp: ${data.main.temp}</div>
-    <div class="row no-gap">Current Temp: ${data.main.temp}</div>
-    <div class="row no-gap">Current Temp: ${data.main.temp}</div>
-
-    `);
-});
+// $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${FORECAST_API_KEY}&units=imperial`).done(data=>{
+//     console.log(data);
+//     const time = new Date();
+//     $("#weather").html(`
+//     <div class="row no-gap justify-center"><h3>${daysOfWeek[time.getDay()]}</h3></div>
+//     <div class="row grow no-gap justify-center">${dateFromTimeStamp(data.dt)}</div>
+//     <div class="row">Current Temp: ${data.main.temp}</div>
+//     <div class="row no-gap">Current Temp: ${data.main.temp}</div>
+//     <div class="row no-gap">Current Temp: ${data.main.temp}</div>
+//
+//     `);
+// });
 
 /** MESSING WITH TIME/DATA MORE, AND USING A FOR EACH FUNCTION TO LIST THEM ALL **/
 $.get("http://api.openweathermap.org/data/2.5/forecast", {
@@ -37,10 +37,10 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
             // console.log(time.getHours());
             // console.log(time.getTime());
             // console.log(time.getDay());
-            // time & date x 4 days
+            // // time & date x 4 days
             // console.log(forecast.dt_txt);
-            // forecast
-            // console.log(forecast.weather[0].description);
+            // // forecast
+            console.log(forecast.weather[0].description);
         }
     });
 });
