@@ -71,6 +71,24 @@
     // fogoMarker.setPopup(fogoPopup);
 </script>
 <script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_EXERCISE_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+        center: [-98.48535, 29.42362], // starting position [lng, lat]
+        zoom: 10, // starting zoom
+    });
+
+    // sets a permanent marker on the map based of long/lat coords
+    // const fogoMarker = new mapboxgl.Marker().
+    // setLngLat([-98.48535, 29.42362])
+    //     .addTo(map);
+    // // this enables a popup bubble
+    // const fogoPopup = new mapboxgl.Popup()
+    //     .setHTML('<p class="popup">Fogo De Chao</p>')
+    // fogoMarker.setPopup(fogoPopup);
+</script>
 <script src="js/utils.js"></script>
 <script src="js/jquery-minified.js"></script>
 <script src="js/weather_map.js"></script>
