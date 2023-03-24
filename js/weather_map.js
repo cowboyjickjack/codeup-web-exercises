@@ -20,8 +20,8 @@
     <div class="row">${dateFromTimeStamp(data.dt)}</div>
     <div class="row">Temp: ${data.main.temp}°F</div>
     <div class="row">${data.main.temp_min}°F / ${data.main.temp_max}°F</div>
-    <div class="row">Windspeed: ${data.wind.speed}</div>
-    <div class="row">Humiditity: ${data.main.humidity}</div>
+    <div class="row">Wind: ${data.wind.speed}</div>
+    <div class="row">Humiditity: ${data.main.humidity}%</div>
     <div class="row">Air Pressure: ${data.main.pressure}</div>
     </div>
 
@@ -46,8 +46,8 @@
     <div class="row grow no-gap">${(dateFromTimeStamp(day2.dt))}</div>
     <div class="row">Temp: ${day2.main.temp}°F</div>
     <div class="row no-gap">${day2.main.temp_min}°F / ${day2.main.temp_max}°F</div>
-    <div class="row no-gap">Windspeed: ${day2.wind.speed}</div>
-    <div class="row no-gap">Humiditity: ${day2.main.humidity}</div>
+    <div class="row no-gap">Wind: ${day2.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day2.main.humidity}%</div>
     <div class="row no-gap">Air Pressure: ${day2.main.pressure}</div>
     </div>
     `);
@@ -70,8 +70,8 @@
     <div class="row grow no-gap">${(dateFromTimeStamp(day3.dt))}</div>
     <div class="row">Temp: ${day3.main.temp}°F</div>
     <div class="row no-gap">${day3.main.temp_min}°F / ${day3.main.temp_max}°F</div>
-    <div class="row no-gap">Windspeed: ${day3.wind.speed}</div>
-    <div class="row no-gap">Humiditity: ${day3.main.humidity}</div>
+    <div class="row no-gap">Wind: ${day3.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day3.main.humidity}%</div>
     <div class="row no-gap">Air Pressure: ${day3.main.pressure}</div>
     </div>
     `);
@@ -94,8 +94,8 @@
     <div class="row grow no-gap">${(dateFromTimeStamp(day4.dt))}</div>
     <div class="row">Temp: ${day4.main.temp}°F</div>
     <div class="row no-gap">${day4.main.temp_min} / ${day4.main.temp_max}°F</div>
-    <div class="row no-gap">Windspeed: ${day4.wind.speed}</div>
-    <div class="row no-gap">Humiditity: ${day4.main.humidity}</div>
+    <div class="row no-gap">Wind: ${day4.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day4.main.humidity}%</div>
     <div class="row no-gap">Air Pressure: ${day4.main.pressure}</div>
     </div>
     `);
@@ -118,8 +118,8 @@
     <div class="row grow no-gap">${(dateFromTimeStamp(day5.dt))}</div>
     <div class="row">Temp: ${day5.main.temp}°F</div>
     <div class="row no-gap ">${day5.main.temp_min}°F / ${day5.main.temp_max}°F</div>
-    <div class="row no-gap">Windspeed: ${day5.wind.speed}</div>
-    <div class="row no-gap">Humiditity: ${day5.main.humidity}</div>
+    <div class="row no-gap">Wind: ${day5.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day5.main.humidity}%</div>
     <div class="row no-gap">Air Pressure: ${day5.main.pressure}</div>
     </div>
     `);
