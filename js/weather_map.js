@@ -115,13 +115,15 @@
             if (index % 8 === 0 && index !== 0) {
                 const time = new Date(forecast.dt * 1000);
 
-                console.log(forecast.dt_txt);
-                console.log(forecast.weather[0].description);
-                console.log(forecast.main.temp);
-                console.log(forecast.main.temp_min);
-                console.log(forecast.main.temp_max);
-                console.log(forecast.wind.speed);
-                console.log('data end');
+                let date = forecast.dt_txt;
+                let description = forecast.weather[0].description;
+                let temp = forecast.main.temp;
+                let tempMin = forecast.main.temp_min;
+                let tempMax = forecast.main.temp_max;
+                let windSpeed = forecast.wind.speed;
+                let humidity = forecast.main.humidity;
+                let airPressure = forecast.main.pressure;
+
             }
         });
     });
