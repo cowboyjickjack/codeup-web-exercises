@@ -12,21 +12,22 @@
 
     console.log(SALat);
 
-    function appendLeadingZeroes(n) {
-        if (n <= 9) {
-            return "0" + n;
-        }
-        return n;
-    }
-
     /** FORECASTS WEATHER **/
 
     $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=>{
         console.log(data);
         const time = new Date();
-        $("#weather").html(`
-    <div class="row no-gap justify-center"><h3>${daysOfWeek[time.getDay()]}</h3></div>
-    <div class="row grow no-gap justify-center">${dateFromTimeStamp(data.dt)}</div>
+        $("#currentWeather").html(`
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay()]}</h3></div>
+    <div class="row grow no-gap">${dateFromTimeStamp(data.dt)}</div>
+    <div class="row">Current Temp: ${data.main.temp}</div>
+    <div class="row no-gap">Max Temp: ${data.main.temp_min}</div>
+    <div class="row no-gap">Min Temp: ${data.main.temp_max}</div>
+    `);
+
+        $("#tomorrowWeather").html(`
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay()]}</h3></div>
+    <div class="row grow no-gap">${dateFromTimeStamp(data.dt)}</div>
     <div class="row">Current Temp: ${data.main.temp}</div>
     <div class="row no-gap">Max Temp: ${data.main.temp_min}</div>
     <div class="row no-gap">Min Temp: ${data.main.temp_max}</div>
