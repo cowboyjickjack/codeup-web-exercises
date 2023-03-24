@@ -11,6 +11,12 @@
     text-align: center;
 }
 
+.singleCard {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 div.row {
     display: flex;
     justify-content: center;
@@ -18,11 +24,22 @@ div.row {
 
 div h3 {
     display: flex;
-    font-size: 24px;
+    font-size: 22px;
+}
+
+div h6 {
+    display: flex;
 }
 
 h1 {
     display: flex;
     align-items: flex-start;
-    font-size: 50px;
+    font-size: 40px;
+}
+
+/** MAP STYLES **/
+
+button#5, button#15, button#20{
+    display: flex;
+    z-index: 2;
 }
