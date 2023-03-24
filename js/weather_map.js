@@ -163,13 +163,17 @@
         return n;
     }
 
-    function dateFromTimeStamp(timeStamp){
-        let dateTime = new Date(timeStamp * 1000);
-        let year = dateTime.getFullYear();
-        let month = appendLeadingZeroes(dateTime.getMonth() + 1);
-        let day = dateTime.getDate();
-        return `${year}/${month}/${day}`;
-    }
+    // forecasts weather
 
-
+    $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=>{
+        console.log(data);
+        const time = new Date();
+        $("#weather").html(`
+    <div class="row no-gap justify-center"><h3>${daysOfWeek[time.getDay()]}</h3></div>
+    <div class="row grow no-gap justify-center">${dateFromTimeStamp(data.dt)}</div>
+    <div class="row">Current Temp: ${data.main.temp}</div>
+    <div class="row no-gap">Max Temp: ${data.main.temp_min}</div>
+    <div class="row no-gap">Min Temp: ${data.main.temp_max}</div>
+    `);
+    });
 })();
