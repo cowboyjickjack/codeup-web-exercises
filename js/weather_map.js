@@ -69,7 +69,23 @@
     // });
 
     /** LOOP ATTEMPT **/
-
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: WEATHERMAP_API_KEY,
+        lat: SALat, //using coords > typing city/state
+        lon: SALong,
+        units: "imperial" // avoids celcius
+    }).done(function (data) {
+        console.log(data)
+        data.list.forEach((forecast, index) => {
+            if (index % 8 === 0 && index !== 0) {
+                const time = new Date(forecast.dt);
+                const formattedTime = JSON.stringify(formatTime(time).split(' ').slice(-1)).substr(1).slice(1, -2)
+                const date = dateFromTimeStamp(time);
+                const forecast = forecast.weather[0].description;
+                console.log(forecast.weather[0].description);
+            }
+        });
+    });
 
         /** ZOOM LEVELS **/
         document.getElementById('5').addEventListener('click', event => {
