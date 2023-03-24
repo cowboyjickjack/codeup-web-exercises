@@ -10,123 +10,166 @@
     // const SALong = -98.4936;
     // const SALat = 29.4241;
 
-    // /** FORECASTS CURRENT WEATHER **/
-    //
-    // $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=> {
-    // const time = new Date();
-    // $("#currentWeather").html(`
-    // <div class="row no-gap"><h3>${daysOfWeek[time.getDay()]}</h3></div>
-    // <div class="row grow no-gap">${dateFromTimeStamp(data.dt)}</div>
-    // <div class="row">Current Temp: ${data.main.temp}</div>
-    // <div class="row no-gap">Max Temp: ${data.main.temp_min}</div>
-    // <div class="row no-gap">Min Temp: ${data.main.temp_max}</div>
-    // `);
-    //
-    // /** TOMORROWS WEATHER **/
-    //
-    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //     APPID: WEATHERMAP_API_KEY,
-    //     lat:    SALat, //using coords > typing city/state
-    //     lon:   SALong,
-    //     units: "imperial" // avoids celcius
-    // }).done(function(data) {
-    //
-    // let day2 = data.list[8];
-    //
-    // $("#dayTwo").html(`
-    // <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 1]}</h3></div>
-    // <div class="row grow no-gap">${(dateFromTimeStamp(day2.dt))}</div>
-    // <div class="row">Current Temp: ${day2.main.temp}</div>
-    // <div class="row no-gap">Max Temp: ${day2.main.temp_min}</div>
-    // <div class="row no-gap">Min Temp: ${day2.main.temp_max}</div>
-    // `);
-    // });
-    //
-    // /** DAY 3 WEATHER **/
-    //
-    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //     APPID: WEATHERMAP_API_KEY,
-    //     lat:    SALat, //using coords > typing city/state
-    //     lon:   SALong,
-    //     units: "imperial" // avoids celcius
-    // }).done(function(data) {
-    //
-    // let day3 = data.list[16];
-    //
-    // $("#dayThree").html(`
-    // <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 5]}</h3></div>
-    // <div class="row grow no-gap">${(dateFromTimeStamp(day3.dt))}</div>
-    // <div class="row">Current Temp: ${day3.main.temp}</div>
-    // <div class="row no-gap">Max Temp: ${day3.main.temp_min}</div>
-    // <div class="row no-gap">Min Temp: ${day3.main.temp_max}</div>
-    // `);
-    // });
-    //
-    // /** DAY 4 WEATHER **/
-    //
-    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //     APPID: WEATHERMAP_API_KEY,
-    //     lat:    SALat, //using coords > typing city/state
-    //     lon:   SALong,
-    //     units: "imperial" // avoids celcius
-    // }).done(function(data) {
-    //
-    // let day4 = data.list[24];
-    //
-    // $("#dayFour").html(`
-    // <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 4]}</h3></div>
-    // <div class="row grow no-gap">${(dateFromTimeStamp(day4.dt))}</div>
-    // <div class="row">Current Temp: ${day4.main.temp}</div>
-    // <div class="row no-gap">Max Temp: ${day4.main.temp_min}</div>
-    // <div class="row no-gap">Min Temp: ${day4.main.temp_max}</div>
-    // `);
-    //
-    // /** DAY 5 WEATHER **/
-    //
-    //
-    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    // APPID: WEATHERMAP_API_KEY,
-    // lat:    SALat, //using coords > typing city/state
-    // lon:   SALong,
-    // units: "imperial" // avoids celcius
-    // }).done(function(data) {
-    //
-    // let day5 = data.list[32];
-    //
-    // $("#dayFive").html(`
-    // <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 3]}</h3></div>
-    // <div class="row grow no-gap">${(dateFromTimeStamp(day5.dt))}</div>
-    // <div class="row">Current Temp: ${day5.main.temp}</div>
-    // <div class="row no-gap">Max Temp: ${day5.main.temp_min}</div>
-    // <div class="row no-gap">Min Temp: ${day5.main.temp_max}</div>
-    // `);
-    // });
-    // });
+    /** FORECASTS CURRENT WEATHER **/
 
-    /** LOOP ATTEMPT **/
+    $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=> {
+    const time = new Date();
+    $("#currentWeather").html(`
+    <div class="row"><h3>${daysOfWeek[time.getDay()]}</h3></div>
+    <div class="row">${dateFromTimeStamp(data.dt)}</div>
+    <div class="row">Current Temp: ${data.main.temp}</div>
+    <div class="row">Max Temp: ${data.main.temp_min}</div>
+    <div class="row">Min Temp: ${data.main.temp_max}</div>
+    <div class="row">Windspeed: ${data.wind.speed}</div>
+    <div class="row">Humiditity: ${data.main.humidity}</div>
+    <div class="row">Air Pressure: ${data.main.pressure}</div>
+
+
+    
+    `);
+
+    /** TOMORROWS WEATHER **/
+
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: WEATHERMAP_API_KEY,
-        lat: SALat, //using coords > typing city/state
-        lon: SALong,
+        lat:    SALat, //using coords > typing city/state
+        lon:   SALong,
         units: "imperial" // avoids celcius
-    }).done(function (data) {
-        console.log(data)
-        data.list.forEach((forecast, index) => {
-            if (index % 8 === 0 && index !== 0) {
-                const time = new Date(forecast.dt * 1000);
+    }).done(function(data) {
 
-                let date = forecast.dt_txt;
-                let description = forecast.weather[0].description;
-                let temp = forecast.main.temp;
-                let tempMin = forecast.main.temp_min;
-                let tempMax = forecast.main.temp_max;
-                let windSpeed = forecast.wind.speed;
-                let humidity = forecast.main.humidity;
-                let airPressure = forecast.main.pressure;
+    let day2 = data.list[8];
 
-            }
-        });
+    $("#dayTwo").html(`
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 1]}</h3></div>
+    <div class="row grow no-gap">${(dateFromTimeStamp(day2.dt))}</div>
+    <div class="row">Current Temp: ${day2.main.temp}</div>
+    <div class="row no-gap">Max Temp: ${day2.main.temp_min}</div>
+    <div class="row no-gap">Min Temp: ${day2.main.temp_max}</div>
+    <div class="row no-gap">Windspeed: ${day2.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day2.main.humidity}</div>
+    <div class="row no-gap">Air Pressure: ${day2.main.pressure}</div>
+    `);
     });
+
+    /** DAY 3 WEATHER **/
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: WEATHERMAP_API_KEY,
+        lat:    SALat, //using coords > typing city/state
+        lon:   SALong,
+        units: "imperial" // avoids celcius
+    }).done(function(data) {
+
+    let day3 = data.list[16];
+
+    $("#dayThree").html(`
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 5]}</h3></div>
+    <div class="row grow no-gap">${(dateFromTimeStamp(day3.dt))}</div>
+    <div class="row">Current Temp: ${day3.main.temp}</div>
+    <div class="row no-gap">Max Temp: ${day3.main.temp_min}</div>
+    <div class="row no-gap">Min Temp: ${day3.main.temp_max}</div>
+    <div class="row no-gap">Windspeed: ${day3.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day3.main.humidity}</div>
+    <div class="row no-gap">Air Pressure: ${day3.main.pressure}</div>
+    `);
+    });
+
+    /** DAY 4 WEATHER **/
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: WEATHERMAP_API_KEY,
+        lat:    SALat, //using coords > typing city/state
+        lon:   SALong,
+        units: "imperial" // avoids celcius
+    }).done(function(data) {
+
+    let day4 = data.list[24];
+
+    $("#dayFour").html(`
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 4]}</h3></div>
+    <div class="row grow no-gap">${(dateFromTimeStamp(day4.dt))}</div>
+    <div class="row">Current Temp: ${day4.main.temp}</div>
+    <div class="row no-gap">Max Temp: ${day4.main.temp_min}</div>
+    <div class="row no-gap">Min Temp: ${day4.main.temp_max}</div>
+    <div class="row no-gap">Windspeed: ${day4.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day4.main.humidity}</div>
+    <div class="row no-gap">Air Pressure: ${day4.main.pressure}</div>
+    `);
+
+    /** DAY 5 WEATHER **/
+
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+    APPID: WEATHERMAP_API_KEY,
+    lat:    SALat, //using coords > typing city/state
+    lon:   SALong,
+    units: "imperial" // avoids celcius
+    }).done(function(data) {
+
+    let day5 = data.list[32];
+
+    $("#dayFive").html(`
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 3]}</h3></div>
+    <div class="row grow no-gap">${(dateFromTimeStamp(day5.dt))}</div>
+    <div class="row">Current Temp: ${day5.main.temp}</div>
+    <div class="row no-gap">Max Temp: ${day5.main.temp_min}</div>
+    <div class="row no-gap">Min Temp: ${day5.main.temp_max}</div>
+    <div class="row no-gap">Windspeed: ${day5.wind.speed}</div>
+    <div class="row no-gap">Humiditity: ${day5.main.humidity}</div>
+    <div class="row no-gap">Air Pressure: ${day5.main.pressure}</div>
+    `);
+    });
+    });
+
+    /** LOOP ATTEMPT **/
+    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
+    //     APPID: WEATHERMAP_API_KEY,
+    //     lat: SALat, //using coords > typing city/state
+    //     lon: SALong,
+    //     units: "imperial" // avoids celcius
+    // }).done(function (data) {
+    //     console.log(data)
+    //     data.list.forEach((forecast, index) => {
+    //         if (index % 8 === 0 && index !== 0) {
+    //             const time = new Date(forecast.dt * 1000);
+
+                // let date = forecast.dt_txt;
+                // let description = forecast.weather[0].description;
+                // let temp = forecast.main.temp;
+                // let tempMin = forecast.main.temp_min;
+                // let tempMax = forecast.main.temp_max;
+                // let windSpeed = forecast.wind.speed;
+                // let humidity = forecast.main.humidity;
+                // let airPressure = forecast.main.pressure;
+
+
+                /** JAVIER LOOP SUGGESTION FOR ACTUAL MIN/MAX TEMP **/
+                // const dayEnds = [];
+                // data.list.forEach((forecast, index) => {
+                //     console.log(formatTime(forecast.dt))
+                //     const dateTime = new Date(forecast.dt * 1000);
+                //     if (dateTime.getHours() === 22){
+                //         dayEnds.push(index);
+                //     }
+                // });
+                // for (let i = 0; i < dayEnds.length - 1; i++){
+                //     let date = forecast.dt_txt;
+                //     let description = forecast.weather[0].description;
+                //     let temp = forecast.main.temp;
+                //     let tempMin = forecast.main.temp_min;
+                //     let tempMax = [];
+                //     let windSpeed = [];
+                //     let humidity = [];
+                //     let airPressure = [];
+                //
+                //     for (let j = dayEnds[i] + 1; j <= dayEnds[i + 1]; j++){
+                //         let descAvg = description.push(data.list[j].weather[0].description);
+                //         console.log(descAvg)
+                //     }
+                // }
+    //         }
+    //     });
+    // });
 
         /** ZOOM LEVELS **/
         document.getElementById('5').addEventListener('click', event => {
@@ -154,5 +197,5 @@
                 map.setCenter(coords);
             });
         });
-    // });
+    });
 })();
