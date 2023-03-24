@@ -10,10 +10,10 @@
     // const SALong = -98.4936;
     // const SALat = 29.4241;
 
-    /** FORECASTS WEATHER **/
+    /** FORECASTS CURRENT WEATHER **/
 
     $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=> {
-        console.log(data);
+        // console.log(data);
         const time = new Date();
         $("#currentWeather").html(`
     <div class="row no-gap"><h3>${daysOfWeek[time.getDay()]}</h3></div>
@@ -23,23 +23,51 @@
     <div class="row no-gap">Min Temp: ${data.main.temp_max}</div>
     `);
 
+    /** TOMORROWS WEATHER **/
 
-        $.get("http://api.openweathermap.org/data/2.5/forecast", {
-            APPID: WEATHERMAP_API_KEY,
-            lat:    SALat, //using coords > typing city/state
-            lon:   SALong,
-            units: "imperial" // avoids celcius
-        }).done(function(data) {
-            console.log(data);
-            // data.list.forEach((forecast, index) => {
-            //     if (index % 8 === 0 && index !== 0){
-            //         const time = new Date(forecast.dt * 1000);
-                    $("#tomorrowWeather").html(`
-                <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 1]}</h3></div>
-                `);
-                // }
-            // });
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: WEATHERMAP_API_KEY,
+        lat:    SALat, //using coords > typing city/state
+        lon:   SALong,
+        units: "imperial" // avoids celcius
+    }).done(function(data) {
+        console.log(data);
+        // data.list.forEach((forecast, index) => {
+        // //     if (index % 8 === 0 && index !== 0){
+        //         const time = new Date(forecast.dt * 1000);
+                let tomorrow = data.list[4];
+                $("#tomorrowWeather").html(`
+            <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 1]}</h3></div>
+            <div class="row grow no-gap">${(dateFromTimeStamp(tomorrow.dt))}</div>
+            <div class="row">Current Temp: ${tomorrow.main.temp}</div>
+            <div class="row no-gap">Max Temp: ${tomorrow.main.temp_min}</div>
+            <div class="row no-gap">Min Temp: ${tomorrow.main.temp_max}</div>
+            `);
+
+    /** DAY 3 WEATHER **/
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: WEATHERMAP_API_KEY,
+        lat:    SALat, //using coords > typing city/state
+        lon:   SALong,
+        units: "imperial" // avoids celcius
+    }).done(function(data) {
+        console.log(data);
+        // data.list.forEach((forecast, index) => {
+        // //     if (index % 8 === 0 && index !== 0){
+        //         const time = new Date(forecast.dt * 1000);
+        let dayAfterTomorrow = data.list[10];
+        $("#dayAfterTomorrow").html(`
+        <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 2]}</h3></div>
+        <div class="row grow no-gap">${(dateFromTimeStamp(dayAfterTomorrow.dt))}</div>
+        <div class="row">Current Temp: ${dayAfterTomorrow.main.temp}</div>
+        <div class="row no-gap">Max Temp: ${dayAfterTomorrow.main.temp_min}</div>
+        <div class="row no-gap">Min Temp: ${dayAfterTomorrow.main.temp_max}</div>
+        `);
+
+            // }
         });
+    });
 
         /** ZOOM LEVELS **/
         document.getElementById('5').addEventListener('click', event => {
