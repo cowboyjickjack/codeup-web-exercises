@@ -93,7 +93,7 @@
     <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 4]}</h3></div>
     <div class="row grow no-gap">${(dateFromTimeStamp(day4.dt))}</div>
     <div class="row">Temp: ${day4.main.temp}°F</div>
-    <div class="row no-gap">Min/Max Temp: ${day4.main.temp_min} / ${day4.main.temp_max}°F</div>
+    <div class="row no-gap">${day4.main.temp_min} / ${day4.main.temp_max}°F</div>
     <div class="row no-gap">Windspeed: ${day4.wind.speed}</div>
     <div class="row no-gap">Humiditity: ${day4.main.humidity}</div>
     <div class="row no-gap">Air Pressure: ${day4.main.pressure}</div>
@@ -117,7 +117,7 @@
     <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 3]}</h3></div>
     <div class="row grow no-gap">${(dateFromTimeStamp(day5.dt))}</div>
     <div class="row">Temp: ${day5.main.temp}°F</div>
-    <div class="row no-gap info">Min/Max Temp: ${day5.main.temp_min}°F / ${day5.main.temp_max}°F</div>
+    <div class="row no-gap ">${day5.main.temp_min}°F / ${day5.main.temp_max}°F</div>
     <div class="row no-gap">Windspeed: ${day5.wind.speed}</div>
     <div class="row no-gap">Humiditity: ${day5.main.humidity}</div>
     <div class="row no-gap">Air Pressure: ${day5.main.pressure}</div>
