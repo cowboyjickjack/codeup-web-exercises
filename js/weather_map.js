@@ -1,16 +1,14 @@
 (function () {
-    mapboxgl.accessToken = MAPBOX_API_TOKEN;
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/outdoors-v12', 'width': '50%', // style URL
-        center: [-98.624141, 29.558928], // starting position [lng, lat]
-        zoom: 10, // starting zoom
-    });
-
-    const SALong = -98.4936;
-    const SALat = 29.4241;
-
-    console.log(SALat);
+    // mapboxgl.accessToken = MAPBOX_API_TOKEN;
+    // const map = new mapboxgl.Map({
+    //     container: 'map', // container ID
+    //     style: 'mapbox://styles/mapbox/outdoors-v12', 'width': '50%', // style URL
+    //     center: [-98.624141, 29.558928], // starting position [lng, lat]
+    //     zoom: 10, // starting zoom
+    // });
+    //
+    // const SALong = -98.4936;
+    // const SALat = 29.4241;
 
     /** FORECASTS WEATHER **/
 
@@ -25,13 +23,6 @@
     <div class="row no-gap">Min Temp: ${data.main.temp_max}</div>
     `);
 
-        $("#tomorrowWeather").html(`
-    <div class="row no-gap"><h3>${daysOfWeek[time.getDay()]}</h3></div>
-    <div class="row grow no-gap">${dateFromTimeStamp(data.dt)}</div>
-    <div class="row">Current Temp: ${data.main.temp}</div>
-    <div class="row no-gap">Max Temp: ${data.main.temp_min}</div>
-    <div class="row no-gap">Min Temp: ${data.main.temp_max}</div>
-    `);
 
     /** ZOOM LEVELS **/
     document.getElementById('5').addEventListener('click', event => {

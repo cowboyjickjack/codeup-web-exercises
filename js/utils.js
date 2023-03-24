@@ -153,6 +153,16 @@ dropdowns.forEach(function (dropdown) {
 
 /******************** WEATHER UTILS ********************/
 
+/** MAP MARKER **/
+// sets a permanent marker on the map based of long/lat coords
+// const fogoMarker = new mapboxgl.Marker().
+// setLngLat([-98.48535, 29.42362])
+//     .addTo(map);
+// // this enables a popup bubble
+// const fogoPopup = new mapboxgl.Popup()
+//     .setHTML('<p class="popup">Fogo De Chao</p>')
+// fogoMarker.setPopup(fogoPopup);
+
 /** WIND DIRECTION **/
 function windCardinalDirection(degrees){
     let cardinalDirection = '';
