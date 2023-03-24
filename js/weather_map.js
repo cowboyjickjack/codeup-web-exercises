@@ -12,7 +12,7 @@
 
     /** FORECASTS WEATHER **/
 
-    $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=>{
+    $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=> {
         console.log(data);
         const time = new Date();
         $("#currentWeather").html(`
@@ -24,31 +24,48 @@
     `);
 
 
-    /** ZOOM LEVELS **/
-    document.getElementById('5').addEventListener('click', event => {
-        map.flyTo({zoom:5});
-    });
-    document.getElementById('15').addEventListener('click', event => {
-        map.flyTo({zoom:15});
-    });
-    document.getElementById('20').addEventListener('click', event => {
-        map.flyTo({zoom:20});
-    });
-
-    /** ADDRESS INPUT/EVENT LISTENER **/
-    document.getElementById('setMarkerButton').addEventListener('click', event => {
-        // prevents form from submitting by clicking button, and resets its function
-        event.preventDefault();
-        // map.setZoom(document.getElementById('setMarker').value);
-
-        const address = document.getElementById('setMarker').value;
-        console.log(address);
-        // geocode sets coordinates, .then stashes the coordinates as 'coords'
-        geocode(address, MAPBOX_EXERCISE_TOKEN).then(coords=> {
-            const newMarker = new mapboxgl.Marker().setLngLat(coords).addTo(map);
-            // this centers the map on the input coords
-            map.setCenter(coords);
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            APPID: WEATHERMAP_API_KEY,
+            lat:    SALat, //using coords > typing city/state
+            lon:   SALong,
+            units: "imperial" // avoids celcius
+        }).done(function(data) {
+            console.log(data);
+            // data.list.forEach((forecast, index) => {
+            //     if (index % 8 === 0 && index !== 0){
+            //         const time = new Date(forecast.dt * 1000);
+                    $("#tomorrowWeather").html(`
+                <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 1]}</h3></div>
+                `);
+                // }
+            // });
         });
-    });
+
+        /** ZOOM LEVELS **/
+        document.getElementById('5').addEventListener('click', event => {
+            map.flyTo({zoom: 5});
+        });
+        document.getElementById('15').addEventListener('click', event => {
+            map.flyTo({zoom: 15});
+        });
+        document.getElementById('20').addEventListener('click', event => {
+            map.flyTo({zoom: 20});
+        });
+
+        /** ADDRESS INPUT/EVENT LISTENER **/
+        document.getElementById('setMarkerButton').addEventListener('click', event => {
+            // prevents form from submitting by clicking button, and resets its function
+            event.preventDefault();
+            // map.setZoom(document.getElementById('setMarker').value);
+
+            const address = document.getElementById('setMarker').value;
+            console.log(address);
+            // geocode sets coordinates, .then stashes the coordinates as 'coords'
+            geocode(address, MAPBOX_EXERCISE_TOKEN).then(coords => {
+                const newMarker = new mapboxgl.Marker().setLngLat(coords).addTo(map);
+                // this centers the map on the input coords
+                map.setCenter(coords);
+            });
+        });
     });
 })();
