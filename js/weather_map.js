@@ -10,6 +10,7 @@
     // const SALong = -98.4936;
     // const SALat = 29.4241;
 
+
     /** FORECASTS CURRENT WEATHER **/
 
     $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${SALat}&lon=${SALong}&appid=${WEATHERMAP_API_KEY}&units=imperial`).done(data=> {
@@ -126,55 +127,6 @@
     });
     });
 
-    /** LOOP ATTEMPT **/
-    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //     APPID: WEATHERMAP_API_KEY,
-    //     lat: SALat, //using coords > typing city/state
-    //     lon: SALong,
-    //     units: "imperial" // avoids celcius
-    // }).done(function (data) {
-    //     console.log(data)
-    //     data.list.forEach((forecast, index) => {
-    //         if (index % 8 === 0 && index !== 0) {
-    //             const time = new Date(forecast.dt * 1000);
-
-                // let date = forecast.dt_txt;
-                // let description = forecast.weather[0].description;
-                // let temp = forecast.main.temp;
-                // let tempMin = forecast.main.temp_min;
-                // let tempMax = forecast.main.temp_max;
-                // let windSpeed = forecast.wind.speed;
-                // let humidity = forecast.main.humidity;
-                // let airPressure = forecast.main.pressure;
-
-
-                /** JAVIER LOOP SUGGESTION FOR ACTUAL MIN/MAX TEMP **/
-                // const dayEnds = [];
-                // data.list.forEach((forecast, index) => {
-                //     console.log(formatTime(forecast.dt))
-                //     const dateTime = new Date(forecast.dt * 1000);
-                //     if (dateTime.getHours() === 22){
-                //         dayEnds.push(index);
-                //     }
-                // });
-                // for (let i = 0; i < dayEnds.length - 1; i++){
-                //     let date = forecast.dt_txt;
-                //     let description = forecast.weather[0].description;
-                //     let temp = forecast.main.temp;
-                //     let tempMin = forecast.main.temp_min;
-                //     let tempMax = [];
-                //     let windSpeed = [];
-                //     let humidity = [];
-                //     let airPressure = [];
-                //
-                //     for (let j = dayEnds[i] + 1; j <= dayEnds[i + 1]; j++){
-                //         let descAvg = description.push(data.list[j].weather[0].description);
-                //         console.log(descAvg)
-                //     }
-                // }
-    //         }
-    //     });
-    // });
 
         /** ZOOM LEVELS **/
         document.getElementById('5').addEventListener('click', event => {
@@ -200,24 +152,8 @@
                 const newMarker = new mapboxgl.Marker().setLngLat(coords).addTo(map);
                 // this centers the map on the input coords
                 map.setCenter(coords);
+
             });
         });
-
-        /** ADDRESS INPUT UPDATING WEATHER **/
-        const mapUpdate = function () {document.getElementById('setMarkerButton').addEventListener('click', event => {
-                // prevents form from submitting by clicking button, and resets its function
-                // event.preventDefault();
-                // map.setZoom(document.getElementById('setMarker').value);
-
-                const address = document.getElementById('setMarker').value;
-                console.log(address);
-                // geocode sets coordinates, .then stashes the coordinates as 'coords'
-                geocode(address, MAPBOX_EXERCISE_TOKEN).then(coords => {
-                    const newMarker = new mapboxgl.Marker().setLngLat(coords).addTo(map);
-                    // this centers the map on the input coords
-                    map.setCenter(coords);
-                });
-            });
-        };
     });
 })();
