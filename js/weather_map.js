@@ -66,7 +66,7 @@
 
     $("#dayThree").html(`
     <div class="singleCard">
-    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 5]}</h3></div>
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 2]}</h3></div>
     <div class="row grow no-gap">${(dateFromTimeStamp(day3.dt))}</div>
     <div class="row">Temp: ${day3.main.temp}°F</div>
     <div class="row no-gap">${day3.main.temp_min}°F / ${day3.main.temp_max}°F</div>
@@ -90,7 +90,7 @@
 
     $("#dayFour").html(`
     <div class="singleCard">
-    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 4]}</h3></div>
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 3]}</h3></div>
     <div class="row grow no-gap">${(dateFromTimeStamp(day4.dt))}</div>
     <div class="row">Temp: ${day4.main.temp}°F</div>
     <div class="row no-gap">${day4.main.temp_min} / ${day4.main.temp_max}°F</div>
@@ -114,7 +114,7 @@
 
     $("#dayFive").html(`
     <div class="singleCard">
-    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() - 3]}</h3></div>
+    <div class="row no-gap"><h3>${daysOfWeek[time.getDay() + 4]}</h3></div>
     <div class="row grow no-gap">${(dateFromTimeStamp(day5.dt))}</div>
     <div class="row">Temp: ${day5.main.temp}°F</div>
     <div class="row no-gap ">${day5.main.temp_min}°F / ${day5.main.temp_max}°F</div>
@@ -202,5 +202,22 @@
                 map.setCenter(coords);
             });
         });
+
+        /** ADDRESS INPUT UPDATING WEATHER **/
+        const mapUpdate = function () {document.getElementById('setMarkerButton').addEventListener('click', event => {
+                // prevents form from submitting by clicking button, and resets its function
+                // event.preventDefault();
+                // map.setZoom(document.getElementById('setMarker').value);
+
+                const address = document.getElementById('setMarker').value;
+                console.log(address);
+                // geocode sets coordinates, .then stashes the coordinates as 'coords'
+                geocode(address, MAPBOX_EXERCISE_TOKEN).then(coords => {
+                    const newMarker = new mapboxgl.Marker().setLngLat(coords).addTo(map);
+                    // this centers the map on the input coords
+                    map.setCenter(coords);
+                });
+            });
+        };
     });
 })();
