@@ -4,7 +4,11 @@
 
 /** IMPORTING FROM MODULE JS FILE!!!
  * ./utils-module bc we're already in js file **/
-import {convertToCelcius} from "./utils-module.js";
+// second function is being given a new alias to be called upon
+// useful if the function name is strangely spelled
+import {convertToCelcius, randomNumber as randomNum} from "./utils-module.js";
+// below would import EVERYTHING ----------
+// import * as utils from ".utils-module.js"
 
 // const HelloWorld = (name = 'World', ) => {
 //     if (!name) {
@@ -84,3 +88,4 @@ console.log(projects);
  * utils.js is scratching the surface of seperations of concerns **/
 
 console.log(convertToCelcius(88));
+console.log(randomNum(0, 100));
