@@ -4,6 +4,12 @@
     font-family: 'Roboto Mono', sans-serif;
 }
 
+body {
+    background-image: url("/images/weather.png");
+    background-size: cover;
+}
+
+
 .column.cards {
     display: flex;
     flex-direction: row;
@@ -36,11 +42,31 @@ h1 {
     display: flex;
     align-items: flex-start;
     font-size: 40px;
+    color: white;
 }
 
+label {
+    font-size: 32px;
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-evenly;
+}
 /** MAP STYLES **/
 
 button#5, button#15, button#20{
     display: flex;
-    z-index: 2;
+    position: relative;
+    background-color: #0a6aa9;
+    color: white;
+    border-radius: 2px;
+}
+button {
+    display: flex;
+    background-color: #0a6aa9;
+    color: white;
+    border-radius: 2px;
 }
