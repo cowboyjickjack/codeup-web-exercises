@@ -1,15 +1,4 @@
 (function () {
-    // mapboxgl.accessToken = MAPBOX_API_TOKEN;
-    // const map = new mapboxgl.Map({
-    //     container: 'map', // container ID
-    //     style: 'mapbox://styles/mapbox/outdoors-v12', 'width': '50%', // style URL
-    //     center: [-98.624141, 29.558928], // starting position [lng, lat]
-    //     zoom: 10, // starting zoom
-    // });
-    //
-    // const SALong = -98.4936;
-    // const SALat = 29.4241;
-
 
     /** FORECASTS CURRENT WEATHER **/
 
@@ -155,5 +144,6 @@
 
             });
         });
+
     });
 })();
