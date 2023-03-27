@@ -126,6 +126,15 @@ const sortDrinkByPrice = drinks => {
     return drinks.sort((a, b) => a.price - b.price);
 }
 
+/** Count words in a string  **/
+function countWords(input){
+    if
+    (input === "")
+    {  return 0 } else {
+        return input.trim().split(/\s+/).length
+    }
+}
+
 /** Hamburger Menu ---  */
 
 let dropdowns = document.querySelectorAll('[data-dropdown="parent"]')
