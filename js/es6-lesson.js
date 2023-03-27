@@ -3,7 +3,9 @@
  * A WAY OF MAKING DATA MORE ACCESSIBLE **/
 
 /** IMPORTING FROM MODULE JS FILE!!!
- * ./utils-module bc we're already in js file **/
+ * ./utils-module bc we're already in js file
+ * don't try to import externally hosted/sourced files, only locally hosted
+ * cannot export jQuery! **/
 // second function is being given a new alias to be called upon
 // useful if the function name is strangely spelled
 import {convertToCelcius, randomNumber as randomNum} from "./utils-module.js";
