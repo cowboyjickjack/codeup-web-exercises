@@ -141,9 +141,13 @@
                 const newMarker = new mapboxgl.Marker().setLngLat(coords).addTo(map);
                 // this centers the map on the input coords
                 map.setCenter(coords);
-
             });
         });
-
+        const searchBar = document.querySelector('#setMarker');
+        searchBar.addEventListener('change', (e) => {
+            const value = e.target.value;
+            /* Whatever you want to do with the value */
+            console.log(searchBar);
+        });
     });
 })();
