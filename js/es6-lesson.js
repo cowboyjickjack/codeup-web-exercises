@@ -2,6 +2,10 @@
 /** ES6 SYNTAX IS SUPPORTED BY ALL BROWSERS
  * A WAY OF MAKING DATA MORE ACCESSIBLE **/
 
+/** IMPORTING FROM MODULE JS FILE!!!
+ * ./utils-module bc we're already in js file **/
+import {convertToCelcius} from "./utils-module.js";
+
 // const HelloWorld = (name = 'World', ) => {
 //     if (!name) {
 //         name = 'World';
@@ -79,4 +83,4 @@ console.log(projects);
  * This is so if a function goes wrong, it's easier to resolve.
  * utils.js is scratching the surface of seperations of concerns **/
 
-
+console.log(convertToCelcius(88));
