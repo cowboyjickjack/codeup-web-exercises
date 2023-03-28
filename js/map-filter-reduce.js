@@ -24,4 +24,81 @@ const pricesAfterTax = prices.map(price => {
 /** Starting with an array of numbers, use .map to create an array with all the numbers squared. **/
 const randomNumbers = [2, 12, 70, 91, 1, 1, 59, 44, 33, 98];
 // no {} because it's a single line and no return is needed
-const numbersSquared = randomNumbers.map(number => Math.pow(number, 2));
+const numbersSquared = randomNumbers.map(number => number ** 2);
+
+// cars array with objects inside
+const cars = [
+    {
+        make: "Honda",
+        model: "Civic",
+        mileage: 10428
+    },
+    {
+        make: "Toyota",
+        model: "Corolla",
+        mileage: 9425
+    },
+    {
+        make: "Ford",
+        model: "Mustang",
+        mileage: 2567
+    },
+    {
+        make: "Audi",
+        model: "A3",
+        mileage: 14500
+    },
+    {
+        make: "Mazda",
+        model: "3",
+        mileage: 11248
+    }
+];
+
+// pushing mileages into a new array
+const mileages = cars.map(car => car.mileage);
+// can take two and put them into a format that you want
+// you can also destructure on the fly
+const carNames = cars.map(car => `${car.make} ${car.model}`);
+
+/** Take your books array from the objects exercise.
+ * Use .map() to create a new array that has all the author names in a single property. **/
+const books = [
+    {
+        title: "Mexican Gothic",
+        author: {
+            firstName: "Sylvia",
+            lastName: "Moreno"
+        }
+    },
+    {
+        title: "All Systems Red",
+        author: {
+            firstName: "Martha",
+            lastName: "Wells"
+        }
+    },
+    {
+        title: "1177 B.C.: The Year Civilization Collapsed",
+        author: {
+            firstName: "Eric",
+            lastName: "Cline"
+        }
+    },
+    {
+        title: "Version Control With Git",
+        author: {
+            firstName: "Jon",
+            lastName: "Loeliger"
+        }
+    },
+    {
+        title: "Data Structures the Fun Way",
+        author: {
+            firstName: "Jeremy",
+            lastName: "Kubica"
+        }
+    }
+];
+
+const authorNames = books.map(author => `${author.author.firstName} ${author.author.lastName}`);

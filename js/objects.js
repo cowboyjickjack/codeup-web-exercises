@@ -101,7 +101,7 @@
                 lastName: `Vasquez`
             }
         }
-    ]
+    ];
 
     /**
      * TODO:
