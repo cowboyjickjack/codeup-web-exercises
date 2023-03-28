@@ -65,40 +65,144 @@ const carNames = cars.map(car => `${car.make} ${car.model}`);
  * Use .map() to create a new array that has all the author names in a single property. **/
 const books = [
     {
-        title: "Mexican Gothic",
+        title: 'The Great Gatsby',
         author: {
-            firstName: "Sylvia",
-            lastName: "Moreno"
-        }
+            firstName: 'F. Scott',
+            lastName: 'Fitzgerald'
+        },
+        published: 1925,
+        genre: 'Fiction'
     },
     {
-        title: "All Systems Red",
+        title: 'To Kill a Mockingbird',
         author: {
-            firstName: "Martha",
-            lastName: "Wells"
-        }
+            firstName: 'Harper',
+            lastName: 'Lee'
+        },
+        published: 1960,
+        genre: 'Fiction'
     },
     {
-        title: "1177 B.C.: The Year Civilization Collapsed",
+        title: 'The Catcher in the Rye',
         author: {
-            firstName: "Eric",
-            lastName: "Cline"
-        }
+            firstName: 'J.D.',
+            lastName: 'Salinger'
+        },
+        published: 1951,
+        genre: 'Fiction'
     },
     {
-        title: "Version Control With Git",
+        title: 'The Lord of the Rings',
         author: {
-            firstName: "Jon",
-            lastName: "Loeliger"
-        }
+            firstName: 'J.R.R.',
+            lastName: 'Tolkien'
+        },
+        published: 1954,
+        genre: 'Fantasy'
     },
     {
-        title: "Data Structures the Fun Way",
+        title: 'Pride and Prejudice',
         author: {
-            firstName: "Jeremy",
-            lastName: "Kubica"
-        }
+            firstName: 'Jane',
+            lastName: 'Austen'
+        },
+        published: 1813,
+        genre: 'Fiction'
+    },
+    {
+        title: '1984',
+        author: {
+            firstName: 'George',
+            lastName: 'Orwell'
+        },
+        published: 1949,
+        genre: 'Science Fiction'
+    },
+    {
+        title: 'The Hobbit',
+        author: {
+            firstName: 'J.R.R.',
+            lastName: 'Tolkien'
+        },
+        published: 1937,
+        genre: 'Fantasy'
+    },
+    {
+        title: 'One Hundred Years of Solitude',
+        author: {
+            firstName: 'Gabriel',
+            lastName: 'García Márquez'
+        },
+        published: 1967,
+        genre: 'Magical Realism'
+    },
+    {
+        title: 'The Picture of Dorian Gray',
+        author: {
+            firstName: 'Oscar',
+            lastName: 'Wilde'
+        },
+        published: 1890,
+        genre: 'Fiction'
+    },
+    {
+        title: 'The Hitchhiker\'s Guide to the Galaxy',
+        author: {
+            firstName: 'Douglas',
+            lastName: 'Adams'
+        },
+        published: 1979,
+        genre: 'Science Fiction'
     }
 ];
 
 const authorNames = books.map(author => `${author.author.firstName} ${author.author.lastName}`);
+// if you don't like nesting, you can take out multiple chunks from the array of objects
+const titleAndAuthor = books.map(book => {
+    return {
+        title: book.title,
+        author: `${book.author.firstName} ${book.author.lastName}`
+    }
+});
+
+/** EXERCISES **/
+// TODO: Use .map to create an array of strings where each element is a user's email address.
+const users = [
+    {
+        id: 1,
+        name: 'ryan',
+        email: 'ryan@codeup.com',
+        languages: ['clojure', 'javascript'],
+        yearsOfExperience: 5
+    },
+    {
+        id: 2,
+        name: 'luis',
+        email: 'luis@codeup.com',
+        languages: ['java', 'scala', 'php'],
+        yearsOfExperience: 6
+    },
+    {
+        id: 3,
+        name: 'zach',
+        email: 'zach@codeup.com',
+        languages: ['javascript', 'bash'],
+        yearsOfExperience: 7
+    },
+    {
+        id: 4,
+        name: 'fernando',
+        email: 'fernando@codeup.com',
+        languages: ['java', 'php', 'sql'],
+        yearsOfExperience: 8
+    },
+    {
+        id: 5,
+        name: 'justin',
+        email: 'justin@codeup.com',
+        languages: ['html', 'css', 'javascript', 'php'],
+        yearsOfExperience: 9
+    }
+];
+const emailAddress = users.map(email => `${email.email}`);
+console.log(emailAddress);
