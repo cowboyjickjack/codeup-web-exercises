@@ -11,7 +11,78 @@
 import {convertToCelcius, randomNumber as randomNum} from "./utils-module.js";
 // below would import EVERYTHING ----------
 // import * as utils from ".utils-module.js"
-
+const employees = [
+    {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'john.doe@example.com',
+        position: 'Software Engineer',
+        startDate: '2020-01-01'
+    },
+    {
+        firstName: 'Jane',
+        lastName: 'Doe',
+        email: 'jane.doe@example.com',
+        position: 'Product Manager',
+        startDate: '2019-06-01'
+    },
+    {
+        firstName: 'Bob',
+        lastName: 'Smith',
+        email: 'bob.smith@example.com',
+        position: 'Data Analyst',
+        startDate: '2021-03-01'
+    },
+    {
+        firstName: 'Alice',
+        lastName: 'Jones',
+        email: 'alice.jones@example.com',
+        position: 'UX Designer',
+        startDate: '2020-09-01'
+    },
+    {
+        firstName: 'David',
+        lastName: 'Lee',
+        email: 'david.lee@example.com',
+        position: 'Front-end Developer',
+        startDate: '2018-12-01'
+    },
+    {
+        firstName: 'Samantha',
+        lastName: 'Chen',
+        email: 'samantha.chen@example.com',
+        position: 'Full-stack Developer',
+        startDate: '2021-01-01'
+    },
+    {
+        firstName: 'Mike',
+        lastName: 'Brown',
+        email: 'mike.brown@example.com',
+        position: 'Marketing Manager',
+        startDate: '2019-03-01'
+    },
+    {
+        firstName: 'Emily',
+        lastName: 'Wilson',
+        email: 'emily.wilson@example.com',
+        position: 'Sales Representative',
+        startDate: '2022-01-01'
+    },
+    {
+        firstName: 'Mark',
+        lastName: 'Davis',
+        email: 'mark.davis@example.com',
+        position: 'Project Manager',
+        startDate: '2020-06-01'
+    },
+    {
+        firstName: 'Julia',
+        lastName: 'Nguyen',
+        email: 'julia.nguyen@example.com',
+        position: 'Data Scientist',
+        startDate: '2019-01-01'
+    }
+];
 // const HelloWorld = (name = 'World', ) => {
 //     if (!name) {
 //         name = 'World';
