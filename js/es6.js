@@ -85,4 +85,4 @@ let list = document.createElement('ul'); // making it better, work with a node
 for (const developer of developers) {
   list += `<li>${developer}</li>`
 }
-list += '</ul>';
+// list += '</ul>';
