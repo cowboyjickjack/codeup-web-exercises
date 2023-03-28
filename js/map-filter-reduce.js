@@ -166,7 +166,8 @@ const titleAndAuthor = books.map(book => {
 });
 
 /** EXERCISES **/
-// TODO: Use .map to create an array of strings where each element is a user's email address.
+// TODO: Use .map to create an array of strings where
+//  each element is a user's email address.
 const users = [
     {
         id: 1,
@@ -210,9 +211,33 @@ const emailAddress = users.map(email => `${email.email}`);
 // console.log(emailAddress);
 
 /** FILTER LESSON **/
-const underTenThousandMiles = cars.filter(car => car.mileage < 10000);
+// .sort shows how to sort objects based on numeric property
+const underTenThousandMiles = cars.filter(car => car.mileage < 10000).sort((a, b) => a.mileage - b.mileage);
 
-    /** map practice **/
-    /** Take an array of numbers and make them strings **/
-    arr = [2, 5, 100]
+// TODO: Use .filter to create an array of user objects where
+//  each user object has at least 3 languages in the languages array.
+const overThreeLanguages = users.filter(user => user.languages.length >= 3);
+
+// TODO: Create an array with smash characters who's names contain only 5 letters.
+const smashers = ["Mario", "Donkey Kong", "Link", "Samus","Dark Samus", "Yoshi",
+    "Kirby", "Fox", "Pikachu", "Luigi", "Ness", "Captain Falcon", "Jigglypuff",
+    "Peach", "Daisy", "Bowser", "Ice Climbers", "Sheik", "Zelda", "Dr. Mario",
+    "Pichu", "Falco", "Marth", "Lucina", "Young Link", "Ganondorf", "Mewtwo",
+    "Roy", "Chrom", "Mr. Game & Watch", "Meta Knight", "Pit", "Dark Pit",
+    "Zero Suit Samus", "Wario", "Snake", "Ike", "Pokemon Trainer", "Squirtle",
+    "Ivysaur", "Charizard", "Diddy Kong", "Lucas", "Sonic", "King Dedede",
+    "Olimar", "Lucario", "R.O.B.", "Toon Link", "Wolf", "Villager", "Mega Man",
+    "Wii Fit Trainer", "Rosalina & Luma", "Little Mac", "Greninja", "Mii Brawler",
+    "Mii Swordfighter", "Mii Gunner", "Palutena", "Pac-Man", "Robin", "Shulk",
+    "Bowser Jr.", "Duck Hunt", "Ryu", "Ken", "Cloud", "Corrin", "Bayonetta", "Inkling",
+    "Ridley", "Simon", "Richter", "King K. Rool", "Isabelle", "Incineroar", "Piranha Plant",
+    "Joker", "Hero", "Banjo & Kazooie", "Terry", "Byleth", "Min Min", "Steve",
+    "Sephiroth", "Pyra", "Mythra", "Kazuya", "Sora"];
+const smashersWithFiveLetters = smashers.filter(character => character.length === 5).sort();
+// TODO: Create another array with all the smash characters whose names contain over 10 letters.
+const smashersWithOverTenLetters = smashers.filter(character => character.length > 10).sort();
+
+/** PRACTICE **/
+// TODO: Take an array of numbers and make them strings
+arr = [2, 5, 100]
 const stringed = arr.map(arr => arr.toString());
