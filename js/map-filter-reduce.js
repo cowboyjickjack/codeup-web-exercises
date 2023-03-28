@@ -205,4 +205,11 @@ const users = [
     }
 ];
 const emailAddress = users.map(email => `${email.email}`);
+// forEach separates them each
+emailAddress.forEach(email => console.log(email));
 console.log(emailAddress);
+
+/** map practice **/
+/** Take an array of numbers and make them strings **/
+arr = [2, 5, 100]
+const stringed = arr.map(arr => arr.toString());
