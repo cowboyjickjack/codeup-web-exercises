@@ -206,10 +206,13 @@ const users = [
 ];
 const emailAddress = users.map(email => `${email.email}`);
 // forEach separates them each
-emailAddress.forEach(email => console.log(email));
-console.log(emailAddress);
+// emailAddress.forEach(email => console.log(email));
+// console.log(emailAddress);
 
-/** map practice **/
-/** Take an array of numbers and make them strings **/
-arr = [2, 5, 100]
+/** FILTER LESSON **/
+const underTenThousandMiles = cars.filter(car => car.mileage < 10000);
+
+    /** map practice **/
+    /** Take an array of numbers and make them strings **/
+    arr = [2, 5, 100]
 const stringed = arr.map(arr => arr.toString());
