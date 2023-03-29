@@ -8,5 +8,10 @@ export const getGitHubUsers = async () => { // export will allow this function t
         console.log(error);
     }
     // the .then syntax (older) compared to await
-    // return fetch('https://api.github.com/users').then(response => response.json()).then(data => data);
+    return fetch('https://api.github.com/users')
+        .then(response => response.json())
+        .then(data => data)
+        .catch(error => {
+            console.log(error); // do not forget! Very important to have a plan when things go wrong
+        });
 }
