@@ -48,13 +48,17 @@ const emailAddress = users.map(user => user.email);
 // TODO:Use .reduce to get the total years of experience from the list of users.
 //  Once you get the total of years you can use the result to calculate the average.
 const totalYearsOfExperience = users.reduce((acc, curr, index, array) => {
-    acc =  acc + curr.yearsOfExperience; // avg
-    if (index === array.length - 1) { // last iteration
-        return acc / array.length;
-    } else {
-        return acc;
-    }
+    let totalYears =  acc + curr.yearsOfExperience; // avg
+    // if (index === array.length - 1) { // last iteration
+    //     return acc / array.length;
+    // } else {
+    //     return acc;
+    // }
+    return totalYears;
 }, 0);
+let avgYears = totalYearsOfExperience / users.length;
+
+
 
 // TODO: Use .reduce to get the longest email from the list of users.
 const longestEmail = users.reduce((longest, curr) => {
@@ -68,13 +72,13 @@ const longestEmail = users.reduce((longest, curr) => {
 // TODO: Use .reduce to get the list of user's names in a single string.
 //  Example: Your instructors are: ryan, luis, zach, fernando, justin.
 const userNames = users.reduce((acc, curr, index) => {
-    // return index === 0 ? curr.name : acc + ', ' + curr.name;
+    // return index === 0 ? curr.name : acc + ', ' + curr.name; // ternary version
     if (index === 0) {
         return curr.name;
     } else {
         return acc + ', ' + curr.name;
     }
-}, '');
+}, 0); // starting at the beginning
 
 /** ADDITIONAL EXERCISES **/
 // TODO: Given the following array, complete the todos...
