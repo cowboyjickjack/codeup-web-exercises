@@ -8,12 +8,23 @@ export const getGitHubUsers = async () => { // export will allow this function t
         console.log(error);
     }
     // the .then syntax (older) compared to await
-    return fetch('https://api.github.com/users')
-        .then(response => response.json())
-        .then(data => data)
-        .catch(error => {
-            console.log(error); // do not forget! Very important to have a plan when things go wrong
-        });
+    // return fetch('https://api.github.com/users')
+    //     .then(response => response.json())
+    //     .then(data => data)
+    //     .catch(error => {
+    //         console.log(error); // do not forget! Very important to have a plan when things go wrong
+    //     });
+}
+
+/** FETCHING WITH KEY FROM GITHUB API **/
+export const fetchGitHubUsersWithKey = async () => {
+    try {
+        let response = await fetch('https://api.github.com/users', {headers: {'Authorization': 'token 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'}})
+        let data = await response.json()
+        return data;
+    } catch(error){
+        console.log(error);
+    }
 }
 
 // PARENT = don't want to define where it renders as something that is set - want this to be versatile
@@ -38,4 +49,14 @@ export const renderGitHubUser = (user, parent) => { // doesn't need async bc we 
     });
     // then, append it
     parent.appendChild(element);
+
+
+    // TODO: Create a function that accepts a GitHub username,
+    //   and returns a promise that resolves returning just the
+    //   date of the last commit that user made.
+
+// export  const lastCommitDate = (user) => {
+//
+//
+// }
 };
