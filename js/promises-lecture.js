@@ -6,5 +6,7 @@ import {getGitHubUsers} from "./github.js"; // can hold cmd, click, and takes yo
     // here is our meat :)
     console.log(users);
 
+    // Render users (creating the stuff that connects with the DOM, onto the screen)
+
 
 })();
