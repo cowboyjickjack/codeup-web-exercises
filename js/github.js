@@ -16,15 +16,28 @@ export const getGitHubUsers = async () => { // export will allow this function t
     //     });
 }
 
-/** FETCHING WITH KEY FROM GITHUB API **/
-export const fetchGitHubUsersWithKey = async () => {
-    try {
-        let response = await fetch('https://api.github.com/users', {headers: {'Authorization': 'token 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'}})
-        let data = await response.json()
+/** FETCHING WITH API KEY **/
+export const getUser = async(username)=>{
+    try{
+        const url = `https://api.github.com/users/${username}/events/public`;
+        const options = {
+            headers: {
+                'Authorization': `token ${GITHUB_API_KEY}`
+            }
+        }
+        let response = await fetch(url, options);
+        let data = await response.json();
         return data;
     } catch(error){
         console.log(error);
     }
+}
+
+export const getLastCommit = (userEvents)=>{
+    let commits = userEvents.filter(function(e){
+        return e.type === "PushEvent";
+    });
+    return commits[0];
 }
 
 // PARENT = don't want to define where it renders as something that is set - want this to be versatile
