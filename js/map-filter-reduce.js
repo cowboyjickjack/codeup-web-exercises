@@ -241,3 +241,145 @@ const smashersWithOverTenLetters = smashers.filter(character => character.length
 // TODO: Take an array of numbers and make them strings
 arr = [2, 5, 100]
 const stringed = arr.map(arr => arr.toString());
+
+const usedCars = [
+    {
+        year: 2006,
+        make: "Toyota",
+        model: "Prius",
+        price: 8044
+    },
+    {
+        year: 2017,
+        make: "Honda",
+        model: "Civic",
+        price: 18123
+    },
+    {
+        year: 2004,
+        make: "Ford",
+        model: "Mustang",
+        price: 9052
+    },
+    {
+        year: 2013,
+        make: "Cadillac",
+        model: "ATS",
+        price: 10991
+    },
+    {
+        year: 2009,
+        make: "Subaru",
+        model: "Impreza",
+        price: 7335
+    },
+    {
+        year: 2008,
+        make: "Dodge",
+        model: "Charger",
+        price: 8847
+    },
+    {
+        year: 2014,
+        make: "Chrysler",
+        model: "300",
+        price: 13517
+    },
+    {
+        year: 2011,
+        make: "Buick",
+        model: "Regal",
+        price: 8253
+    },
+    {
+        year: 2012,
+        make: "Chevrolet",
+        model: "Impala",
+        price: 6736
+    },
+    {
+        year: 2015,
+        make: "BMW",
+        model: "3 series",
+        price: 13767
+    },
+    {
+        year: 2020,
+        make: "Hyundai",
+        model: "Elantra",
+        price: 17892
+    },
+    {
+        year: 2008,
+        make: "Mercedes-Benz",
+        model: "C-Class",
+        price: 8444
+    },
+    {
+        year: 2016,
+        make: "Audi",
+        model: "A3",
+        price: 15900
+    }
+];
+
+/** REDUCE LESSON **/
+const usedCarPrices = usedCars.map(car => car.price);
+// console.log(usedCarPrices)
+
+/** .reduce() takes 4 variables **/
+// no index 0, because it's shoved into the variable called total,
+// and index 1 is shoved into the variable called priced
+let totalValueOfAllCars = usedCarPrices.reduce((total, price, index) => {
+    // console.log(`The index is ${index}, the total is ${total}, and the current car value is ${price}.`)
+    return total + price;
+});
+
+const averageCarValue = usedCarPrices.reduce((total, price, index, array) => {
+    // getting the accumulator
+    total = total + price;
+    if (index === array.length -1){
+        // getting the average, at the end, the last iteration
+        return parseFloat((total/array.length).toFixed(2));
+    }
+    return total;
+});
+
+// TODO: Find the total and average of the array of a hundred numbers.
+const aHundredNums = [9225, 6397, 97, 5062, 2149, 4656, 6551, 2145, 1073, 7963, 6279,
+    2873, 1820, 1468, 9611, 6431, 797, 3433, 5518, 4932, 7880, 6996, 5761, 6828, 6909,
+    9431, 4313, 2265, 7709, 5131, 2054, 8212, 9285, 7945, 612, 6055, 7189, 8539,
+    8201, 2209, 98, 9329, 4281, 441, 7230, 3582, 2502, 8432, 9749, 1267, 4111, 4289, 6793, 8238,
+    6892, 7665, 9252, 2065, 9817, 8868, 2133, 4519, 1916, 3035, 7547, 9217, 9438, 4473,
+    7162, 6652, 2540, 5290, 1502, 7302, 3917, 6100, 6211, 286, 8413, 8380, 5514, 5858, 7280,
+    3490, 3907, 1, 1428, 8825, 8339, 8809, 7713, 7770, 3873, 3474, 6775, 9126, 3081, 7613, 4017, 445];
+
+const total = aHundredNums.reduce((accumulator, currentValue, index) => {
+    // console.log(`At index ${index}, the accumulator is ${accumulator}, and the current value is ${currentValue}`)
+    return (accumulator + currentValue) ;
+});
+
+const hundoAverage = aHundredNums.reduce((acc, curr, index, array) => {
+    acc = acc + curr;
+    if (index === array.length - 1) {
+        return acc / array.length;
+    } else {
+        return acc;
+    }
+})
+
+const totalOfOdds = aHundredNums.reduce((acc, curr, index) => {
+   if (index % 2 === 1) {
+       return acc + curr;
+   } else {
+       return acc;
+   }
+});
+
+/** Get value of all used cars via only reduce **/
+const valueOfUsedCars = usedCars.reduce((acc, car) => {
+    return acc + car.price}, // first argument is a function
+    0 // second argument is a starting point
+    // saying ok, 0 plus the first cars price, then put it into the acc, then get the next cars price, add, stuff into
+    // acc, and so on
+);
