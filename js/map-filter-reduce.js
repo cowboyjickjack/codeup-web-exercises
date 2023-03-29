@@ -61,9 +61,9 @@ let avgYears = totalYearsOfExperience / users.length;
 
 
 // TODO: Use .reduce to get the longest email from the list of users.
-const longestEmail = users.reduce((longest, curr) => {
-    if (longest.email.length > curr.email.length){
-       return longest;
+const longestEmail = users.reduce((acc, curr) => {
+    if (acc.email.length > curr.email.length){
+       return acc.email; // ensures it's only returning the email, not the entire array
     } else {
         return curr;
     }
@@ -71,14 +71,24 @@ const longestEmail = users.reduce((longest, curr) => {
 
 // TODO: Use .reduce to get the list of user's names in a single string.
 //  Example: Your instructors are: ryan, luis, zach, fernando, justin.
-const userNames = users.reduce((acc, curr, index) => {
+const instructors = users.reduce((acc, user, index) => {
     // return index === 0 ? curr.name : acc + ', ' + curr.name; // ternary version
-    if (index === 0) {
-        return curr.name;
+    if (index+1 === users.length) {
+        return acc + `${user.name}.`;
     } else {
-        return acc + ', ' + curr.name;
+        return acc + `${user.name}, `;
     }
-}, 0); // starting at the beginning
+}, 'Your instructors are: '); // starting at the beginning
+
+// TODO: BONUS: Use .reduce to get the unique list of languages from the list of users.
+let uniqueLanguages = users.reduce((acc, user) => {
+    user.languages.forEach(function (language){
+        if(!acc.includes(language)){ // if doesn't include language
+            acc.push(language); // then push to accumulator
+        }
+    });
+    return acc;
+}, []);
 
 /** ADDITIONAL EXERCISES **/
 // TODO: Given the following array, complete the todos...
