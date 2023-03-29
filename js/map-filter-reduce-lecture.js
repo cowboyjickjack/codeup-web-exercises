@@ -56,7 +56,7 @@ const cars = [
 ];
 
 // pushing mileages into a new array
-const mileages = cars.map(car => car.mileage);
+// const mileages = cars.map(car => car.mileage);
 // can take two and put them into a format that you want
 // you can also destructure on the fly
 const carNames = cars.map(car => `${car.make} ${car.model}`);
@@ -383,3 +383,65 @@ const valueOfUsedCars = usedCars.reduce((acc, car) => {
     // saying ok, 0 plus the first cars price, then put it into the acc, then get the next cars price, add, stuff into
     // acc, and so on
 );
+
+/** MINI REDUCE PRACTICE **/
+const carsList = [
+    {
+        make: "Honda",
+        model: "Civic",
+        mileage: 10428
+    },
+    {
+        make: "Toyota",
+        model: "Corolla",
+        mileage: 9425
+    },
+    {
+        make: "Ford",
+        model: "Mustang",
+        mileage: 2567
+    },
+    {
+        make: "Audi",
+        model: "A3",
+        mileage: 14500
+    },
+    {
+        make: "Mazda",
+        model: "3",
+        mileage: 11248
+    }
+];
+// TODO: Use .reduce() with a second argument to find the total mileage of all the cars in the cars array.
+let totalMileage = carsList.reduce((acc, car) => {return acc + car.mileage}, 0);
+
+/** STARTING WITH EMPTY ARRAY **/
+// what if you want the highest mileage? index/array comes into play
+const highestMilegage = carsList.reduce((acc, car, index, array) => {
+    if (index === array.length - 1) { // on last iteration of the loop
+        acc.push(car.mileage); // push the last mileage into the array
+        return acc.sort( (a, b) => b - a)[0]; // sort from high to low and return the first one (remove 0 if you want all)
+    } else {
+        acc.push(car.mileage);
+        return acc;
+    }
+}, []);
+
+const mileageReport = cars.reduce((acc, car, index, array) => {
+    if (index === array.length - 1) {
+        acc.push(car.mileage);
+        let report = 'The mileages are: ';
+        report += acc.join(', ');
+        const mileagesSorted = acc.sort((a, b) => b-a);
+        const highestMileage = mileagesSorted[0];
+        const lowestMileage = mileagesSorted[mileagesSorted.length - 1];
+        report += ".\n";
+        report += 'The highest mileage is ' + highestMileage + '.\n';
+        report += 'The lowest mileage is ' + lowestMileage;
+        return report;
+    } else {
+        acc.push(car.mileage);
+        return acc;
+    }
+}, []);
+
