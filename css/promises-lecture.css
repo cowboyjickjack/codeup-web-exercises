@@ -1,3 +1,8 @@
+#user-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .user-card {
     border: 2px solid black;
     border-radius: 10px;

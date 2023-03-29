@@ -26,10 +26,10 @@ export const renderGitHubUser = (user, parent) => { // doesn't need async bc we 
     element.classList.add('user-card'); // adding class to div
     element.innerHTML = `
         <div class="img-wrapper">
-            <img class="avatar" src="https://via.placeholder.com/300x300?" alt="User Image">
+            <img class="avatar" src="${user.avatar_url}" alt="User Image">
         </div>
-        <h2>mojombo</h2>
-        <a href="#" target="_blank">Go to Profile</a>
+        <h2>${user.login}</h2>
+        <a target="_blank" href="${user.html_url}">Go to Profile</a>
         <button>Remove</button>
     `;
     // to make the 'remove' button work and remove the whole card, we need an event listener
