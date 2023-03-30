@@ -44,4 +44,16 @@ export const getStarWarsCharacters = async () => {
         console.log(error);
     }
 };
-console.log(getStarWarsCharacters());
+// console.log(getStarWarsCharacters());
+export const starWarsEyeColor = async () => {
+    try {
+        let response = await fetch(`https://swapi.dev/api/people/`);
+        let data = await response.json();
+        let people = data.results;
+        console.log(people);
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+};
+console.log(starWarsEyeColor())
