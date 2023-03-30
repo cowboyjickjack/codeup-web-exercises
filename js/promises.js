@@ -2,7 +2,7 @@ import {getUser, getLastCommit} from "./github.js";
 import {keys} from "./keys.js";
 
 (async() => {
-    let users = await getUser('cowboyjickjack');
+    let users = await getUser('hussainarusa');
     // all of our data
     console.log(users);
 

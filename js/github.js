@@ -1,5 +1,6 @@
 import {keys} from "./keys.js";
 
+/** LIST OF GITHUB USERS **/
 export const getGitHubUsers = async () => { // export will allow this function to be exported // async will utilize await
     try { // try/catch is like if/else
         let response = await fetch('https://api.github.com/users'); // this exact url doesn't require a key
@@ -18,7 +19,7 @@ export const getGitHubUsers = async () => { // export will allow this function t
     //     });
 }
 
-/** FETCHING WITH API KEY **/
+/** SINGULAR GITHUB USER **/
 export const getUser = async(username)=>{
     try{
         const url = `https://api.github.com/users/${username}/events/public`;
@@ -36,7 +37,9 @@ export const getUser = async(username)=>{
 }
 
 export const getLastCommit = (userEvents)=>{
-    let commits = userEvents.filter(function(e){
+    // could also use .find() since the array of userEvents is already in chronological order,
+    // and we can just get the first one that it finds
+    let commits = userEvents.filter(function(e){ // e = event (just one of the parameters needed)
         return e.type === "PushEvent";
     });
     return commits[0];
