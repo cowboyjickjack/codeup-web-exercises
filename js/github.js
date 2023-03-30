@@ -1,3 +1,5 @@
+import {keys} from "./keys.js";
+
 export const getGitHubUsers = async () => { // export will allow this function to be exported // async will utilize await
     try { // try/catch is like if/else
         let response = await fetch('https://api.github.com/users'); // this exact url doesn't require a key
@@ -22,7 +24,7 @@ export const getUser = async(username)=>{
         const url = `https://api.github.com/users/${username}/events/public`;
         const options = {
             headers: {
-                'Authorization': `token ${GITHUB_API_KEY}`
+                'Authorization': `token ${keys.GITHUB_API_KEY}`
             }
         }
         let response = await fetch(url, options);
