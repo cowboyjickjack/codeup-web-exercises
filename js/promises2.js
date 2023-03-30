@@ -45,12 +45,16 @@ export const getStarWarsCharacters = async () => {
     }
 };
 // console.log(getStarWarsCharacters());
-export const starWarsEyeColor = async () => {
+export const starWarsEyeColor = async (person) => {
     try {
         let response = await fetch(`https://swapi.dev/api/people/`);
         let data = await response.json();
-        let people = data.results;
-        console.log(people);
+        let luke = data.results[0].eye_color;
+        let luke = data.results[0].eye_color;
+        let luke = data.results[0].eye_color;
+        let luke = data.results[0].eye_color;
+        console.log(luke)
+        console.log(data)
         return data;
     } catch (error) {
         console.log(error);
