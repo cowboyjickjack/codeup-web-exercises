@@ -13,7 +13,10 @@ import {keys} from "./keys.js";
         }
     });
     console.log(onlyCommits[0]);
+
 })();
+
+
 
 
 
