@@ -17,6 +17,12 @@
       "genre": "Comedy",
       "rating": 5,
       "id": 3
+    },
+    {
+      "title": "Shrek",
+      "genre": "Comedy",
+      "rating": 5,
+      "id": 4
     }
   ]
 }
