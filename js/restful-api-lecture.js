@@ -1,4 +1,4 @@
-import {setFavorite, patchFavorite, deleteFavorite, getFavorites, getFavorite} from "./movies.js";
+import * as movieUtils from "./movies.js";
 
 (async ()=> {
     document.querySelector('button').addEventListener('click', async function (){
@@ -13,21 +13,26 @@ import {setFavorite, patchFavorite, deleteFavorite, getFavorites, getFavorite} f
             // DON'T SEND ID BECAUSE PPL DON'T KNOW HOW MANY MOVIES YOU HAVE
             // It'll be a guessing game on their end
         }
-        // let result = await setFavorite(movieData);
+        // let result = await movieUtils.setFavorite(movieData);
         // console.log(result);
     });
 
     // let body = {
     //     "rating": 2
     // }
-    // let response = await patchFavorite(3, body);
+    // let response = await movieUtils.patchFavorite(3, body);
     // let data = await response.json();
     // console.log(data);
 
-    await deleteFavorite(4);
-    // let favorites = await getFavorites();
-    // console.log(favorites);
-    // let favorite = await getFavorite(2);
-    // console.log(favorite);
+    // await movieUtils.deleteFavorite(4);
+    // let favorites = await movieUtils.getFavorites();
+    // console.log('All favorites => 'favorites);
+    // let favorite = await movieUtils.getFavorite(2);
+    // console.log('ONE favorite => 'favorite);
+    // Our function is expecting an object, not a string, hence the {} and title
+    let searched = await movieUtils.searchFavorite({title: 'The Shawshank Redemption'});
+    console.log('Searched favorite => 'searched);
+    // console.log(await movieUtils.searchFavorite({genre: 'Comedy'}))
+
 
 })();

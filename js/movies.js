@@ -96,20 +96,20 @@ export const patchFavorite = async (id, movie) => { // selecting id, replacing a
 
 export const deleteFavorite = async (id) => {
     try {
-        if (!id) { // since it's in try, it'll throw it into catch
-            throw new Error('You must provide an id')
+        if (!id) {
+            throw new Error('You must provide an id');
         }
-        let url = `http://localhost:3000/favorites`;
+        let url = `http://localhost:3000/favorites/${id}`;
         let options = {
-            method: "DELETE", // 'DELETE' since we're removing it
+            method: "DELETE",
             headers: {
-                "Content-Type": `application/json/favorites/${id}`
-            },
+                'Content-Type': 'application/json'
+            }
         }
         let response = await fetch(url, options);
-        let data = response.json();
+        let data = await response.json();
         return data;
-    } catch (error) {
+    } catch(error){
         console.log(error);
     }
 }
