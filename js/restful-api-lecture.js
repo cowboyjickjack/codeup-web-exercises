@@ -26,12 +26,12 @@ import * as movieUtils from "./movies.js";
 
     // await movieUtils.deleteFavorite(4);
     // let favorites = await movieUtils.getFavorites();
-    // console.log('All favorites => 'favorites);
+    // console.log('All favorites =>, 'favorites);
     // let favorite = await movieUtils.getFavorite(2);
-    // console.log('ONE favorite => 'favorite);
+    // console.log('ONE favorite => ', favorite);
     // Our function is expecting an object, not a string, hence the {} and title
     let searched = await movieUtils.searchFavorite({title: 'The Shawshank Redemption'});
-    console.log('Searched favorite => 'searched);
+    console.log('Searched favorite => ', searched);
     // console.log(await movieUtils.searchFavorite({genre: 'Comedy'}))
 
 
