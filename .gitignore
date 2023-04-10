@@ -2,8 +2,3 @@
 *.iml
 *.DS_Store
 keys.js
-# MacOS
-.DS_Store
-# Compiled output
-*.class
-out/*
