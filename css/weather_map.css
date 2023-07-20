@@ -41,6 +41,9 @@ div h6 {
 h1 {
     display: flex;
     align-items: flex-start;
+    justify-content: start;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 40px;
     color: white;
 }

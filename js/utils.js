@@ -233,7 +233,7 @@ function formatTime(timeStamp){
 }
 
 /** DATE FROM TIME STAMP **/
-export function dateFromTimeStamp(timeStamp){
+function dateFromTimeStamp(timeStamp){
     let dateTime = new Date(timeStamp * 1000);
     let year = dateTime.getFullYear();
     let month = appendLeadingZeroes(dateTime.getMonth() + 1);

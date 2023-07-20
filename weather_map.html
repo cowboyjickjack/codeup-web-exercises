@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map Project</title>
+    <script src="js/jquery.js"></script>
     <script src="js/keys.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'/>
@@ -66,6 +67,10 @@
 <!---------- SCRIPTS ---------->
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script>
+
+    // const zipInputValue = document.getElementById('setMarker').value;
+    // console.log("user input is: " + zipInputValue);
+
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
@@ -74,12 +79,11 @@
         zoom: 10, // starting zoom
     });
 
-    const SALong = -98.4936;
-    const SALat = 29.4241;
+    // const SALong = -98.4936;
+    // const SALat = 29.4241;
 
 </script>
 <script src="js/utils.js"></script>
-<script src="js/jquery-minified.js"></script>
 <script src="js/weather_map.js"></script>
 </body>
 </html>
